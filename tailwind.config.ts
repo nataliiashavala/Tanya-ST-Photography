@@ -19,7 +19,14 @@ module.exports = {
                 white: "#fff",
                 transparent: "transparent",
             },
-        },
+            fontSize: {
+                'custom': '4rem', // or '64px'
+              },
+            fontFamily: {
+                'nanum': ['"Nanum Myeongjo"', 'serif'],
+                'explora': ['Explora', 'sans-serif'],
+              },
+        }, // Add a comma here
     },
     plugins: [],
 };
