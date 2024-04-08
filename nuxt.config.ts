@@ -31,11 +31,16 @@ export default defineNuxtConfig({
           content: "https://www.air-tv.net/",
         },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
+        // Correct placement for the font link
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Explora&family=Nanum+Myeongjo&display=swap' }
+      ],
     },
   },
   modules: [
-    "@nuxtjs/tailwindcss",
+    '@nuxtjs/tailwindcss',
     // "@pinia/nuxt",
     // "nuxt-icon",
     // "nuxt-icons",
@@ -44,15 +49,5 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: "~/assets/scss/tailwind.scss",
   },
-  // i18n: {
-  //   locales: [
-  //     { code: 'en', iso: 'en', file: 'en.json' },
-  //     { code: 'ua', iso: 'ua', file: 'ua.json' },
-  //   ],
-  //   defaultLocale: 'en',
-  //   detectBrowserLanguage: false,
-  //   strategy: 'no_prefix',
-  //   lazy: true,
-  //   langDir: 'locales/',
-  // },
+  // Other configuration...
 });
