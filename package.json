@@ -12,10 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.11.4",
-<<<<<<< HEAD
-=======
     "element-plus": "^2.6.3",
->>>>>>> 27828b86281c779781d134af0f568b61f5960360
     "nuxt": "^3.11.1",
     "pinia": "^2.1.7",
     "sass": "^1.72.0",
@@ -24,12 +21,8 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@types/node": "^20.12.4"
-=======
     "@nuxt/eslint-config": "^0.3.1",
     "@types/node": "^20.12.4",
     "eslint": "^9.0.0"
->>>>>>> 27828b86281c779781d134af0f568b61f5960360
   }
 }
