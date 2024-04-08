@@ -1,15 +1,5 @@
 <template>
   <div>
-    <h1>Blog</h1>
+    <h1>About me</h1>
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
