@@ -1,6 +1,11 @@
 <template>
   <div>
     <Home />
+    <Wedding />
+    <Family />
+    <PersonalBrand />
+    <AboutMe />
+
   </div>
 </template>
 
@@ -8,8 +13,8 @@
 import Home from '~/pages/Home/index.vue'
 import  Wedding from '~/pages/Wedding/index.vue'
 import  Family from '~/pages/Family/index.vue'
-import PersonalBrand from '~/pages/PersonalBrand/index.vue'
-import About from '~/pages/About/index.vue'
+import PersonalBrand from '~/pages/personal-brand/index.vue'
+import AboutMe from '~/pages/about-me/index.vue'
 
 </script>
 
