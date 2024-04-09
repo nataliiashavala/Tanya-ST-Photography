@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import TCard from '~/components/general/TCard.vue';
 import heroImage from '~/assets/img/about_me/hero_img_about_me.jpg';
 import TButton from '~/components/general/TButton.vue';
@@ -12,9 +12,9 @@ import TButton from '~/components/general/TButton.vue';
       :imageSrc="heroImage"
       VerticalText=""
     />
-  <tButton colorOption="option1"
+  <TButton colorOption="option1"
   text="Get In Touch"
-  ></tButton>
+  ></TButton>
   <div class="font-nanum text-end text-base">
     <h1>INSTAGRAM</h1>
     <p>@tanyast</p>

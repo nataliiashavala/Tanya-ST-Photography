@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div class="max-w-lg mx-auto">
     <div :class="['text-center p-6 border border-gray-200', textColorClass]">
       <h2 class="text-2xl font-bold mb-4">{{ title }}</h2>
@@ -47,4 +46,3 @@ import { defineProps } from 'vue';
 <style scoped>
 
 </style>
->>>>>>> 27828b86281c779781d134af0f568b61f5960360
