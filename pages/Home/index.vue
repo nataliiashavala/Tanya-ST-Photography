@@ -1,10 +1,14 @@
 <template>
-  <td colorOption="option3"
+  <div>
+  <td
+colorOption="option3"
   text="Get In Touch"
-  ></td>
-  <TButton colorOption="option3"
+  />
+  <TButton
+color-option="option3" 
   text="Get In Touch"
-  >куів</TButton>
+  >button</TButton>
+</div>
 </template>
 
 <script setup>
