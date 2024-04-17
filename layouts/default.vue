@@ -5,12 +5,13 @@
     </header>
     <main>
       <nuxt-page />
-      <p class="text-red text-xl"></p>
-      <p class="text-red text-xl">eijskd</p>
     </main>
-
+    <footer>
+      <TFooter />
+    </footer>
   </div>
 </template>
 <script setup>
 import THeader from "~/components/general/THeader.vue";
+import TFooter from "~/components/general/TFooter.vue";
 </script>

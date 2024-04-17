@@ -41,10 +41,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/tailwindcss',
-    // "@pinia/nuxt",
-    // "nuxt-icon",
-    // "nuxt-icons",
-    // "@nuxtjs/i18n",
+   "@nuxt/eslint"
   ],
   tailwindcss: {
     cssPath: "~/assets/scss/tailwind.scss",

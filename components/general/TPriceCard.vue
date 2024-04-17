@@ -3,16 +3,19 @@
     <div :class="['text-center p-6 border border-gray-200', textColorClass]">
       <h2 class="text-2xl font-bold mb-4">{{ title }}</h2>
       <p class="text-left mb-6">{{ text }}</p>
-      <slot></slot> <!-- Slot for the button -->
+      <slot/> <!-- Slot for the button -->
     </div>
   </div>
   <div class="">
-    <img :src="imageSrc" alt="Featured Image" class="" />
+    <img :src="imageSrc" alt="Featured Image" class="" >
   </div>"
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed , defineProps } from 'vue';
+</script>
+
+<script setup>
 
 const props = defineProps({
   title: String,
@@ -29,19 +32,15 @@ const textColorClass = computed(() => ({
 }));
 </script>
 
-<style scoped>
+=======
+  <style scoped>
 /* Add any additional styles if needed */
 </style>
-
-=======
-  <div>
-    
-  </div>
 </template>
 
-<script setup>
-import { defineProps } from 'vue';
-</script>
+<div>
+    
+  </div>
 
 <style scoped>
 

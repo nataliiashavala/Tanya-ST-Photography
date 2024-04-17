@@ -18,6 +18,7 @@ module.exports = {
                 black: "#000",
                 white: "#fff",
                 transparent: "transparent",
+                customGreen: "#545A3F"
             },
             fontSize: {
                 'custom': '4rem', // or '64px'

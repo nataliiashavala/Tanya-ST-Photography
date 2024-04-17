@@ -1,0 +1,8 @@
+{
+  "eslint.experimental.useFlatConfig": true,
+  "prettier.singleQuote": true,
+	"prettier.quoteProps": "preserve",
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": "explicit"
+  // }
+}

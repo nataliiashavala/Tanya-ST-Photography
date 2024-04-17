@@ -9,7 +9,7 @@
   
     <!-- Right Column for Image and Vertical Text -->
     <div class="flex space-x-0">
-      <img :src="imageSrc" alt="Featured Image" class="custom-size" />
+      <img :src="imageSrc" alt="Featured Image" class="custom-size" >
       <div class="">
         <span class="text-custom transform rotate-180 text-center text-black whitespace-nowrap font-explora tracking-widest v-text">{{ VerticalText }}</span>
       </div>

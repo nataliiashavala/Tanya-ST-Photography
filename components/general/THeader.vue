@@ -1,12 +1,13 @@
 <script setup lang="ts">
+import Logo from '~/assets/icons/logo.jpg'
 
 const links = [
   { name: 'home', path: '/' },
   { name: 'wedding', path: '/wedding' },
   { name: 'family', path: '/family' },
   {name: 'personal brand', path: '/personal-brand'},
-  { name: 'about me', path: '/about' },
-  { 
+  { name: 'about me', path: '/about-me' },
+  {
     name: 'more',
     more: [
     { name: 'mini shoot', path: '/mini-shoot' },
@@ -32,32 +33,26 @@ const handleSelectChange = (value: string) => {
 </script>
 
 <template>
-<div>
-  <div class="header">
-      <div class="flex justify-around" >
-        <div class="header__logo">
-          <nuxt-link to="/" class="header__logo-link">
-            <img src="#" alt="Logo" class="header__logo-image" />
+  <div class="header flex justify-around items-center uppercase pt-5">
+          <nuxt-link to="/" class="mb-10">
+            <img :src="Logo" alt="Logo" >
           </nuxt-link>
-        </div>
-        <nav class="flex">
-          <div class="flex" v-for="(item, index) in links" :key="`link-${index}`">
-            <nuxt-link v-if="item.path" :to="item.path" class="mr-24">{{ item.name }}</nuxt-link>
+        <nav class="flex whitespace-nowrap text-xs border-b-2">
+          <div v-for="(item, index) in links" :key="`link-${index}`" class="flex">
+            <nuxt-link v-if="item.path" :to="item.path" class="mr-20">{{ item.name }}</nuxt-link>
           </div>
-       
-        <el-select v-model="value" style="width: 240px" placeholder="More" class="mr-24" @change="handleSelectChange">
+
+        <el-select v-model="value" placeholder="More" class="mr-20 !w-60 !border-none pb-1" @change="handleSelectChange">
           <el-option
             v-for="(option, index) in links.find(link => link.name === 'more')?.more ?? []"
             :key="`more-${index}`"
             :label="option.name"
             :value="option.path"
-          ></el-option>
+          />
         </el-select>
-        <nuxt-link to="/contact">contact me</nuxt-link>
+        <nuxt-link to="/contact-me">contact me</nuxt-link>
       </nav>
-      </div>
     </div>
-  </div>
 </template>
 
 
