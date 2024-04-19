@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import TCard from '~/components/general/TCard.vue';
 import heroImage from '~/assets/img/wedding/hero_img_wedding.jpg';
+import TPriceCard from '~/components/general/TPriceCard.vue';
+import priceCardImage from '~/assets/img/family/hero_card_img.jpg';
+import TButton from '~/components/general/TButton.vue';
+// Define the list of items for the price card
+const priceCardItems = [
+  'Pre-shoot consultation',
+  '2 hour shoot',
+  '300+ high-resolution, edited, digitals photos',
+  'Online Gallery to view'
+];
 </script>
 
 <template>
@@ -12,6 +22,18 @@ The photos that I particularly like on any wedding day are those that capture th
       :image-src="heroImage"
       VerticalText="YOUR WEDDING DAY"
     />
+
+    <TPriceCard
+    titleOne="PRICING"
+    title="FAMILY SHOOT – £250"
+    :items="priceCardItems"
+    :imageSrc="priceCardImage"
+    styleOption="balckOption"
+    />
+ 
+    <TButton colorOption="option1"> 
+      Get In Touch
+      </TButton>
   </div>
 </template>
 

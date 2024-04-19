@@ -7,7 +7,7 @@ const links = [
   { name: 'family', path: '/family' },
   {name: 'personal brand', path: '/personal-brand'},
   { name: 'about me', path: '/about-me' },
-  {
+  { 
     name: 'more',
     more: [
     { name: 'mini shoot', path: '/mini-shoot' },

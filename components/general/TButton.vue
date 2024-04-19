@@ -7,7 +7,7 @@
       buttonStyles.borderColor
     ] "
   >
-    <slot/>
+  <slot/>
   </button>
 </template>
 
@@ -38,3 +38,7 @@ const buttonStyles = computed(() => {
     : {}; // Fallback styles if needed
 });
 </script>
+
+<style>
+/* Ensure Tailwind processes your custom colors */
+</style>

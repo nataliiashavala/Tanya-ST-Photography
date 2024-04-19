@@ -1,6 +1,6 @@
 <template>
   <div>
-  <td
+  <TButton
 colorOption="option3"
   text="Get In Touch"
    />
