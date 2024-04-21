@@ -34,15 +34,18 @@ export default defineNuxtConfig({
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
         // Correct placement for the font link
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Explora&family=Nanum+Myeongjo&display=swap' }
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Explora&family=Nanum+Myeongjo&display=swap",
+        },
       ],
     },
   },
-  modules: [
-    '@nuxtjs/tailwindcss',
-   "@nuxt/eslint"
-  ],
+  modules: ["@nuxtjs/tailwindcss"],
   tailwindcss: {
     cssPath: "~/assets/scss/tailwind.scss",
   },

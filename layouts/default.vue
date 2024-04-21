@@ -1,3 +1,7 @@
+<script setup>
+import THeader from "~/components/general/THeader.vue";
+import TFooter from "~/components/general/TFooter.vue";
+</script>
 <template>
   <div class="default-layout position-relative">
     <header>
@@ -11,7 +15,3 @@
     </footer>
   </div>
 </template>
-<script setup>
-import THeader from "~/components/general/THeader.vue";
-import TFooter from "~/components/general/TFooter.vue";
-</script>

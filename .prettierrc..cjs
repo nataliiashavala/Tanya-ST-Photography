@@ -10,13 +10,13 @@ module.exports = {
   // whether to use single quotes
   singleQuote: true,
   // Print trailing commas when possible on multiple lines. (For example, single-line arrays will never have a trailing comma.) optional"<none|es5|all> ", default none
-  trailingComma: 'es5',
+  trailingComma: "es5",
   // print spaces between parentheses in object literals
   bracketSpacing: true,
   // include parentheses around individual arrow function arguments always: (x) => x \ avoid: x => x
-  arrowParens: 'always',
+  arrowParens: "always",
   // Specify global whitespace sensitivity for HTML files css\strict\ignore
-  htmlWhitespaceSensitivity: 'css',
+  htmlWhitespaceSensitivity: "css",
   // Plugins (TailwindCSS-Prettier)
-  plugins: ['prettier-plugin-tailwindcss'],
+  plugins: ["prettier-plugin-tailwindcss"],
 };
