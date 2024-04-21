@@ -1,10 +1,19 @@
 <script setup>
 import { defineProps } from "vue";
 
-const props = defineProps({
-  title: String,
-  items: Array,
-  imageSrc: String,
+defineProps({
+  title: {
+    type: String,
+    default: "",
+  },
+  items: {
+    type: Array,
+    default: () => [],
+  },
+  imageSrc: {
+    type: String,
+    default: "",
+  },
 });
 </script>
 

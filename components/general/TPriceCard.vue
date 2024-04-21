@@ -1,14 +1,37 @@
 <script setup>
 import { computed, defineProps } from "vue";
 
+// const props = defineProps({
+//   titleOne: String,
+//   title: String,
+//   items: Array,
+//   imageSrc: String,
+//   styleOption: {
+//     type: String,
+//     default: "blackOption",
+//     validator: (value) => ["whiteOption", "blackOption"].includes(value),
+//   },
+// });
 const props = defineProps({
-  titleOne: String,
-  title: String,
-  items: Array,
-  imageSrc: String,
+  titleOne: {
+    type: String,
+    default: "",
+  },
+  title: {
+    type: String,
+    default: "",
+  },
+  items: {
+    type: Array,
+    default: () => [],
+  },
+  imageSrc: {
+    type: String,
+    default: "",
+  },
   styleOption: {
     type: String,
-    default: "blackOption", // Default style option
+    default: "blackOption",
     validator: (value) => ["whiteOption", "blackOption"].includes(value),
   },
 });

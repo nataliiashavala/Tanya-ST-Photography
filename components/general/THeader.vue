@@ -1,7 +1,6 @@
 <script setup>
+import { useRoute } from "vue-router";
 import Logo from "~/assets/icons/logo.jpg";
-
-import { useRoute } from 'vue-router';
 
 const route = useRoute();
 
@@ -11,10 +10,12 @@ const greenBackgroundRoutes = [
   "/elopements",
   "/maternity",
   "/trusted-suppliers",
-  "/contact-me"
+  "/contact-me",
 ];
 
-const hasGreenBackground = computed(() => greenBackgroundRoutes.includes(route.path));
+const hasGreenBackground = computed(() =>
+  greenBackgroundRoutes.includes(route.path),
+);
 
 const links = [
   { name: "home", path: "/" },
@@ -48,7 +49,10 @@ const handleSelectChange = (value) => {
 </script>
 
 <template>
-  <div :class="{ 'bg-customGreen text-white': hasGreenBackground }"  class="header flex justify-around items-center uppercase pt-5">
+  <div
+    :class="{ 'bg-customGreen text-white': hasGreenBackground }"
+    class="header flex justify-around items-center uppercase pt-5"
+  >
     <nuxt-link to="/" class="mb-10">
       <img :src="Logo" alt="Logo" />
     </nuxt-link>
@@ -79,7 +83,7 @@ const handleSelectChange = (value) => {
 </template>
 
 <style scoped lang="scss">
-.select{
+.select {
   .el-select__wrapper {
     box-shadow: none !important;
   }

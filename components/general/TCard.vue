@@ -1,11 +1,23 @@
 <script setup>
 import { defineProps } from "vue";
 
-const props = defineProps({
-  title: String,
-  text: String,
-  imageSrc: String,
-  verticalText: String,
+defineProps({
+  title: {
+    type: String,
+    default: "",
+  },
+  text: {
+    type: String,
+    default: "",
+  },
+  imageSrc: {
+    type: String,
+    default: "",
+  },
+  verticalText: {
+    type: String,
+    default: "",
+  },
 });
 </script>
 
@@ -31,8 +43,7 @@ const props = defineProps({
   </div>
 </template>
 
-<style scoped>
-/* Tailwind CSS utility classes handle most styling. */
+<style scoped lang="scss">
 .custom-size {
   width: 560px;
   height: 831px;
