@@ -1,5 +1,20 @@
-<script setup lang="ts">
+<script setup>
 import Logo from "~/assets/icons/logo.jpg";
+
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const greenBackgroundRoutes = [
+  "/wedding",
+  "/mini-shoot",
+  "/elopements",
+  "/maternity",
+  "/trusted-suppliers",
+  "/contact-me"
+];
+
+const hasGreenBackground = computed(() => greenBackgroundRoutes.includes(route.path));
 
 const links = [
   { name: "home", path: "/" },
@@ -25,7 +40,7 @@ const links = [
 ];
 const value = "";
 
-const handleSelectChange = (value: string) => {
+const handleSelectChange = (value) => {
   if (value) {
     useRouter().push(value);
   }
@@ -33,11 +48,11 @@ const handleSelectChange = (value: string) => {
 </script>
 
 <template>
-  <div class="header flex justify-around items-center uppercase pt-5">
+  <div :class="{ 'bg-customGreen text-white': hasGreenBackground }"  class="header flex justify-around items-center uppercase pt-5">
     <nuxt-link to="/" class="mb-10">
       <img :src="Logo" alt="Logo" />
     </nuxt-link>
-    <nav class="flex whitespace-nowrap text-xs border-b-2">
+    <nav class="flex whitespace-nowrap text-xs border-b">
       <div v-for="(item, index) in links" :key="`link-${index}`" class="flex">
         <nuxt-link v-if="item.path" :to="item.path" class="mr-20">{{
           item.name
@@ -47,7 +62,7 @@ const handleSelectChange = (value: string) => {
       <el-select
         v-model="value"
         placeholder="More"
-        class="mr-20 !w-60 !border-none pb-1"
+        class="mr-20 !w-60 !border-none pb-1 select"
         @change="handleSelectChange"
       >
         <el-option
@@ -62,3 +77,11 @@ const handleSelectChange = (value: string) => {
     </nav>
   </div>
 </template>
+
+<style scoped lang="scss">
+.select{
+  .el-select__wrapper {
+    box-shadow: none !important;
+  }
+}
+</style>
