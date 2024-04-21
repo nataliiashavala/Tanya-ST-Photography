@@ -38,7 +38,3 @@ const buttonStyles = computed(() => {
     <slot />
   </button>
 </template>
-
-<style>
-/* Ensure Tailwind processes your custom colors */
-</style>

@@ -21,13 +21,13 @@ module.exports = {
         customGreen: "#545A3F",
       },
       fontSize: {
-        custom: "4rem", // or '64px'
+        custom: "4rem",
       },
       fontFamily: {
         nanum: ['"Nanum Myeongjo"', "serif"],
         explora: ["Explora", "sans-serif"],
       },
-    }, // Add a comma here
+    },
   },
   plugins: [],
 };
