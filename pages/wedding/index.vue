@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TCard from '~/components/general/TCard.vue';
+import heroImage from '~/assets/img/wedding/hero_img_wedding.jpg';
+</script>
 
 <template>
   <div class="container mx-auto">
