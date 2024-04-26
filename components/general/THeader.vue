@@ -18,7 +18,7 @@ const hasGreenBackground = computed(() =>
 );
 
 const links = [
-  { name: "home", path: "/" },
+  { name: "home", path: "/home" },
   { name: "wedding", path: "/wedding" },
   { name: "family", path: "/family" },
   { name: "personal brand", path: "/personal-brand" },
