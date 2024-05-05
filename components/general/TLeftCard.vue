@@ -19,7 +19,6 @@ defineProps({
 
 <template>
   <div class="flex space-x-5">
-    <!-- Right Column for Image and Vertical Text -->
     <div class="flex space-x-0">
       <img
         :src="imageSrc"
@@ -27,7 +26,6 @@ defineProps({
         class="custom-size w-[35rem] h-[45.8rem]"
       />
     </div>
-    <!-- Left Column for Title and Text -->
     <div class="text-left flex-1 flex flex-col justify-top space-y-10 pt-5">
       <h1 class="text-8xl tracking-widest font-explora">{{ title }}</h1>
       <ul

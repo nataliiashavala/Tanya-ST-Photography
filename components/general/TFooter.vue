@@ -10,7 +10,7 @@ const enterEmail = ref("");
 <template>
   <div class="flex justify-between items-center pt-14">
     <div class="flex bg-customGreen w-full justify-center items-center h-20">
-      <h2 class="text-white text-2xl font-normal font-[NanumMyeongjo] mr-14">
+      <h2 class="text-white text-2xl font-normal font-nanum mr-14">
         Subscribe to our newsletter
       </h2>
       <div class="flex relative h-9 w-1/4">

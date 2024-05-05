@@ -10,6 +10,10 @@ defineProps({
     type: String,
     default: "",
   },
+  textItalic: {
+    type: String,
+    default: "",
+  },
   imageSrc: {
     type: String,
     default: "",
@@ -23,11 +27,10 @@ defineProps({
 
 <template>
   <div class="flex space-x-9">
-    <!-- Left Column for Title and Text -->
-
-    <div class="text-right flex-1 flex flex-col justify-top space-y-4">
+    <div class="text-right flex-1 flex flex-col justify-top space-y-14 my-32">
       <h1 class="text-custom tracking-widest font-nanum">{{ title }}</h1>
       <p class="text-2xl tracking-wide font-nanum">{{ text }}</p>
+      <p class="text-5xl italic tracking-wide font-explora">{{ textItalic }}</p>
     </div>
 
     <!-- Right Column for Image and Vertical Text -->

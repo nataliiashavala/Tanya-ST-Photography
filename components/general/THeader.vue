@@ -1,6 +1,6 @@
 <script setup>
 import { useRoute } from "vue-router";
-import Logo from "~/assets/icons/logo.jpg";
+import Logo from "~/assets/icons/logo.svg";
 
 const route = useRoute();
 
@@ -30,7 +30,7 @@ const links = [
       { name: "solo", path: "/solo" },
       { name: "elopements", path: "/elopements" },
       { name: "couples", path: "/couples" },
-      { name: "buduar", path: "/buduar" },
+      { name: "boudoir", path: "/boudoir" },
       { name: "babies", path: "/babies" },
       { name: "maternity", path: "/maternity" },
       { name: "portfolio", path: "/portfolio" },

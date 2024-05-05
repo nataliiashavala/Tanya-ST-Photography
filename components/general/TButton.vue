@@ -18,9 +18,9 @@ const buttonStyles = computed(() => {
       }
     : props.colorOption === "option2"
       ? {
-          backgroundColor: "bg-[#545A3F]",
-          textColor: "text-white",
-          borderColor: "border border-white",
+          backgroundColor: "bg-[#F5F5F5]",
+          textColor: "text-black",
+          borderColor: "border border-black",
         }
       : {}; // Fallback styles if needed
 });
@@ -29,7 +29,7 @@ const buttonStyles = computed(() => {
 <template>
   <button
     :class="[
-      'w-52 h-14 py-2 px-4 shadow-md',
+      'w-52 h-14 py-2 px-4 shadow-md text-xl',
       buttonStyles.backgroundColor,
       buttonStyles.textColor,
       buttonStyles.borderColor,
