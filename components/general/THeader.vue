@@ -36,6 +36,7 @@ const links = [
       { name: "portfolio", path: "/portfolio" },
       { name: "trusted supliers", path: "/trusted-suppliers" },
       { name: "blog", path: "/blog" },
+      { name: "albums", path: "/albums" },
     ],
   },
 ];

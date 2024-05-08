@@ -18,6 +18,10 @@ defineProps({
     type: String,
     default: "",
   },
+  showButton: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 
@@ -42,6 +46,7 @@ defineProps({
         </h1>
         <p class="font-nanum text-left text-2xl tracking-widest">{{ text }}</p>
         <button
+          v-if="showButton"
           class="bg-customGreen text-white text-small font-nanum w-1/4 h-12 mt-20"
         >
           VIEW ALL PORTFOLIO...

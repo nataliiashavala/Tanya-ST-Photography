@@ -6,6 +6,10 @@ defineProps({
     type: String,
     default: "",
   },
+  addTitle: {
+    type: String,
+    default: "",
+  },
   text: {
     type: String,
     default: "",
@@ -29,6 +33,7 @@ defineProps({
   <div class="flex space-x-9">
     <div class="text-right flex-1 flex flex-col justify-top space-y-14 my-32">
       <h1 class="text-custom tracking-widest font-nanum">{{ title }}</h1>
+      <h1 class="font-nanum text-3xl">{{ addTitle }}</h1>
       <p class="text-2xl tracking-wide font-nanum">{{ text }}</p>
       <p class="text-5xl italic tracking-wide font-explora">{{ textItalic }}</p>
     </div>
