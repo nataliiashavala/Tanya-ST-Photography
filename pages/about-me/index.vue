@@ -26,7 +26,11 @@ import TButton from "~/components/general/TButton.vue";
       :image-src="heroImage"
      />
     <div class="flex justify-center">
-      <TButton color-option="option1">Get In Touch</TButton>
+      <TButton 
+      color-option="option1">
+      Get In Touch
+     </TButton>
+
     </div>
     <div class="font-nanum text-end text-base">
       <h1>INSTAGRAM</h1>

@@ -24,10 +24,10 @@ const leftCardItems = [
 <template>
   <div class="container mx-auto space-y-28">
     <TCard
-      title="I’M HERE TO HELP CAPTURE THE BEST OF YOU"
+      title="I`M HERE TO HELP CAPTURE THE BEST OF YOU"
       text="My mission is to empower you and make you feel good about yourself.
       Whatever your age, background or role in life, I aim to bring out the best of you and capture it on camera. Whether you just want to relax and be yourself or show another facet of your character, I strive to help you feel good about yourself and boost your confidence.
-      It’s your choice and your day: I’m delighted to be a part of it!"
+      It`s your choice and your day: I`m delighted to be a part of it!"
       :image-src="heroImage"
     />
 
@@ -39,7 +39,7 @@ const leftCardItems = [
     <div class="">
       <TPriceCard
         title-one="PRICING"
-        title="SOLO SHOOT – £200"
+        title="SOLO SHOOT - £200"
         :image-src="PriceCardImage"
         :items="priceCardItems"
       />

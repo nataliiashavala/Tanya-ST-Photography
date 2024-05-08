@@ -38,7 +38,7 @@ const priceCardItems = [
 
     <TPriceCard
       title-one="PRICING"
-      title="BUSINESS SHOOT – £250"
+      title="BUSINESS SHOOT - £250"
       :image-src="PriceCardImage"
       :items="priceCardItems"
     />

@@ -40,7 +40,7 @@ const leftCardItems = [
     <div class="">
       <TPriceCard
         title-one="PRICING"
-        title="COUPLES SHOOT – £250"
+        title="£250/ - 1 HOUR"
         :image-src="PriceCardImage"
         :items="priceCardItems"
       />

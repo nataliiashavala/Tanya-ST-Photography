@@ -27,7 +27,7 @@ const leftCardItems = [
     <TCard
       title="COUPLES PHOTOSHOOT SESSIONS"
       text="In the dance of light and shadows, I seek to capture the beautiful intricacies of your love story. Couples photography is more than just taking pictures—it's about pausing the moment when you whisper a joke and she laughs, the gentle way you hold hands, or the shared glance that says everything without a word being spoken. It's the art of freezing those fleeting, ordinary moments that together create your extraordinary love story.
-      As your photographer, I aim to create a relaxed and enjoyable experience that allows your unique chemistry to shine through. Whether it’s your first anniversary, an engagement, or just a day you want to remember forever, I’m here to encapsulate the warmth of your affection in images that will stand the test of time."
+      As your photographer, I aim to create a relaxed and enjoyable experience that allows your unique chemistry to shine through. Whether it`s your first anniversary, an engagement, or just a day you want to remember forever, I`m here to encapsulate the warmth of your affection in images that will stand the test of time."
       :image-src="heroImage"
     />
     <div class="flex flex-col mt-9">
@@ -43,7 +43,7 @@ const leftCardItems = [
     <div class="">
       <TPriceCard
         title-one="PRICING"
-        title="COUPLES SHOOT – £250"
+        title="COUPLES SHOOT - £250"
         :image-src="PriceCardImage"
         :items="priceCardItems"
       />
