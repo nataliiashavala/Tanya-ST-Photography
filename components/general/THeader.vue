@@ -17,6 +17,10 @@ const hasGreenBackground = computed(() =>
   greenBackgroundRoutes.includes(route.path),
 );
 
+const logoStyle = computed(() => ({
+  filter: hasGreenBackground.value ? 'brightness(0) invert(1)' : 'none'
+}));
+
 const links = [
   { name: "home", path: "/home" },
   { name: "wedding", path: "/wedding" },
@@ -47,9 +51,7 @@ const handleSelectChange = (value) => {
   }
 };
 
-const logoStyle = computed(() => ({
-  filter: hasGreenBackground.value ? "brightness(0) invert(1)" : "none",
-}));
+
 </script>
 
 <template>
@@ -58,7 +60,7 @@ const logoStyle = computed(() => ({
     class="header flex justify-around items-end uppercase pt-12 pl-9 font-lato tracking-widest"
   >
     <nuxt-link to="/home" class="mb-1">
-      <img :src="Logo" alt="Logo" />
+      <img :src="Logo" alt="Logo" :style="logoStyle" />
     </nuxt-link>
     <nav class="flex whitespace-nowrap text-xs pb-4 border-b">
       <div v-for="(item, index) in links" :key="`link-${index}`" class="flex">
