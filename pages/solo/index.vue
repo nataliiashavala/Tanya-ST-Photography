@@ -22,7 +22,8 @@ const leftCardItems = [
 </script>
 
 <template>
-  <div class="container mx-auto space-y-28">
+  <div class="flex justify-center px-64 pt-36">
+  <div class="container space-y-28">
     <TCard
       title="I`M HERE TO HELP CAPTURE THE BEST OF YOU"
       text="My mission is to empower you and make you feel good about yourself.
@@ -48,5 +49,6 @@ const leftCardItems = [
         >Get in touch
       </TButton>
     </div>
+  </div>
   </div>
 </template>

@@ -5,10 +5,11 @@ import TButton from "~/components/general/TButton.vue";
 </script>
 
 <template>
-  <div class="container mx-auto">
+  <div class="flex justify-center px-64 pt-36">
+  <div class="container">
     <TCard
       title="HELLO I'M TANYA"
-      text="I'm Ukrainian but I have been based in Aberdeen, Scotland since 2018.
+      textTwo="I'm Ukrainian but I have been based in Aberdeen, Scotland since 2018.
        Taking pictures has been a part of my life for as long as I can remember.
         I bought my first professional camera at 13 years old.
           Back then, l was sofascinated by how photographers could create such beautiful and unique images so I wanted photography to be part of my life since then.
@@ -40,5 +41,6 @@ import TButton from "~/components/general/TButton.vue";
       <h1>PHONE</h1>
       <p>+447444517696</p>
     </div>
+  </div>
   </div>
 </template>

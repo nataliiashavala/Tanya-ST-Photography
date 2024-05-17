@@ -23,34 +23,36 @@ const leftCardItems = [
 </script>
 
 <template>
-  <div class="container mx-auto space-y-28">
-    <TCard
-      title="JUST US: SECRET ESCAPE"
-      addTitle="SENSUAL. INTIMATE. ELLEGANCE"
-      text="Elopements are about the breathtaking intimacy of two hearts becoming one amidst settings that speak volumes. As an elopement photographer, I capture the essence of your union, the unspoken promise in each glance, and the serene simplicity of your perfect day. Your elopement is a sacred narrative, and I am here to narrate it through the silent poetry of images.
-      Elopements are wonderfully personal, and so is my approach. I'll work with you to find that enchanted spot where your spirits soar—be it a tranquil lochside, a rugged cliff edge, or a quiet cityscape—and immortalize the moment with the artistry it deserves. I am passionate about creating a visual chronicle that encapsulates the purity and essence of your journey."
-      :image-src="heroImage"    
+  <div class="flex justify-center px-64 pt-36">
+    <div class="container space-y-28">
+      <TCard
+        title="JUST US: SECRET ESCAPE"
+        addTitle="SENSUAL. INTIMATE. ELLEGANCE"
+        text="Elopements are about the breathtaking intimacy of two hearts becoming one amidst settings that speak volumes. As an elopement photographer, I capture the essence of your union, the unspoken promise in each glance, and the serene simplicity of your perfect day. Your elopement is a sacred narrative, and I am here to narrate it through the silent poetry of images.
+        Elopements are wonderfully personal, and so is my approach. I'll work with you to find that enchanted spot where your spirits soar—be it a tranquil lochside, a rugged cliff edge, or a quiet cityscape—and immortalize the moment with the artistry it deserves. I am passionate about creating a visual chronicle that encapsulates the purity and essence of your journey."
+        :image-src="heroImage"    
+        />
+
+      <TLeftCard
+        :image-src="leftCardImage"
+        title="What I Offer:"
+        :items="leftCardItems"
       />
 
-    <TLeftCard
-      :image-src="leftCardImage"
-      title="What I Offer:"
-      :items="leftCardItems"
-    />
+      <div class="">
+        <TPriceCard
+          title-one="PRICING"
+          title="COUPLES SHOOT - £250"
+          :items="priceCardItems"
+          :image-src="priceCardImage"
+        />
 
-    <div class="">
-      <TPriceCard
-        title-one="PRICING"
-        title="COUPLES SHOOT - £250"
-        :items="priceCardItems"
-        :image-src="priceCardImage"
-      />
-
-      <TButton 
-      class="outline outline-white text-center" 
-      color-option="option1">
-      Get in touch
-      </TButton>
+        <TButton 
+        class="outline outline-white text-center" 
+        color-option="option1">
+        Get in touch
+        </TButton>
+      </div>
     </div>
   </div>
 </template>
