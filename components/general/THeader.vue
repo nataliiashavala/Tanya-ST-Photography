@@ -35,7 +35,6 @@ const links = [
       { name: "maternity", path: "/maternity" },
       { name: "portfolio", path: "/portfolio" },
       { name: "trusted supliers", path: "/trusted-suppliers" },
-      { name: "blog", path: "/blog" },
       { name: "albums", path: "/albums" },
     ],
   },
@@ -52,14 +51,14 @@ const handleSelectChange = (value) => {
 <template>
   <div
     :class="{ 'bg-customGreen text-white': hasGreenBackground }"
-    class="header flex justify-around items-center uppercase pt-5"
+    class="header flex justify-around items-end uppercase pt-12 pl-9 font-lato tracking-widest"
   >
-    <nuxt-link to="/" class="mb-10">
+    <nuxt-link to="/" class="mb-1">
       <img :src="Logo" alt="Logo" />
     </nuxt-link>
-    <nav class="flex whitespace-nowrap text-xs border-b">
+    <nav class="flex whitespace-nowrap text-xs pb-4 border-b">
       <div v-for="(item, index) in links" :key="`link-${index}`" class="flex">
-        <nuxt-link v-if="item.path" :to="item.path" class="mr-20">{{
+        <nuxt-link v-if="item.path" :to="item.path" class="text-xs mr-20 font-lato tracking-widest">{{
           item.name
         }}</nuxt-link>
       </div>
@@ -67,7 +66,7 @@ const handleSelectChange = (value) => {
       <el-select
         v-model="value"
         placeholder="More"
-        class="mr-20 !w-60 !border-none pb-1 select"
+        class="mr-20 !w-44 !border-none text-xs pb-1 select placeholder: text-xs"
         @change="handleSelectChange"
       >
         <el-option
@@ -76,6 +75,7 @@ const handleSelectChange = (value) => {
           :key="`more-${index}`"
           :label="option.name"
           :value="option.path"
+          class="text-xs font-lato uppercase tracking-widest"
         />
       </el-select>
       <nuxt-link to="/contact-me">contact me</nuxt-link>
@@ -87,6 +87,9 @@ const handleSelectChange = (value) => {
 .select {
   .el-select__wrapper {
     box-shadow: none !important;
+    font-family: 'Lato', sans-serif;
+    border-radius: 0%;
   }
 }
 </style>
+  
