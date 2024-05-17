@@ -46,6 +46,10 @@ const handleSelectChange = (value) => {
     useRouter().push(value);
   }
 };
+
+const logoStyle = computed(() => ({
+  filter: hasGreenBackground.value ? "brightness(0) invert(1)" : "none",
+}));
 </script>
 
 <template>
@@ -54,7 +58,7 @@ const handleSelectChange = (value) => {
     class="header flex justify-around items-center uppercase pt-5"
   >
     <nuxt-link to="/" class="mb-10">
-      <img :src="Logo" alt="Logo" />
+      <img :src="Logo" alt="Logo" :style="logoStyle" />
     </nuxt-link>
     <nav class="flex whitespace-nowrap text-xs border-b">
       <div v-for="(item, index) in links" :key="`link-${index}`" class="flex">

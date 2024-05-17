@@ -27,11 +27,7 @@ const leftCardItems = [
       Elopements are wonderfully personal, and so is my approach. I'll work with you to find that enchanted spot where your spirits soar—be it a tranquil lochside, a rugged cliff edge, or a quiet cityscape—and immortalize the moment with the artistry it deserves. I am passionate about creating a visual chronicle that encapsulates the purity and essence of your journey."
     />
 
-    <TLeftCard
-
-      title="What I Offer:"
-      :items="leftCardItems"
-    />
+    <TLeftCard title="What I Offer:" :items="leftCardItems" />
 
     <div class="">
       <TPriceCard
@@ -40,12 +36,9 @@ const leftCardItems = [
         :items="priceCardItems"
       />
 
-      <TButton 
-      class="outline outline-white text-center" 
-      color-option="option1">
-      Get in touch
+      <TButton class="outline outline-white text-center" color-option="option1">
+        Get in touch
       </TButton>
     </div>
   </div>
 </template>
-

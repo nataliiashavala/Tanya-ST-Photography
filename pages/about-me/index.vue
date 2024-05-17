@@ -24,7 +24,7 @@ import TButton from "~/components/general/TButton.vue";
                                Living and shooting among such diversity wasn't just work; it was an eye-opening journey.
                                  Every wedding had its own heartbeat, and I got to be there, camera in hand, soaking it all in. Dubai, you were an experience of a lifetime!."
       :image-src="heroImage"
-     />
+    />
     <div class="flex justify-center">
       <TButton color-option="option1">Get In Touch</TButton>
     </div>
