@@ -87,8 +87,6 @@ const handleSelectChange = (value) => {
 .select {
   .el-select__wrapper {
     box-shadow: none !important;
-    font-family: 'Lato', sans-serif;
-    border-radius: 0%;
   }
 }
 </style>
