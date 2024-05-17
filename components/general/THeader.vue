@@ -53,7 +53,7 @@ const handleSelectChange = (value) => {
     :class="{ 'bg-customGreen text-white': hasGreenBackground }"
     class="header flex justify-around items-end uppercase pt-12 pl-9 font-lato tracking-widest"
   >
-    <nuxt-link to="/" class="mb-1">
+    <nuxt-link to="/home" class="mb-1">
       <img :src="Logo" alt="Logo" />
     </nuxt-link>
     <nav class="flex whitespace-nowrap text-xs pb-4 border-b">
@@ -87,6 +87,18 @@ const handleSelectChange = (value) => {
 .select {
   .el-select__wrapper {
     box-shadow: none !important;
+  }
+  .el-select-dropdown {
+    // Add space between options
+   .el-select-dropdown__item {
+      padding: 10px 20px; // adjust the padding to your liking
+    }
+    // Make the select menu longer
+    max-height: 400px; // adjust the height to your liking
+  }
+ .el-select-dropdown__wrap {
+    // Add white border
+    border: 1px solid #fff;
   }
 }
 </style>
