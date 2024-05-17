@@ -45,5 +45,3 @@ const priceCardItems = [
     </TButton>
   </div>
 </template>
-
-
