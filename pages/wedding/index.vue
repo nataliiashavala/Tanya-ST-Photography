@@ -44,48 +44,55 @@ const leftCardItems = [
 </script>
 
 <template>
-  <div class="container mx-auto space-y-32">
-    <TCard
-      title="I`M HERE TO HELP YOU REMEMBER YOUR BIG DAY"
-      text="You don`t need to look any further. I am here to do everything I can to take the stress out of your big day and to be there for you every step of the way.
-      The photos that I particularly like on any wedding day are those that capture those special, spontaneous moments. A tender glance shared by the couple, a mother`s smile, laughter between guests, a child`s curiosity… I won`t miss any details. It`s these moments that make your day as well as the more formal aspects such as the taking of your vows or the giving of the speeches."
-      :image-src="heroImage"
-      vertical-text="YOUR WEDDING DAY"
-    />
+  <div class="text-white" :style="{ backgroundColor: '#545A3F' }">
+    <div class="flex justify-center px-64 pt-36">
+      <div class="container mx-auto space-y-32" >
+        <TCard
+          title="I`M HERE TO HELP YOU REMEMBER YOUR BIG DAY"
+          text="You don`t need to look any further. I am here to do everything I can to take the stress out of your big day and to be there for you every step of the way.
+          The photos that I particularly like on any wedding day are those that capture those special, spontaneous moments. A tender glance shared by the couple, a mother`s smile, laughter between guests, a child`s curiosity… I won`t miss any details. It`s these moments that make your day as well as the more formal aspects such as the taking of your vows or the giving of the speeches."
+          :image-src="heroImage"
+          vertical-text="YOUR WEDDING DAY"
+        />
 
-    <TRightCard
-      first-title="EMOTIONS THROUGH EVERY PHOTO"
-      second-title="ON THE SHOOT"
-      :image-src="rightImage"
-      showButton="true"
-      text="I am an easy-going photographer whilst never compromising on professionalism and detail and I will ensure you feel comfortable and relaxed working with me. I love bringing out the best in my subjects, capturing real moments and emotions, the formal and informal that both make up your special day. However, l am also happy to take more traditional posed-style photos, depending entirely on your personal needs.
-      I am an adventurous and flexible person, delighted to go wherever my couples bring me. Whether it`s a church, your home or the top of a mountain, it`s your special day and I will follow! On the shoot with me, you will feel relaxed, at ease and will thoroughly enjoy your day, knowing your photos are in the best of hands."  
-    />
+        <TRightCard
+          first-title="EMOTIONS THROUGH EVERY PHOTO"
+          second-title="ON THE SHOOT"
+          :image-src="rightImage"
+          showButton="true"
+          text="I am an easy-going photographer whilst never compromising on professionalism and detail and I will ensure you feel comfortable and relaxed working with me. I love bringing out the best in my subjects, capturing real moments and emotions, the formal and informal that both make up your special day. However, l am also happy to take more traditional posed-style photos, depending entirely on your personal needs.
+          I am an adventurous and flexible person, delighted to go wherever my couples bring me. Whether it`s a church, your home or the top of a mountain, it`s your special day and I will follow! On the shoot with me, you will feel relaxed, at ease and will thoroughly enjoy your day, knowing your photos are in the best of hands."  
+        />
 
-    <TPriceCard
-      title-one="PRICING"
-      title="£250/ 1 HOUR"
-      :image-src="onePriceCardImage"
-      :items="priceOneCardItems"
-    />
+        <TPriceCard 
+          title-one="PRICING"
+          title="£250/ 1 HOUR"
+          :image-src="onePriceCardImage"
+          :items="priceOneCardItems"
+          styleOption= "whiteOption"
+        />
 
-    <TPriceCard
-      title="£1,200"
-      :image-src="twoPriceCardImage"
-      :items="priceTwoCardItems"
-      reverse-columns
-    />
-    <div class="">
-      <TPriceCard
-        title="£1,650"
-        :image-src="threePriceCardImage"
-        :items="priceThreeCardItems"
-      />
+        <TPriceCard
+          title="£1,200"
+          :image-src="twoPriceCardImage"
+          :items="priceTwoCardItems"
+          reverse-columns
+          styleOption= "whiteOption"
+        />
+        <div class="">
+          <TPriceCard
+            title="£1,650"
+            :image-src="threePriceCardImage"
+            :items="priceThreeCardItems"
+            styleOption= "whiteOption"
+          />
 
-      <TButton class="outline outline-white text-center" color-option="option1"
-        >Get in touch
-      </TButton>
-    </div>
+          <TButton class="outline outline-white text-center" color-option="option1"
+            >Get in touch
+          </TButton>
+        </div>
+      </div>
+  </div>
   </div>
 </template>
 
