@@ -35,7 +35,7 @@ const links = [
       { name: "maternity", path: "/maternity" },
       { name: "portfolio", path: "/portfolio" },
       { name: "trusted supliers", path: "/trusted-suppliers" },
-      { name: "blog", path: "/blog" },
+      { name: "albums", path: "/albums" },
     ],
   },
 ];
@@ -55,14 +55,14 @@ const logoStyle = computed(() => ({
 <template>
   <div
     :class="{ 'bg-customGreen text-white': hasGreenBackground }"
-    class="header flex justify-around items-center uppercase pt-5"
+    class="header flex justify-around items-end uppercase pt-12 pl-9 font-lato tracking-widest"
   >
-    <nuxt-link to="/" class="mb-10">
-      <img :src="Logo" alt="Logo" :style="logoStyle" />
+    <nuxt-link to="/home" class="mb-1">
+      <img :src="Logo" alt="Logo" />
     </nuxt-link>
-    <nav class="flex whitespace-nowrap text-xs border-b">
+    <nav class="flex whitespace-nowrap text-xs pb-4 border-b">
       <div v-for="(item, index) in links" :key="`link-${index}`" class="flex">
-        <nuxt-link v-if="item.path" :to="item.path" class="mr-20">{{
+        <nuxt-link v-if="item.path" :to="item.path" class="text-xs mr-20 font-lato tracking-widest">{{
           item.name
         }}</nuxt-link>
       </div>
@@ -70,7 +70,7 @@ const logoStyle = computed(() => ({
       <el-select
         v-model="value"
         placeholder="More"
-        class="mr-20 !w-60 !border-none pb-1 select"
+        class="mr-20 !w-44 !border-none text-xs pb-1 select placeholder: text-xs"
         @change="handleSelectChange"
       >
         <el-option
@@ -79,6 +79,7 @@ const logoStyle = computed(() => ({
           :key="`more-${index}`"
           :label="option.name"
           :value="option.path"
+          class="text-xs font-lato uppercase tracking-widest"
         />
       </el-select>
       <nuxt-link to="/contact-me">contact me</nuxt-link>
@@ -91,5 +92,18 @@ const logoStyle = computed(() => ({
   .el-select__wrapper {
     box-shadow: none !important;
   }
+  .el-select-dropdown {
+    // Add space between options
+   .el-select-dropdown__item {
+      padding: 10px 20px; // adjust the padding to your liking
+    }
+    // Make the select menu longer
+    max-height: 400px; // adjust the height to your liking
+  }
+ .el-select-dropdown__wrap {
+    // Add white border
+    border: 1px solid #fff;
+  }
 }
 </style>
+  

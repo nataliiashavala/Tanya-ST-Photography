@@ -16,32 +16,34 @@ const priceCardItems = [
 </script>
 
 <template>
-  <div class="container mx-auto">
-    <TCard
-      title="I`M HERE TO GIVE YOU UNFORGETTABLE MEMORIES"
-      text="Family shoots are important moments for everyone. I try to make it memorable and easy-going for my clients. I love to capture pure emotions and the special bond within each family. I love to take photos of people moving and interacting with each other. My shoots are full of emotion, action, fun and smiles.
-        I can help with clothes and styling, giving advice regarding colours, hair and overall look. I can also recommend an experienced make-up artist to help you achieve that perfect look on the day."
-      :image-src="heroImage"
-      vertical-text="FAMILY MOMENTS"
-    />
+  <div class="flex justify-center px-64 pt-36">
+    <div class="container">
+      <TCard
+        title="I`M HERE TO GIVE YOU UNFORGETTABLE MEMORIES"
+        text="Family shoots are important moments for everyone. I try to make it memorable and easy-going for my clients. I love to capture pure emotions and the special bond within each family. I love to take photos of people moving and interacting with each other. My shoots are full of emotion, action, fun and smiles.
+          I can help with clothes and styling, giving advice regarding colours, hair and overall look. I can also recommend an experienced make-up artist to help you achieve that perfect look on the day."
+        :image-src="heroImage"
+        vertical-text="FAMILY MOMENTS"
+      />
 
-    <TRightCard
-      first-title="EMOTIONS THROUGH EVERY PHOTO"
-      second-title="ON THE SHOOT"
-      :image-src="rightImage"
-      text="Whether It`s capturing the unique bond between a mother and a daughter: the laughter, the joy, those unexpected and natural moments between them, or a dog and its devoted owner taking a stroll through the park, or the love shared between a mother and father and their precious new baby, I love to show these moments through photos.
-      My preferred approach to any type of family shoot is relaxed, simple and unscripted: joining a family exploring the great outdoors, enjoying the simplicity of their daily routine… I love story-telling through photos. Memories that last a lifetime."
-    />
+      <TRightCard
+        first-title="EMOTIONS THROUGH EVERY PHOTO"
+        second-title="ON THE SHOOT"
+        :image-src="rightImage"
+        text="Whether It`s capturing the unique bond between a mother and a daughter: the laughter, the joy, those unexpected and natural moments between them, or a dog and its devoted owner taking a stroll through the park, or the love shared between a mother and father and their precious new baby, I love to show these moments through photos.
+        My preferred approach to any type of family shoot is relaxed, simple and unscripted: joining a family exploring the great outdoors, enjoying the simplicity of their daily routine… I love story-telling through photos. Memories that last a lifetime."
+      />
 
-    <TPriceCard
-      title-one="PRICING"
-      title="FAMILY SHOOT - £250"
-      :image-src="PriceCardImage"
-      :items="priceCardItems"
-    />
+      <TPriceCard
+        title-one="PRICING"
+        title="FAMILY SHOOT - £250"
+        :image-src="PriceCardImage"
+        :items="priceCardItems"
+      />
 
-    <TButton class="outline outline-white text-center" color-option="option1"
-      >Get in touch
-    </TButton>
+      <TButton class="outline outline-white text-center" color-option="option1"
+        >Get in touch
+      </TButton>
+    </div>
   </div>
 </template>

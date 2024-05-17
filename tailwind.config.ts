@@ -26,6 +26,7 @@ module.exports = {
       fontFamily: {
         nanum: ['"Nanum Myeongjo"', "serif"],
         explora: ["Explora", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
     },
   },

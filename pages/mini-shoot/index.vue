@@ -23,30 +23,35 @@ const priceCardItems = [
 </script>
 
 <template>
-  <div class="container mx-auto space-y-28">
-    <TCard
-      title="MINI SHOOT SESSIONS"
-      text="Immerse yourself in the artistry of professional photography with my Mini Shoot Sessions—crafted for those times when life’s pace quickens, but the desire for quality remains. In just 30 minutes, I’ll help you capture the essence of your most cherished moments. These sessions are perfect for anyone seeking a quick taste of bespoke photography, ideal for busy schedules or spontaneous opportunities to create lasting memories."
-      text-italic="Book Your Mini Shoot today, and let’s craft the visual story of your life’s most spontaneous and beautiful moments."
-      :image-src="heroImage"
-    />
-
-    <TLeftCard
-      :image-src="leftCard"
-      title="What I Offer:"
-      :items="leftCardItems"
-    />
-    <div class="">
-      <TPriceCard
-        title-one="PRICING"
-        title="BUSINESS SHOOT – £250"
-        :image-src="PriceCardImage"
-        :items="priceCardItems"
+  <div class="text-white" :style="{ backgroundColor: '#545A3F' }">
+    <div class="flex justify-center px-64 pt-36">
+    <div class="container space-y-28">
+      <TCard
+        title="MINI SHOOT SESSIONS"
+        text="Immerse yourself in the artistry of professional photography with my Mini Shoot Sessions—crafted for those times when life`s pace quickens, but the desire for quality remains. In just 30 minutes, I`ll help you capture the essence of your most cherished moments. These sessions are perfect for anyone seeking a quick taste of bespoke photography, ideal for busy schedules or spontaneous opportunities to create lasting memories."
+        text-italic="Book Your Mini Shoot today, and let`s craft the visual story of your life`s most spontaneous and beautiful moments."
+        :image-src="heroImage"
       />
-      <TButton class="text-center outline outline-white" color-option="option1"
-        >Get in touch
-      </TButton>
+
+      <TLeftCard
+        :image-src="leftCard"
+        title="What I Offer:"
+        :items="leftCardItems"
+      />
+      <div class="">
+        <TPriceCard
+          title-one="PRICING"
+          title="BUSINESS SHOOT - £250"
+          :image-src="PriceCardImage"
+          :items="priceCardItems"
+          styleOption= "whiteOption"
+        />
+        <TButton class="text-center outline outline-white" color-option="option1"
+          >Get in touch
+        </TButton>
+      </div>
     </div>
+  </div>
   </div>
 </template>
 

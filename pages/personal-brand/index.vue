@@ -22,6 +22,7 @@ const priceCardItems = [
 </script>
 
 <template>
+  <div class="flex justify-center px-64 pt-36">
   <div class="container mx-auto">
     <TCard
       title="CAPTURE YOUR PROFESSIONAL BEST"
@@ -38,12 +39,13 @@ const priceCardItems = [
 
     <TPriceCard
       title-one="PRICING"
-      title="BUSINESS SHOOT – £250"
+      title="BUSINESS SHOOT - £250"
       :image-src="PriceCardImage"
       :items="priceCardItems"
     />
 
     <TButton class="text-center" color-option="option2">Get in touch </TButton>
+  </div>
   </div>
 </template>
 
