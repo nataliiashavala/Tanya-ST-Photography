@@ -5,7 +5,7 @@ import Logo from "~/assets/icons/logo.svg";
 const route = useRoute();
 
 const greenBackgroundRoutes = [
-  "/wedding",
+  "/wedding_temp",
   "/mini-shoot",
   "/elopements",
   "/maternity",
@@ -22,8 +22,8 @@ const logoStyle = computed(() => ({
 }));
 
 const links = [
-  { name: "home", path: "/home" },
-  { name: "wedding", path: "/wedding" },
+  { name: "home", path: "/home_temp" },
+  { name: "wedding", path: "/wedding_temp" },
   { name: "family", path: "/family" },
   { name: "personal brand", path: "/personal-brand" },
   { name: "about me", path: "/about-me" },
@@ -31,15 +31,15 @@ const links = [
     name: "more",
     more: [
       { name: "mini shoot", path: "/mini-shoot" },
-      { name: "solo", path: "/solo" },
+      { name: "solo", path: "/solo_temp" },
       { name: "elopements", path: "/elopements" },
-      { name: "couples", path: "/couples" },
+      { name: "couples", path: "/couples_temp" },
       { name: "boudoir", path: "/boudoir" },
-      { name: "babies", path: "/babies" },
-      { name: "maternity", path: "/maternity" },
+      { name: "babies", path: "/babies_temp" },
+      { name: "maternity", path: "/maternity_temp" },
       { name: "portfolio", path: "/portfolio" },
       { name: "trusted supliers", path: "/trusted-suppliers" },
-      { name: "albums", path: "/albums" },
+      { name: "albums", path: "/albums_temp" },
     ],
   },
 ];

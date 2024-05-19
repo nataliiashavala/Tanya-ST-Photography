@@ -23,15 +23,15 @@ const leftCardItems = [
 </script>
 
 <template>
-  <div class="flex justify-center px-64 pt-36">
-    <div class="container space-y-28">
+  <div class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+    <div class="container space-y-8 lg:space-y-28">
       <TCard
         title="COUPLES PHOTOSHOOT SESSIONS"
         text="In the dance of light and shadows, I seek to capture the beautiful intricacies of your love story. Couples photography is more than just taking pictures—it's about pausing the moment when you whisper a joke and she laughs, the gentle way you hold hands, or the shared glance that says everything without a word being spoken. It's the art of freezing those fleeting, ordinary moments that together create your extraordinary love story.
         As your photographer, I aim to create a relaxed and enjoyable experience that allows your unique chemistry to shine through. Whether it`s your first anniversary, an engagement, or just a day you want to remember forever, I`m here to encapsulate the warmth of your affection in images that will stand the test of time."
         :image-src="heroImage"
       />
-      <div class="flex flex-col mt-9">
+      <div class="hidden md:block flex flex-col mt-9">
         <h1 class="text-6xl font-nanum text-center mb-24 w-full">
           CAPTURING YOUR LOVE STORY
         </h1>
@@ -49,9 +49,11 @@ const leftCardItems = [
           :items="priceCardItems"
         />
 
-        <TButton class="outline outline-white text-center" color-option="option1"
-          >Get in touch
-        </TButton>
+        <div class="flex justify-center my-10 lg:my-0">
+          <TButton class="outline outline-white text-center" color-option="option1">
+            Get in touch
+          </TButton>
+        </div>
       </div>
     </div>
   </div>

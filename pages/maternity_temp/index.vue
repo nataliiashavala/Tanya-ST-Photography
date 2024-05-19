@@ -17,12 +17,12 @@ const priceCardItems = [
 
 <template>
   <div class="text-white" :style="{ backgroundColor: '#545A3F' }">
-    <div class="flex justify-center px-64 pt-36">
-      <div class="container space-y-32">
+    <div class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+      <div class="container space-y-8 lg:space-y-28">
         <TCard
           title="MATERNITY"
           addTitle="CARING. LOVING. CALM"
-          text="Embrace the beauty of your journey into motherhood with my Maternity Photoshoot Sessions. As you stand at the threshold of a new chapter, these sessions are crafted to honor the incredible transformation you are experiencing. In the tranquility of your chosen setting, we will collaborate to create graceful, tender portraits that capture the anticipation and love you hold for your unborn child. This is a time of wonder and change, and my maternity photoshoots are designed to reflect the strength and elegance of your pregnancy. With gentle direction and artistic vision, I'll capture the intimate bond between you and your baby-to-be."
+          text="Embrace the beauty of your journey into motherhood with my Maternity Photoshoot Sessions. As you stand at the threshold of a new chapter, these sessions are crafted to honor the incredible transformation you are experiencing. In the tranquility of your chosen setting, we will collaborate to create graceful, tender portraits that capture the anticipation and love you hold for your unborn child. This is a time of wonder and change, and my maternity photoshoots are designed to reflect the strength and elegance of your pregnancy. I'll capture the intimate bond between you and your baby-to-be."
           :image-src="heroImage"
         />
 
@@ -42,11 +42,11 @@ const priceCardItems = [
             :items="priceCardItems"
             styleOption= "whiteOption"
           />
-          <TButton 
-          class="outline outline-white text-center" 
-          color-option="option1">
-          Get in touch
+          <div class="flex justify-center my-10 lg:my-0">
+          <TButton class="outline outline-white text-center" color-option="option1">
+            Get in touch
           </TButton>
+        </div>
         </div>
       </div>
      </div>

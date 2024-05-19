@@ -24,8 +24,8 @@ const leftCardItems = [
 
 <template>
   <div class="text-white" :style="{ backgroundColor: '#545A3F' }">
-    <div class="flex justify-center px-64 pt-36">
-      <div class="container space-y-28">
+    <div class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+      <div class="container space-y-8 lg:space-y-28">
         <TCard
           title="JUST US: SECRET ESCAPE"
           text="Elopements are about the breathtaking intimacy of two hearts becoming one amidst settings that speak volumes. As an elopement photographer, I capture the essence of your union, the unspoken promise in each glance, and the serene simplicity of your perfect day. Your elopement is a sacred narrative, and I am here to narrate it through the silent poetry of images.
@@ -47,10 +47,11 @@ const leftCardItems = [
             :items="priceCardItems"
             styleOption= "whiteOption"
           />
-
-          <TButton class="outline outline-white text-center" color-option="option1"
-            >Get in touch
-          </TButton>
+          <div class="flex justify-center my-10 lg:my-0">
+            <TButton class="outline outline-white text-center" color-option="option1"
+              >Get in touch
+            </TButton>
+          </div>
         </div>
       </div>
   </div>

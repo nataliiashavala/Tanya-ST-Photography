@@ -8,25 +8,25 @@ import SocialMediaIcons from "~/components/general/SocialMediaIcons.vue";
 
 <template>
   <section class="bg-cover bg-center" :style="{ backgroundImage: `url(${heroImage})` }">
-      <div class="px-4 text-center py-56 lg:py-56 uppercase font-nanum">
-          <h1 class="mb-4 text-4xl text-white md:text-5xl lg:text-6xl">contact me</h1>
-          <p class="mb-8 text-lg text-white lg:text-xl sm:px-16 lg:px-48">precious memories forever</p>
+      <div class="px-4 text-center py-20 lg:py-56 uppercase font-nanum">
+          <h1 class="mb-4 text-3xl lg:text-4xl text-white md:text-5xl lg:text-6xl">contact me</h1>
+          <p class="mb-8 text-small text-white lg:text-xl sm:px-16 lg:px-48">precious memories forever</p>
       </div>
   </section>
-  <div class="flex justify-center px-64" :style="{ backgroundColor: '#545A3F' }">
-  <section class="container pt-36 pb-20">
+  <div class="flex justify-center" :style="{ backgroundColor: '#545A3F' }">
+  <section class="container px-6 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
     <!-- Left Column-->
-    <div class="flex flex-row items-start space-x-20">
-      <div class="w-1/2 ">
-        <div class="bg-white p-12 outline outline-black">
-          <div class="flex flex-col justify-center text-center items-center space-y-12">
-            <h1 class="uppercase text-2xl">
+    <div class="flex flex-col lg:flex-row items-start space-x-0 lg:space-x-20 mt-20 lg:mt-0">
+      <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
+        <div class="bg-white p-4 lg:p-12 outline outline-black">
+          <div class="flex flex-col justify-center text-center items-center space-y-6 lg:space-y-12">
+            <h1 class="uppercase text-xl lg:text-2xl">
               we are here to help you to remember the best days
             </h1>
-            <p class="text-base">
+            <p class="text-small lg:text-base">
             I hope you have enjoyed browsing my website!  If you are interested in any of my services, please don`t hesitate to contact me directly using the details provided or by completing the online form below.
             </p>
-            <div class="flex flex-col justify-center items-center space-y-7">
+            <div class="flex flex-col justify-center items-center space-y-3 lg:space-y-7">
               <p class="uppercase">
             contact me
             </p>
@@ -40,7 +40,7 @@ import SocialMediaIcons from "~/components/general/SocialMediaIcons.vue";
       </div> 
       
           <!-- Contact Form-->
-          <div class="w-2/3">
+          <div class="w-full lg:w-2/3">
             <form action="#" method="POST" class="">
               <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div class="sm:col-span-2">
@@ -115,8 +115,8 @@ import SocialMediaIcons from "~/components/general/SocialMediaIcons.vue";
                 </div>
               </div>
               </div>
-              <div class="mt-10 flex justify-center">
-                <button type="submit" class="block bg-[#545A3F] outline outline-white uppercase px-8 py-2.5 text-center text-base  text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">submit</button>
+              <div class="my-10 flex justify-center">
+                <button type="submit" class="block bg-[#545A3F] outline outline-white uppercase px-8 py-2.5 text-center text-base  text-white shadow-sm ">submit</button>
               </div>
             </form>
           </div>

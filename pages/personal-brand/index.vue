@@ -22,30 +22,32 @@ const priceCardItems = [
 </script>
 
 <template>
-  <div class="flex justify-center px-64 pt-36">
-  <div class="container mx-auto">
-    <TCard
-      title="CAPTURE YOUR PROFESSIONAL BEST"
-      text="In the fast-paced digital landscape, a standout image is not just a luxury—it's essential for any business. Whether you're sprucing up your salon, giving your boutique a fresh face, or showcasing the finesse of your beauty therapy services, a tailored business photoshoot is key to making an impact.
-      With an artistic flair and a contemporary style, my photography brings out the vibrancy and charm of your business. I capture the essence of your brand, from the meticulous layout of your shop to the inviting atmosphere of your salon, ensuring every shot reflects the quality and character of your services. For businesses of all scales, from intimate local shops to bustling beauty hubs, I create visuals that resonate with your clientele and accentuate your market presence."
-      :image-src="heroImage"
-    />
+  <div class="flex flex-col justify-center px-6 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+    <div class="container space-y-8 lg:space-y-28">
+      <TCard
+        title="CAPTURE YOUR PROFESSIONAL BEST"
+        text="In the fast-paced digital landscape, a standout image is not just a luxury—it's essential for any business. Whether you're sprucing up your salon, giving your boutique a fresh face, or showcasing the finesse of your beauty therapy services, a tailored business photoshoot is key to making an impact.
+        With an artistic flair and a contemporary style, my photography brings out the vibrancy and charm of your business. I capture the essence of your brand, from the meticulous layout of your shop to the inviting atmosphere of your salon, ensuring every shot reflects the quality and character of your services. For businesses of all scales, from intimate local shops to bustling beauty hubs, I create visuals that resonate with your clientele and accentuate your market presence."
+        :image-src="heroImage"
+      />
 
-    <TLeftCard
-      :image-src="leftCard"
-      title="What I Offer:"
-      :items="leftCardItems"
-    />
-
-    <TPriceCard
-      title-one="PRICING"
-      title="BUSINESS SHOOT - £250"
-      :image-src="PriceCardImage"
-      :items="priceCardItems"
-    />
-
-    <TButton class="text-center" color-option="option2">Get in touch </TButton>
-  </div>
+      <TLeftCard
+        :image-src="leftCard"
+        title="What I Offer:"
+        :items="leftCardItems"
+      />
+      <div class="space-y-4 lg:space-y-8">
+        <TPriceCard
+          title-one="PRICING"
+          title="BUSINESS SHOOT - £250"
+          :image-src="PriceCardImage"
+          :items="priceCardItems"
+        />
+        <div class="flex justify-center">
+          <TButton class="text-center" color-option="option2">Get in touch </TButton>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
