@@ -22,33 +22,34 @@ const leftCardItems = [
 </script>
 
 <template>
-  <div class="flex justify-center px-64 pt-36">
-  <div class="container space-y-28">
-    <TCard
-      title="I`M HERE TO HELP CAPTURE THE BEST OF YOU"
-      text="My mission is to empower you and make you feel good about yourself.
-      Whatever your age, background or role in life, I aim to bring out the best of you and capture it on camera. Whether you just want to relax and be yourself or show another facet of your character, I strive to help you feel good about yourself and boost your confidence.
-      It`s your choice and your day: I`m delighted to be a part of it!"
-      :image-src="heroImage"
-    />
-
-    <TLeftCard
-      :image-src="leftImage"
-      title="What I Offer:"
-      :items="leftCardItems"
-    />
-    <div class="">
-      <TPriceCard
-        title-one="PRICING"
-        title="SOLO SHOOT - £200"
-        :image-src="PriceCardImage"
-        :items="priceCardItems"
+  <div class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+    <div class="container space-y-8 lg:space-y-28">
+      <TCard
+        title="I`M HERE TO HELP CAPTURE THE BEST OF YOU"
+        text="My mission is to empower you and make you feel good about yourself.
+        Whatever your age, background or role in life, I aim to bring out the best of you and capture it on camera. Whether you just want to relax and be yourself or show another facet of your character, I strive to help you feel good about yourself and boost your confidence.
+        It`s your choice and your day: I`m delighted to be a part of it!"
+        :image-src="heroImage"
       />
 
-      <TButton class="outline outline-white text-center" color-option="option1"
-        >Get in touch
-      </TButton>
+      <TLeftCard
+        :image-src="leftImage"
+        title="What I Offer:"
+        :items="leftCardItems"
+      />
+      <div class="">
+        <TPriceCard
+          title-one="PRICING"
+          title="SOLO SHOOT - £200"
+          :image-src="PriceCardImage"
+          :items="priceCardItems"
+        />
+        <div class="flex justify-center my-10 lg:my-0">
+          <TButton class="outline outline-white text-center" color-option="option1"
+            >Get in touch
+          </TButton>
+        </div>
+      </div>
     </div>
-  </div>
   </div>
 </template>

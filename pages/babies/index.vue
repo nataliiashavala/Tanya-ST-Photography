@@ -1,11 +1,11 @@
 <script setup>
 import TCard from "~/components/general/TCard.vue";
-import heroImage from "~/assets/img/maternity/hero_card_img.jpg";
+import heroImage from "~/assets/img/babies/hero_card_img.jpg";
 import TRightCard from "~/components/general/TRightCard.vue";
 import TPriceCard from "~/components/general/TPriceCard.vue";
-import PriceCardImage from "~/assets/img/maternity/price_card.jpg";
+import PriceCardImage from "~/assets/img/babies/price_card.jpg";
 import TButton from "~/components/general/TButton.vue";
-import rightCardImage from "~/assets/img/maternity/right_card_img.jpg";
+import rightCardImage from "~/assets/img/babies/right_card_img.jpg";
 
 const priceCardItems = [
   "Pre-shoot consultation",
@@ -16,8 +16,8 @@ const priceCardItems = [
 </script>
 
 <template>
-  <div class="flex justify-center px-64 pt-36">
-    <div class="container space-y-32">
+  <div class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+    <div class="container space-y-8 lg:space-y-28">
       <TCard
         title="Tiny Smiles: Heartwarming Moments"
         text="Witness the delicate yawns, tiny toes, and sleepy smiles with my Baby Photoshoot Sessions. Designed to capture the fleeting moments of infancy, these sessions are a celebration of new life and the love that surrounds it. In the comfort and warmth of a serene environment, I create timeless portraits that speak to the innocence and enchanting simplicity of your little one.
@@ -39,11 +39,11 @@ const priceCardItems = [
           :image-src="PriceCardImage"
           :items="priceCardItems"
         />
-        <TButton 
-        class="outline outline-white text-center" 
-        color-option="option1">
-        Get in touch
-        </TButton>
+        <div class="flex justify-center my-10 lg:my-0">
+          <TButton class="outline outline-white text-center" color-option="option1">
+            Get in touch
+          </TButton>
+        </div>
       </div>
     </div>
   </div>

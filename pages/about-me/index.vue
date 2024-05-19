@@ -5,8 +5,8 @@ import TButton from "~/components/general/TButton.vue";
 </script>
 
 <template>
-  <div class="flex justify-center px-64 pt-36">
-  <div class="container">
+  <div class="flex flex-col justify-center px-6 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+  <div class="container space-y-2 lg:space-y-28">
     <TCard
       title="HELLO I'M TANYA"
       textTwo="I'm Ukrainian but I have been based in Aberdeen, Scotland since 2018.
@@ -26,20 +26,21 @@ import TButton from "~/components/general/TButton.vue";
                                  Every wedding had its own heartbeat, and I got to be there, camera in hand, soaking it all in. Dubai, you were an experience of a lifetime!."
       :image-src="heroImage"
      />
-    <div class="flex justify-center">
-      <TButton 
+    <div class="flex flex-col lg:flex-row  space-y-6 lg:space-y-0">
+      <div class="flex justify-center items-center">
+      <TButton
       color-option="option1">
       Get In Touch
      </TButton>
-
     </div>
-    <div class="font-nanum text-end text-base">
-      <h1>INSTAGRAM</h1>
-      <p>@tanyast</p>
-      <h1 class="font-bold">EMAIL</h1>
-      <p>tanyastasyk@gmail.com</p>
-      <h1>PHONE</h1>
-      <p>+447444517696</p>
+      <div class="font-nanum text-start text-base ml-0 lg:ml-52">
+        <h1>INSTAGRAM</h1>
+        <p>@tanyast</p>
+        <h1 class="font-bold">EMAIL</h1>
+        <p>tanyastasyk@gmail.com</p>
+        <h1>PHONE</h1>
+        <p>+447444517696</p>
+      </div>
     </div>
   </div>
   </div>

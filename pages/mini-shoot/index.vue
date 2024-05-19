@@ -24,8 +24,8 @@ const priceCardItems = [
 
 <template>
   <div class="text-white" :style="{ backgroundColor: '#545A3F' }">
-    <div class="flex justify-center px-64 pt-36">
-    <div class="container space-y-28">
+    <div class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+    <div class="container space-y-8 lg:space-y-32">
       <TCard
         title="MINI SHOOT SESSIONS"
         text="Immerse yourself in the artistry of professional photography with my Mini Shoot Sessions—crafted for those times when life`s pace quickens, but the desire for quality remains. In just 30 minutes, I`ll help you capture the essence of your most cherished moments. These sessions are perfect for anyone seeking a quick taste of bespoke photography, ideal for busy schedules or spontaneous opportunities to create lasting memories."
@@ -46,9 +46,11 @@ const priceCardItems = [
           :items="priceCardItems"
           styleOption= "whiteOption"
         />
-        <TButton class="text-center outline outline-white" color-option="option1"
-          >Get in touch
-        </TButton>
+        <div class="flex justify-center my-10 lg:my-0">
+          <TButton class="outline outline-white text-center" color-option="option1"
+            >Get in touch
+          </TButton>
+        </div>
       </div>
     </div>
   </div>

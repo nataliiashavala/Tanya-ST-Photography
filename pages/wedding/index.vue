@@ -45,8 +45,8 @@ const leftCardItems = [
 
 <template>
   <div class="text-white" :style="{ backgroundColor: '#545A3F' }">
-    <div class="flex justify-center px-64 pt-36">
-      <div class="container mx-auto space-y-32" >
+    <div class="flex justify-center px-6 pt-12 sm:px-8 sm:pt-16 md:px-10 lg:px-64 lg:pt-36">
+      <div class="container space-y-8 lg:space-y-32">
         <TCard
           title="I`M HERE TO HELP YOU REMEMBER YOUR BIG DAY"
           text="You don`t need to look any further. I am here to do everything I can to take the stress out of your big day and to be there for you every step of the way.
@@ -66,7 +66,7 @@ const leftCardItems = [
 
         <TPriceCard 
           title-one="PRICING"
-          title="£250/ 1 HOUR"
+          title="£250 / 1 HOUR"
           :image-src="onePriceCardImage"
           :items="priceOneCardItems"
           styleOption= "whiteOption"
@@ -86,10 +86,11 @@ const leftCardItems = [
             :items="priceThreeCardItems"
             styleOption= "whiteOption"
           />
-
+          <div class="flex justify-center">
           <TButton class="outline outline-white text-center" color-option="option1"
             >Get in touch
           </TButton>
+          </div>
         </div>
       </div>
   </div>

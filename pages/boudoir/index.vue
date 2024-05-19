@@ -23,8 +23,8 @@ const leftCardItems = [
 </script>
 
 <template>
-  <div class="flex justify-center px-64 pt-36">
-    <div class="container space-y-28">
+  <div class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+    <div class="container space-y-8 lg:space-y-28">
       <TCard
         title="JUST US: SECRET ESCAPE"
         addTitle="SENSUAL. INTIMATE. ELLEGANCE"
@@ -47,11 +47,11 @@ const leftCardItems = [
           :image-src="priceCardImage"
         />
 
-        <TButton 
-        class="outline outline-white text-center" 
-        color-option="option1">
-        Get in touch
-        </TButton>
+        <div class="flex justify-center my-10 lg:my-0">
+          <TButton class="outline outline-white text-center" color-option="option1">
+            Get in touch
+          </TButton>
+        </div>
       </div>
     </div>
   </div>
