@@ -6,6 +6,7 @@ import rightImage from "~/assets/img/family/right_card.jpg";
 import TPriceCard from "~/components/general/TPriceCard.vue";
 import PriceCardImage from "~/assets/img/family/price_card.jpg";
 import TButton from "~/components/general/TButton.vue";
+import TPortfolio from '~/components/general/TPortfolio.vue';
 
 const priceCardItems = [
   "Pre-shoot consultation",
@@ -40,10 +41,26 @@ const priceCardItems = [
         :image-src="PriceCardImage"
         :items="priceCardItems"
       />
+      <div class="flex justify-center">
+        <TButton class="outline outline-white text-center" color-option="option1"
+          >Get in touch
+        </TButton>
+      </div>
 
-      <TButton class="outline outline-white text-center" color-option="option1"
-        >Get in touch
-      </TButton>
+      <div>
+        <TPortfolio
+          mainTitle="PORTFOLIOS"
+          buttonText="VIEW ALL PORTFOLIO..."
+          buttonLink="/portfolio"
+          :image-srcOne="heroImage"
+          :image-srcTwo="heroImage"
+          :image-srcThree="heroImage"
+          :image-srcFour="heroImage"
+          :image-srcFive="heroImage"
+          styleOption="style1"
+        />
+     </div>
+
     </div>
   </div>
 </template>

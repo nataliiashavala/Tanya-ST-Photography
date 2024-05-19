@@ -6,6 +6,7 @@ import leftImage from "~/assets/img/solo/left_card_img.jpg";
 import TPriceCard from "~/components/general/TPriceCard.vue";
 import PriceCardImage from "~/assets/img/solo/price_card.jpg";
 import TButton from "~/components/general/TButton.vue";
+import TPortfolio from '~/components/general/TPortfolio.vue';
 
 const priceCardItems = [
   "Pre-shoot consultation",
@@ -48,6 +49,19 @@ const leftCardItems = [
           <TButton class="outline outline-white text-center" color-option="option1"
             >Get in touch
           </TButton>
+        </div>
+        <div>
+          <TPortfolio
+            mainTitle="PORTFOLIOS"
+            buttonText="VIEW ALL PORTFOLIO..."
+            buttonLink="/portfolio"
+            :image-srcOne="heroImage"
+            :image-srcTwo="heroImage"
+            :image-srcThree="heroImage"
+            :image-srcFour="heroImage"
+            :image-srcFive="heroImage"
+            styleOption="style1"
+          />
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import leftCard from "~/assets/img/mini_shoot/left_card_img.jpg";
 import TPriceCard from "~/components/general/TPriceCard.vue";
 import PriceCardImage from "~/assets/img/mini_shoot/price_card_img.jpg";
 import TButton from "~/components/general/TButton.vue";
+import TPortfolio from '~/components/general/TPortfolio.vue';
 
 const leftCardItems = [
   "A seamless, 30-minute photo session scheduled at your convenience, in a setting that reflects your personal style—be it an urban alleyway, a sunlit park, or the cozy corners of your home.",
@@ -51,6 +52,19 @@ const priceCardItems = [
             >Get in touch
           </TButton>
         </div>
+        <div>
+        <TPortfolio
+          mainTitle="PORTFOLIOS"
+          buttonText="VIEW ALL PORTFOLIO..."
+          buttonLink="/portfolio"
+          :image-srcOne="heroImage"
+          :image-srcTwo="heroImage"
+          :image-srcThree="heroImage"
+          :image-srcFour="heroImage"
+          :image-srcFive="heroImage"
+          styleOption="style2"
+        />
+     </div>
       </div>
     </div>
   </div>

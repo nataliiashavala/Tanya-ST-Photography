@@ -6,6 +6,7 @@ import leftCard from "~/assets/img/personal_brand/left_card_img.jpg";
 import TPriceCard from "~/components/general/TPriceCard.vue";
 import PriceCardImage from "~/assets/img/family/price_card.jpg";
 import TButton from "~/components/general/TButton.vue";
+import TPortfolio from '~/components/general/TPortfolio.vue';
 
 const leftCardItems = [
   "Corporate Headshots: Clean, contemporary, and corporate—perfect for individuals or teams.",
@@ -47,6 +48,20 @@ const priceCardItems = [
           <TButton class="text-center" color-option="option2">Get in touch </TButton>
         </div>
       </div>
+
+      <div>
+        <TPortfolio
+          mainTitle="PORTFOLIOS"
+          buttonText="VIEW ALL PORTFOLIO..."
+          buttonLink="/portfolio"
+          :image-srcOne="heroImage"
+          :image-srcTwo="heroImage"
+          :image-srcThree="heroImage"
+          :image-srcFour="heroImage"
+          :image-srcFive="heroImage"
+          styleOption="style1"
+        />
+     </div>
     </div>
   </div>
 </template>
