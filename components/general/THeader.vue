@@ -36,7 +36,6 @@ const optionStyle = computed(() => ({
 const links = [
   { name: "home", path: "/home_temp" },
   { name: "wedding", path: "/wedding_temp" },
-  { name: "family", path: "/family" },
   { name: "personal brand", path: "/personal-brand" },
   { name: "about me", path: "/about-me" },
   {

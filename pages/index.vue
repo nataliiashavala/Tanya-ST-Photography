@@ -8,7 +8,6 @@ import PersonalBrand from "~/pages/personal-brand/index.vue";
 <template>
   <Home />
   <Wedding />
-  <Family />
   <AboutMe />
   <PersonalBrand />
 </template>
