@@ -71,7 +71,7 @@ const handleSelectChange = (event) => {
     :class="{ 'bg-customGreen text-white': hasGreenBackground }"
     class="header flex justify-around items-end uppercase pt-12 pl-9 font-lato tracking-widest"
   >
-    <nuxt-link to="/home" class="mb-1">
+    <nuxt-link to="/home_temp" class="mb-1">
       <img :src="Logo" alt="Logo" :style="logoStyle" />
     </nuxt-link>
     <nav class="flex whitespace-nowrap items-center text-xs pb-4 border-b">

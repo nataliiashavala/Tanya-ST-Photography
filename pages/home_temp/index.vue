@@ -28,7 +28,7 @@
         </div>
         <div class="flex flex-col lg:flex-row lg:space-x-14 mt-8 space-y-8 sm:space-y-0">
           <div class="max-w-sm">
-            <router-link to="/wedding">
+            <router-link to="/wedding_temp">
                   <img class="" src="/assets/img/home/first_card_img.jpg" alt="" />
                 </router-link>
               <div class="p-5 text-center">
