@@ -13,35 +13,38 @@ const enterEmail = ref("");
 
 <template>
   <div class="mt-44 mx-10">
-    <h1 class="text-center text-5xl text-[#4F4F4F]">FOLLOW ME ON INSTAGRAM</h1>
-    <p class="text-center text-[#838383] text-4xl my-4">@tanyastt</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 justify-center">
+    <h1 class="text-center text:2xl lg:text-5xl text-[#4F4F4F]">FOLLOW ME ON INSTAGRAM</h1>
+    <p class="text-center text-[#838383] text-2xl my-4">@tanyastt</p>
+    <div class="flex flex-col lg:flex-row gap-5 justify-center">
+      <div class="hidden md:block">
       <a href="https://www.instagram.com/tanyastt/">
         <img :src="twoPriceCardImage" alt="" class="w-full sm:w-auto" />
+      </a></div>
+      <div class="hidden md:block">
+      <a href="https://www.instagram.com/tanyastt/">
+        <img :src="twoPriceCardImage" alt="" class="w-full sm:w-auto" />
+      </a></div>
+      <a href="https://www.instagram.com/tanyastt/">
+        <img :src="twoPriceCardImage" alt="" class=" w-full sm:w-auto" />
       </a>
+    
       <a href="https://www.instagram.com/tanyastt/">
-        <img :src="twoPriceCardImage" alt="" class="w-full sm:w-auto" />
-      </a>
-      <a href="https://www.instagram.com/tanyastt/">
-        <img :src="twoPriceCardImage" alt="" class="w-full sm:w-auto" />
-      </a>
-      <a href="https://www.instagram.com/tanyastt/">
-        <img :src="twoPriceCardImage" alt="" class="w-full sm:w-auto" />
-      </a>
-      <a href="https://www.instagram.com/tanyastt/">
-        <img :src="twoPriceCardImage" alt="" class="w-full sm:w-auto" />
+        <img :src="twoPriceCardImage" alt="" class=" w-full sm:w-auto" />
       </a>
     </div>
     <div class="flex flex-col md:flex-row justify-around items-center relative mt-14 uppercase">
       <div class="content mb-6 md:hidden lg:block">
         <h3 class="mb-5">Get in touch</h3>
-        <p>Tanyastasyk@gmail.com</p>
+        <p>Tanyastasyk@gmail.com</p> 
+        <div class="divider hidden md:hidden lg:block"></div>
       </div>
-      <div class="divider hidden md:hidden lg:block"></div>
-      <p class="text-lg mt-6 md:mt-0 md:text-center md:hidden lg:block">
+      <div class="">
+     
+      <p class= " text-lg mt-6 md:mt-0 md:text-center md:hidden lg:block">
         Because every picture should be unique, capturing your special day.<br>
         Together, we will share your story.
       </p>
+    </div>
       <div class="divider hidden md:hidden lg:block"></div>
       <div class="flex flex-col items-center" >
         <p class="uppercase lg:text-base md:text-2xl">contact me</p>

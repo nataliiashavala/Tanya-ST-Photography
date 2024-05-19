@@ -1,5 +1,6 @@
 <script setup>
-import { computed, ref, reactive } from 'vue';
+import { useRoute, useRouter } from "vue-router";
+import { computed } from 'vue';
 import Logo from "~/assets/icons/logo.svg";
 
 const route = useRoute();
@@ -55,7 +56,7 @@ const links = [
     ],
   },
 ];
-const value = ref("");
+const value = "";
 
 const handleSelectChange = (event) => {
   const value = event.target.value;
@@ -63,41 +64,12 @@ const handleSelectChange = (event) => {
     router.push(value);
   }
 };
-
-const isMenuOpen = ref(false);
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
-};
-
-// Reactive property to track window width
-const windowSize = reactive({
-  width: typeof window !== 'undefined' ? window.innerWidth : 0,
-});
-
-const updateWindowSize = () => {
-  if (typeof window !== 'undefined') {
-    windowSize.width = window.innerWidth;
-  }
-};
-
-onMounted(() => {
-  if (typeof window !== 'undefined') {
-    window.addEventListener('resize', updateWindowSize);
-  }
-});
-
-onUnmounted(() => {
-  if (typeof window !== 'undefined') {
-    window.removeEventListener('resize', updateWindowSize);
-  }
-});
 </script>
 
 <template>
   <div
     :class="{ 'bg-customGreen text-white': hasGreenBackground }"
-    class="header flex justify-between items-end uppercase pt-12 pl-9 lg:pr-5 xl:pr-14 font-lato tracking-widest"
+    class="header flex justify-around items-end uppercase pt-12 pl-9 font-lato tracking-widest"
   >
     <nuxt-link to="/home_temp" class="mb-1">
       <img :src="Logo" alt="Logo" :style="logoStyle" />
@@ -126,7 +98,7 @@ onUnmounted(() => {
             :key="`more-${index}`" 
             :value="option.path" 
             :style="optionStyle"
-            class="font-lato uppercase tracking-widest"
+            class="text-xs font-lato uppercase tracking-widest"
           >
             {{ option.name }}
           </option>
@@ -137,48 +109,38 @@ onUnmounted(() => {
   </div>
 </template>
 
+
+
 <style scoped lang="scss">
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hamburger-menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 21px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 10;
-}
-
-.hamburger-menu span {
-  width: 30px;
-  height: 3px;
-  background: #000;
-  border-radius: 10px;
-  transition: all 0.3s linear;
+.custom-select-wrapper {
   position: relative;
-  transform-origin: center;
+  display: inline-block;
 }
 
-.hamburger-menu span.open:nth-child(1) {
-  transform: rotate(45deg);
+.custom-select {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  width: 100%;
+  background: none;
+  background-position: right 10px center;
+  background-repeat: no-repeat;
 }
 
-.hamburger-menu span.open:nth-child(2) {
-
-  transform: rotate(-45deg);
-  margin: -19px 0;
+.custom-select option {
+  border: none;
+}
+.custom-select option:focus {
+  border: none;
 }
 
-.hamburger-menu span.open:nth-child(3) {
-  opacity: 0;
+.custom-select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 nav {
