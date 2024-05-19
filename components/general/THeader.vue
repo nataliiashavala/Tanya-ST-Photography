@@ -85,9 +85,9 @@ const handleSelectChange = (event) => {
           @change="handleSelectChange" 
           v-model="value" 
           :style="selectStyle" 
-          class="custom-select w-full text-xs pb-1"
+          class="custom-select w-full uppercase text-xs pb-1"
         >
-          <option value="" disabled>More</option>
+          <option value="" disabled>MORE</option>
           <option 
             v-for="(option, index) in links.find((link) => link.name === 'more')?.more ?? []" 
             :key="`more-${index}`" 
@@ -100,9 +100,12 @@ const handleSelectChange = (event) => {
         </select>
       </div>
       <nuxt-link to="/contact-me">contact me</nuxt-link>
-    </nav>
+    
+</nav>
   </div>
 </template>
+
+
 
 <style scoped lang="scss">
 .custom-select-wrapper {
