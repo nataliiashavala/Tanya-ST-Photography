@@ -26,10 +26,6 @@ defineProps({
     type: String,
     default: "",
   },
-  verticalText: {
-    type: String,
-    default: "",
-  },
 });
 </script>
 
@@ -45,11 +41,6 @@ defineProps({
     <!-- Right Column for Image and Vertical Text -->
     <div class="space-x-0">
       <img :src="imageSrc" alt="Featured Image" class="lg:custom-size" />
-      <div class="hidden md:block">
-        <span
-          class="text-custom transform rotate-180 text-center whitespace-nowrap font-explora tracking-widest v-text"
-          >{{ verticalText }}</span>
-      </div>
     </div>
   </div>
 </template>
@@ -58,8 +49,5 @@ defineProps({
 .custom-size {
   width: 560px;
   height: 831px;
-}
-.v-text {
-  writing-mode: vertical-rl;
 }
 </style>

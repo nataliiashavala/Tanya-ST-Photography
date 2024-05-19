@@ -84,6 +84,7 @@
           :image-srcThree="heroImage"
           :image-srcFour="heroImage"
           :image-srcFive="heroImage"
+          styleOption="style2"
         />
      </div>
 

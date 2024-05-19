@@ -6,6 +6,20 @@ import TPriceCard from "~/components/general/TPriceCard.vue";
 import PriceCardImage from "~/assets/img/maternity/price_card.jpg";
 import TButton from "~/components/general/TButton.vue";
 import rightCardImage from "~/assets/img/maternity/right_card_img.jpg";
+import TPortfolio from '~/components/general/TPortfolio.vue';
+import TImgCarousel from "~/components/general/TImgCarousel.vue";
+import img1 from "~/assets/img/portfolio/slider/img1.jpg";
+import img2 from "~/assets/img/portfolio/slider/img2.jpg";
+import img3 from "~/assets/img/portfolio/slider/img3.jpg";
+import img4 from "~/assets/img/portfolio/slider/img4.jpg";
+import img5 from "~/assets/img/portfolio/slider/img5.jpg";
+import img6 from "~/assets/img/portfolio/slider/img6.jpg";
+import img7 from "~/assets/img/portfolio/slider/img7.jpg";
+import img8 from "~/assets/img/portfolio/slider/img8.jpg";
+import img9 from "~/assets/img/portfolio/slider/img9.jpg";
+import img10 from "~/assets/img/portfolio/slider/img10.jpg";
+
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
 const priceCardItems = [
   "Pre-shoot consultation",
@@ -25,6 +39,12 @@ const priceCardItems = [
           text="Embrace the beauty of your journey into motherhood with my Maternity Photoshoot Sessions. As you stand at the threshold of a new chapter, these sessions are crafted to honor the incredible transformation you are experiencing. In the tranquility of your chosen setting, we will collaborate to create graceful, tender portraits that capture the anticipation and love you hold for your unborn child. This is a time of wonder and change, and my maternity photoshoots are designed to reflect the strength and elegance of your pregnancy. I'll capture the intimate bond between you and your baby-to-be."
           :image-src="heroImage"
         />
+        <div>
+          <TImgCarousel
+          :images="images"
+            :interval="5000"
+              />
+        </div>
 
         <TRightCard
           first-title="EMOTIONS THROUGH EVERY PHOTO"
@@ -46,6 +66,19 @@ const priceCardItems = [
           <TButton class="outline outline-white text-center" color-option="option1">
             Get in touch
           </TButton>
+        </div>
+        <div>
+            <TPortfolio
+              mainTitle="PORTFOLIOS"
+              buttonText="VIEW ALL PORTFOLIO..."
+              buttonLink="/portfolio"
+              :image-srcOne="heroImage"
+              :image-srcTwo="heroImage"
+              :image-srcThree="heroImage"
+              :image-srcFour="heroImage"
+              :image-srcFive="heroImage"
+              styleOption="style2"
+            />
         </div>
         </div>
       </div>
