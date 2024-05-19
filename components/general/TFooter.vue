@@ -9,7 +9,7 @@ const enterEmail = ref("");
 </script>
 
 <template>
-  <div>
+  <div class="mt-44 mx-10">
     <h1 class="text-center text-5xl text-[#4F4F4F]">FOLLOW ME ON INSTAGRAM</h1>
     <p class="text-center text-[#838383] text-4xl my-4">@tanyastt</p>
     <div class="flex gap-5">
@@ -35,8 +35,8 @@ const enterEmail = ref("");
         <p>Tanyastasyk@gmail.com</p>
       </div>
       <div class="divider" />
-      <p>
-        Because every picture should be unique, capturing your special day.
+      <p class="text-lg  mt-6">
+        Because every picture should be unique, capturing your special day.<br>
         Together, we will share your story.
       </p>
       <div class="divider" />

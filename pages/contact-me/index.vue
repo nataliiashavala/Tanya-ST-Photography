@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 import heroImage from "~/assets/img/contact_me/hero_img.jpg";
-import SocialMediaIcons from "~/components/general/SocialMediaIcons.vue";
 
 
 </script>
@@ -30,9 +29,6 @@ import SocialMediaIcons from "~/components/general/SocialMediaIcons.vue";
               <p class="uppercase">
             contact me
             </p>
-              <div class="justify-center">
-              <SocialMediaIcons />
-              </div>
             </div>
           </div>
 

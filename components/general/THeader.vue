@@ -1,8 +1,10 @@
 <script setup>
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
+import { computed } from 'vue';
 import Logo from "~/assets/icons/logo.svg";
 
 const route = useRoute();
+const router = useRouter();
 
 const greenBackgroundRoutes = [
   "/wedding_temp",
@@ -14,8 +16,23 @@ const greenBackgroundRoutes = [
 ];
 
 const hasGreenBackground = computed(() =>
-  greenBackgroundRoutes.includes(route.path),
+  greenBackgroundRoutes.includes(route.path)
 );
+
+const logoStyle = computed(() => ({
+  filter: hasGreenBackground.value ? 'brightness(0) invert(1)' : 'none'
+}));
+
+const selectStyle = computed(() => ({
+  backgroundColor: hasGreenBackground.value ? '#545A3F' : 'white',
+  color: hasGreenBackground.value ? 'white' : 'black',
+  '--icon-color': hasGreenBackground.value ? 'white' : '#545A3F',
+}));
+
+const optionStyle = computed(() => ({
+  backgroundColor: hasGreenBackground.value ? '#545A3F' : 'white',
+  color: hasGreenBackground.value ? 'white' : 'black',
+}));
 
 const links = [
   { name: "home", path: "/home_temp" },
@@ -41,15 +58,12 @@ const links = [
 ];
 const value = "";
 
-const handleSelectChange = (value) => {
+const handleSelectChange = (event) => {
+  const value = event.target.value;
   if (value) {
-    useRouter().push(value);
+    router.push(value);
   }
 };
-
-const logoStyle = computed(() => ({
-  filter: hasGreenBackground.value ? "brightness(0) invert(1)" : "none",
-}));
 </script>
 
 <template>
@@ -58,52 +72,82 @@ const logoStyle = computed(() => ({
     class="header flex justify-around items-end uppercase pt-12 pl-9 font-lato tracking-widest"
   >
     <nuxt-link to="/home" class="mb-1">
-      <img :src="Logo" alt="Logo" />
+      <img :src="Logo" alt="Logo" :style="logoStyle" />
     </nuxt-link>
-    <nav class="flex whitespace-nowrap text-xs pb-4 border-b">
+    <nav class="flex whitespace-nowrap items-center text-xs pb-4 border-b">
       <div v-for="(item, index) in links" :key="`link-${index}`" class="flex">
-        <nuxt-link v-if="item.path" :to="item.path" class="text-xs mr-20 font-lato tracking-widest">{{
-          item.name
-        }}</nuxt-link>
+        <nuxt-link v-if="item.path" :to="item.path" class="text-xs mr-20 font-lato tracking-widest">
+          {{ item.name }}
+        </nuxt-link>
       </div>
-
-      <el-select
-        v-model="value"
-        placeholder="More"
-        class="mr-20 !w-44 !border-none text-xs pb-1 select placeholder: text-xs"
-        @change="handleSelectChange"
-      >
-        <el-option
-          v-for="(option, index) in links.find((link) => link.name === 'more')
-            ?.more ?? []"
-          :key="`more-${index}`"
-          :label="option.name"
-          :value="option.path"
-          class="text-xs font-lato uppercase tracking-widest"
-        />
-      </el-select>
+      <div class="relative custom-select-wrapper mr-20">
+        <select 
+          @change="handleSelectChange" 
+          v-model="value" 
+          :style="selectStyle" 
+          class="custom-select w-full text-xs pb-1"
+        >
+          <option value="" disabled>More</option>
+          <option 
+            v-for="(option, index) in links.find((link) => link.name === 'more')?.more ?? []" 
+            :key="`more-${index}`" 
+            :value="option.path" 
+            :style="optionStyle"
+            class="text-xs font-lato uppercase tracking-widest"
+          >
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
       <nuxt-link to="/contact-me">contact me</nuxt-link>
     </nav>
   </div>
 </template>
 
 <style scoped lang="scss">
-.select {
-  .el-select__wrapper {
-    box-shadow: none !important;
-  }
-  .el-select-dropdown {
-    // Add space between options
-   .el-select-dropdown__item {
-      padding: 10px 20px; // adjust the padding to your liking
-    }
-    // Make the select menu longer
-    max-height: 400px; // adjust the height to your liking
-  }
- .el-select-dropdown__wrap {
-    // Add white border
-    border: 1px solid #fff;
-  }
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  width: 100%;
+  background: none;
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+}
+
+.custom-select option {
+  border: none;
+}
+.custom-select option:focus {
+  border: none;
+}
+
+.custom-select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.custom-select-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10 30L50 80L90 30H10Z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #fff
 }
 </style>
-  
