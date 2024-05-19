@@ -107,13 +107,13 @@ onUnmounted(() => {
       <span :class="{ 'open': isMenuOpen }"></span>
       <span :class="{ 'open': isMenuOpen }"></span>
     </button>
-    <nav :class="{ 'open': isMenuOpen }" class="flex flex-col md:flex-row whitespace-nowrap items-center text-xs pb-4 border-b">
-      <div v-for="(item, index) in links" :key="`link-${index}`" v-if="isMenuOpen || windowSize.width >= 768" class="flex">
+    <nav :class="{ 'open': isMenuOpen }" class="flex flex-col md:flex-row whitespace-nowrap items-center text-xs pb-4  lg:border-b">
+      <div v-for="(item, index) in links" :key="`link-${index}`" v-if="isMenuOpen || windowSize.width >= 900" class="flex">
         <nuxt-link v-if="item.path" :to="item.path" class="text-xs mr-20 font-lato tracking-widest">
           {{ item.name }}
         </nuxt-link>
       </div>
-      <div class="relative custom-select-wrapper mr-20" v-if="isMenuOpen || windowSize.width >= 768">
+      <div class="relative custom-select-wrapper mr-20" v-if="isMenuOpen || windowSize.width >= 900">
         <select 
           @change="handleSelectChange" 
           v-model="value" 
@@ -132,7 +132,7 @@ onUnmounted(() => {
           </option>
         </select>
       </div>
-      <nuxt-link to="/contact-me" v-if="isMenuOpen || windowSize.width >= 768">contact me</nuxt-link>
+      <nuxt-link to="/contact-me" v-if="isMenuOpen || windowSize.width >= 900">contact me</nuxt-link>
     </nav>
   </div>
 </template>
@@ -193,7 +193,7 @@ nav.open {
   max-height: 500px; /* Adjust as needed */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .hamburger-menu {
     display: none;
   }
@@ -202,7 +202,7 @@ nav.open {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hamburger-menu {
     display: flex;
   }
