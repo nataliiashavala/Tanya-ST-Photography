@@ -1,6 +1,5 @@
 <script setup>
-import { useRoute, useRouter } from "vue-router";
-import { computed } from 'vue';
+import { computed, ref, reactive } from 'vue';
 import Logo from "~/assets/icons/logo.svg";
 
 const route = useRoute();
@@ -56,7 +55,7 @@ const links = [
     ],
   },
 ];
-const value = "";
+const value = ref("");
 
 const handleSelectChange = (event) => {
   const value = event.target.value;
@@ -64,23 +63,57 @@ const handleSelectChange = (event) => {
     router.push(value);
   }
 };
+
+const isMenuOpen = ref(false);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
+
+// Reactive property to track window width
+const windowSize = reactive({
+  width: typeof window !== 'undefined' ? window.innerWidth : 0,
+});
+
+const updateWindowSize = () => {
+  if (typeof window !== 'undefined') {
+    windowSize.width = window.innerWidth;
+  }
+};
+
+onMounted(() => {
+  if (typeof window !== 'undefined') {
+    window.addEventListener('resize', updateWindowSize);
+  }
+});
+
+onUnmounted(() => {
+  if (typeof window !== 'undefined') {
+    window.removeEventListener('resize', updateWindowSize);
+  }
+});
 </script>
 
 <template>
   <div
     :class="{ 'bg-customGreen text-white': hasGreenBackground }"
-    class="header flex justify-around items-end uppercase pt-12 pl-9 font-lato tracking-widest"
+    class="header flex justify-between items-end uppercase pt-12 pl-9 lg:pr-5 xl:pr-14 font-lato tracking-widest"
   >
     <nuxt-link to="/home_temp" class="mb-1">
       <img :src="Logo" alt="Logo" :style="logoStyle" />
     </nuxt-link>
-    <nav class="flex whitespace-nowrap items-center text-xs pb-4 border-b">
-      <div v-for="(item, index) in links" :key="`link-${index}`" class="flex">
+    <button @click="toggleMenu" class="hamburger-menu ml-auto mr-10">
+      <span :class="{ 'open': isMenuOpen }"></span>
+      <span :class="{ 'open': isMenuOpen }"></span>
+      <span :class="{ 'open': isMenuOpen }"></span>
+    </button>
+    <nav :class="{ 'open': isMenuOpen }" class="flex flex-col md:flex-row whitespace-nowrap items-center text-xs pb-4 border-b">
+      <div v-for="(item, index) in links" :key="`link-${index}`" v-if="isMenuOpen || windowSize.width >= 768" class="flex">
         <nuxt-link v-if="item.path" :to="item.path" class="text-xs mr-20 font-lato tracking-widest">
           {{ item.name }}
         </nuxt-link>
       </div>
-      <div class="relative custom-select-wrapper mr-20">
+      <div class="relative custom-select-wrapper mr-20" v-if="isMenuOpen || windowSize.width >= 768">
         <select 
           @change="handleSelectChange" 
           v-model="value" 
@@ -93,64 +126,92 @@ const handleSelectChange = (event) => {
             :key="`more-${index}`" 
             :value="option.path" 
             :style="optionStyle"
-            class="text-xs font-lato uppercase tracking-widest"
+            class="font-lato uppercase tracking-widest"
           >
             {{ option.name }}
           </option>
         </select>
       </div>
-      <nuxt-link to="/contact-me">contact me</nuxt-link>
-    
-</nav>
+      <nuxt-link to="/contact-me" v-if="isMenuOpen || windowSize.width >= 768">contact me</nuxt-link>
+    </nav>
   </div>
 </template>
 
-
-
 <style scoped lang="scss">
-.custom-select-wrapper {
-  position: relative;
-  display: inline-block;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.custom-select {
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 21px;
+  background: transparent;
   border: none;
-  padding: 10px;
-  font-size: 16px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   cursor: pointer;
-  width: 100%;
-  background: none;
-  background-position: right 10px center;
-  background-repeat: no-repeat;
+  padding: 0;
+  z-index: 10;
 }
 
-.custom-select option {
-  border: none;
-}
-.custom-select option:focus {
-  border: none;
-}
-
-.custom-select:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+.hamburger-menu span {
+  width: 30px;
+  height: 3px;
+  background: #000;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: center;
 }
 
-.custom-select-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  width: 12px;
-  height: 12px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10 30L50 80L90 30H10Z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #fff
+.hamburger-menu span.open:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger-menu span.open:nth-child(2) {
+
+  transform: rotate(-45deg);
+  margin: -19px 0;
+}
+
+.hamburger-menu span.open:nth-child(3) {
+  opacity: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+nav.open {
+  max-height: 500px; /* Adjust as needed */
+}
+
+@media (min-width: 768px) {
+  .hamburger-menu {
+    display: none;
+  }
+  nav {
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav.open {
+    display: flex;
+  }
 }
 </style>
