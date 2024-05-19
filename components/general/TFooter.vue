@@ -1,6 +1,9 @@
 <script setup>
 import { Top } from "@element-plus/icons-vue";
 import twoPriceCardImage from "~/assets/img/wedding/two_price_card.jpg";
+import mail from "~/assets/icons/mail.svg";
+import instagram from "~/assets/icons/instagram.svg";
+import facebook from "~/assets/icons/facebook.svg";
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -13,23 +16,23 @@ const enterEmail = ref("");
     <h1 class="text-center text-5xl text-[#4F4F4F]">FOLLOW ME ON INSTAGRAM</h1>
     <p class="text-center text-[#838383] text-4xl my-4">@tanyastt</p>
     <div class="flex gap-5">
-      <a href="">
+      <a href="https://www.instagram.com/tanyastt/">
         <img :src="twoPriceCardImage" alt="" />
       </a>
-      <a href="">
+      <a href="https://www.instagram.com/tanyastt/">
         <img :src="twoPriceCardImage" alt="" />
       </a>
-      <a href="">
+      <a href="https://www.instagram.com/tanyastt/">
         <img :src="twoPriceCardImage" alt="" />
       </a>
-      <a href="">
+      <a href="https://www.instagram.com/tanyastt/">
         <img :src="twoPriceCardImage" alt="" />
       </a>
-      <a href="">
+      <a href="https://www.instagram.com/tanyastt/">
         <img :src="twoPriceCardImage" alt="" />
       </a>
     </div>
-    <div class="flex justify-around items-center relative mt-14">
+    <div class="flex justify-around items-center relative mt-14 uppercase">
       <div class="content">
         <h3 class="mb-5">Get in touch</h3>
         <p>Tanyastasyk@gmail.com</p>
@@ -41,8 +44,17 @@ const enterEmail = ref("");
       </p>
       <div class="divider" />
       <div>
-        <p>contact me</p>
-        <div></div>
+        <p class="uppercase">contact me</p>
+        <div class="flex items-center justify-between">
+          <a href="https://www.instagram.com/tanyastt/" >
+            <img :src="instagram" alt=""></a>
+          <a href="https://www.facebook.com/TanyaStPhoto" class="mr-2">
+            <img :src="facebook" alt="">
+          </a>
+          <a href="mailto:tanyastasyk@gmail.com">
+            <img :src="mail" alt="">
+          </a>
+        </div>
       </div>
     </div>
   </div>
