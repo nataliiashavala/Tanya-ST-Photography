@@ -7,6 +7,19 @@ import PriceCardImage from "~/assets/img/babies/price_card.jpg";
 import TButton from "~/components/general/TButton.vue";
 import rightCardImage from "~/assets/img/babies/right_card_img.jpg";
 import TPortfolio from '~/components/general/TPortfolio.vue';
+import TImgCarousel from "~/components/general/TImgCarousel.vue";
+import img1 from "~/assets/img/portfolio/slider/img1.jpg";
+import img2 from "~/assets/img/portfolio/slider/img2.jpg";
+import img3 from "~/assets/img/portfolio/slider/img3.jpg";
+import img4 from "~/assets/img/portfolio/slider/img4.jpg";
+import img5 from "~/assets/img/portfolio/slider/img5.jpg";
+import img6 from "~/assets/img/portfolio/slider/img6.jpg";
+import img7 from "~/assets/img/portfolio/slider/img7.jpg";
+import img8 from "~/assets/img/portfolio/slider/img8.jpg";
+import img9 from "~/assets/img/portfolio/slider/img9.jpg";
+import img10 from "~/assets/img/portfolio/slider/img10.jpg";
+
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
 const priceCardItems = [
   "Pre-shoot consultation",
@@ -25,7 +38,12 @@ const priceCardItems = [
         Each photograph is a pause button on the rapid growth of your baby, a treasured snapshot of their earliest days. Whether it's a peaceful slumber or a wide-eyed wonder, my goal is to capture the natural beauty of your baby's first curious explorations of the world."
         :image-src="heroImage"
       />
-
+      <div>
+          <TImgCarousel
+          :images="images"
+            :interval="5000"
+              />
+        </div>
       <TRightCard
         first-title="EMOTIONS THROUGH EVERY PHOTO"
         second-title="ON THE SHOOT"
