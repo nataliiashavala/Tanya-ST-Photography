@@ -43,7 +43,7 @@
               </div>
           </div>
           <div class="max-w-sm pt-0 lg:pt-28">
-            <router-link to="/family">
+            <router-link to="/">
               <img class="" src="/assets/img/home/second_card_img.jpg" alt="" />
             </router-link>
               <div class="p-5 text-center">
