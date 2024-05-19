@@ -46,6 +46,10 @@ const handleSelectChange = (value) => {
     useRouter().push(value);
   }
 };
+
+const logoStyle = computed(() => ({
+  filter: hasGreenBackground.value ? "brightness(0) invert(1)" : "none",
+}));
 </script>
 
 <template>

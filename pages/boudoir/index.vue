@@ -56,4 +56,3 @@ const leftCardItems = [
     </div>
   </div>
 </template>
-

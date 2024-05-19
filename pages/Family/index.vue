@@ -47,5 +47,3 @@ const priceCardItems = [
     </div>
   </div>
 </template>
-
-
