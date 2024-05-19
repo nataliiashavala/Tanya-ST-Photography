@@ -15,40 +15,41 @@ const enterEmail = ref("");
   <div class="mt-44 mx-10">
     <h1 class="text-center text-5xl text-[#4F4F4F]">FOLLOW ME ON INSTAGRAM</h1>
     <p class="text-center text-[#838383] text-4xl my-4">@tanyastt</p>
-    <div class="flex gap-5">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 justify-center">
       <a href="https://www.instagram.com/tanyastt/">
-        <img :src="twoPriceCardImage" alt="" />
+        <img :src="twoPriceCardImage" alt="" class="w-full sm:w-auto" />
       </a>
       <a href="https://www.instagram.com/tanyastt/">
-        <img :src="twoPriceCardImage" alt="" />
+        <img :src="twoPriceCardImage" alt="" class="w-full sm:w-auto" />
       </a>
       <a href="https://www.instagram.com/tanyastt/">
-        <img :src="twoPriceCardImage" alt="" />
+        <img :src="twoPriceCardImage" alt="" class="w-full sm:w-auto" />
       </a>
       <a href="https://www.instagram.com/tanyastt/">
-        <img :src="twoPriceCardImage" alt="" />
+        <img :src="twoPriceCardImage" alt="" class="w-full sm:w-auto" />
       </a>
       <a href="https://www.instagram.com/tanyastt/">
-        <img :src="twoPriceCardImage" alt="" />
+        <img :src="twoPriceCardImage" alt="" class="w-full sm:w-auto" />
       </a>
     </div>
-    <div class="flex justify-around items-center relative mt-14 uppercase">
-      <div class="content">
+    <div class="flex flex-col md:flex-row justify-around items-center relative mt-14 uppercase">
+      <div class="content mb-6 md:hidden lg:block">
         <h3 class="mb-5">Get in touch</h3>
         <p>Tanyastasyk@gmail.com</p>
       </div>
-      <div class="divider" />
-      <p class="text-lg  mt-6">
+      <div class="divider hidden md:hidden lg:block"></div>
+      <p class="text-lg mt-6 md:mt-0 md:text-center md:hidden lg:block">
         Because every picture should be unique, capturing your special day.<br>
         Together, we will share your story.
       </p>
-      <div class="divider" />
-      <div>
-        <p class="uppercase">contact me</p>
-        <div class="flex items-center justify-between">
-          <a href="https://www.instagram.com/tanyastt/" >
-            <img :src="instagram" alt=""></a>
-          <a href="https://www.facebook.com/TanyaStPhoto" class="mr-2">
+      <div class="divider hidden md:hidden lg:block"></div>
+      <div class="flex flex-col items-center" >
+        <p class="uppercase lg:text-base md:text-2xl">contact me</p>
+        <div class="flex items-center justify-center gap-4">
+          <a href="https://www.instagram.com/tanyastt/">
+            <img :src="instagram" alt="">
+          </a>
+          <a href="https://www.facebook.com/TanyaStPhoto">
             <img :src="facebook" alt="">
           </a>
           <a href="mailto:tanyastasyk@gmail.com">
@@ -58,18 +59,17 @@ const enterEmail = ref("");
       </div>
     </div>
   </div>
-  <div class="flex justify-between items-center pt-14">
-    <div
-      class="flex bg-customGreen w-full justify-center items-center mt-6 h-20"
-    >
+  <div class="flex flex-col lg:flex-row justify-between items-center pt-14">
+    <div class="flex bg-customGreen w-full justify-center items-center mt-6 h-20 px-6 lg:px-0">
       <h2 class="text-white text-2xl font-normal font-nanum mr-14">
         Subscribe to our newsletter
       </h2>
-      <div class="flex relative h-9 w-1/4">
+      <div class="flex relative h-9 w-full lg:w-1/4">
         <el-input
           v-model="enterEmail"
           type="email"
           placeholder="Enter your email"
+          class="w-full"
         />
         <el-button
           class="absolute border border-white right-0.5 bottom-0.5"
@@ -81,7 +81,7 @@ const enterEmail = ref("");
       </div>
     </div>
     <div
-      class="border ml-7 mr-4 w-16 h-14 border-black flex items-center justify-center"
+      class="border mt-6 lg:mt-0 lg:ml-7 lg:mr-4 w-16 h-14 border-black flex items-center justify-center"
     >
       <el-button type="text" @click="scrollToTop">
         <el-icon :size="50" color="black">
