@@ -1,4 +1,5 @@
 <script setup>
+import { faBlackTie } from '@fortawesome/free-brands-svg-icons';
 import { computed, ref, reactive } from 'vue';
 import Logo from "~/assets/icons/logo.svg";
 
@@ -12,6 +13,7 @@ const greenBackgroundRoutes = [
   "/maternity",
   "/trusted-suppliers",
   "/contact-me",
+  "/about-me",
 ];
 
 const hasGreenBackground = computed(() =>
@@ -25,7 +27,7 @@ const logoStyle = computed(() => ({
 const selectStyle = computed(() => ({
   backgroundColor: hasGreenBackground.value ? '#545A3F' : 'white',
   color: hasGreenBackground.value ? 'white' : 'black',
-  '--icon-color': hasGreenBackground.value ? 'white' : '#545A3F',
+
 }));
 
 const optionStyle = computed(() => ({
@@ -35,6 +37,7 @@ const optionStyle = computed(() => ({
 
 const links = [
   { name: "home", path: "/home_temp" },
+  { name: "wedding", path: "/wedding_temp" },
   { name: "wedding", path: "/wedding_temp" },
   { name: "personal brand", path: "/personal-brand" },
   { name: "about me", path: "/about-me" },
@@ -96,19 +99,17 @@ onUnmounted(() => {
 <template>
   <div
     :class="{ 'bg-customGreen text-white': hasGreenBackground }"
-    class="header flex justify-between items-end uppercase pt-12 pl-9 lg:pr-5 xl:pr-14 font-lato tracking-widest"
+    class="header flex items-end uppercase pt-5 lg:pt-9 pl-4 lg:pl-24 lg:pr-64 font-lato tracking-widest"
   >
-    <nuxt-link to="/home_temp" class="mb-1">
+    <nuxt-link to="/home_temp" class="">
       <img :src="Logo" alt="Logo" :style="logoStyle" />
     </nuxt-link>
-    <button @click="toggleMenu" class="hamburger-menu ml-auto mr-10">
-      <span :class="{ 'open': isMenuOpen }"></span>
-      <span :class="{ 'open': isMenuOpen }"></span>
-      <span :class="{ 'open': isMenuOpen }"></span>
+    <button @click="toggleMenu" class="text-2xl uppercase font-nanum ml-auto mr-10">
+      menu
     </button>
-    <nav :class="{ 'open': isMenuOpen }" class="flex flex-col md:flex-row whitespace-nowrap items-center text-xs pb-4  lg:border-b">
+    <nav :class="{ 'open': isMenuOpen }" class="flex flex-col md:flex-row whitespace-nowrap items-center text-xs lg:border-b ">
       <div v-for="(item, index) in links" :key="`link-${index}`" v-if="isMenuOpen || windowSize.width >= 900" class="flex">
-        <nuxt-link v-if="item.path" :to="item.path" class="text-xs mr-20 font-lato tracking-widest">
+        <nuxt-link v-if="item.path" :to="item.path" class="text-xs mr-24 font-lato tracking-widest mb-4">
           {{ item.name }}
         </nuxt-link>
       </div>
@@ -117,7 +118,7 @@ onUnmounted(() => {
           @change="handleSelectChange" 
           v-model="value" 
           :style="selectStyle" 
-          class="custom-select w-20 uppercase text-xs pb-1"
+          class="custom-select w-20 uppercase text-xs mb-4"
         >
           <option value="" disabled>MORE</option>
           <option 
@@ -125,13 +126,13 @@ onUnmounted(() => {
             :key="`more-${index}`" 
             :value="option.path" 
             :style="optionStyle"
-            class="font-lato uppercase tracking-widest"
+            class="font-lato uppercase tracking-widest "
           >
             {{ option.name }}
           </option>
         </select>
       </div>
-      <nuxt-link to="/contact-me" v-if="isMenuOpen || windowSize.width >= 900">contact me</nuxt-link>
+      <nuxt-link to="/contact-me" class="mb-4" v-if="isMenuOpen || windowSize.width >= 900">contact me</nuxt-link>
     </nav>
   </div>
 </template>
@@ -140,7 +141,6 @@ onUnmounted(() => {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .hamburger-menu {
