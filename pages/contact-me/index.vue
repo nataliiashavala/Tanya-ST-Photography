@@ -1,7 +1,52 @@
 <script setup>
-import { ref } from 'vue'
 import heroImage from "~/assets/img/contact_me/hero_img.jpg";
+import { ref, onMounted } from 'vue';
 
+// Data properties as reactive references
+const accessKey = ref('8a1f8bd0-1766-42be-9d91-66fbc109d1e6');
+const formData = ref({
+  name: '',
+  surname: '',
+  email: '',
+  reffear: '',
+  date: '',
+  capture: ''
+
+
+});
+
+// Mounted lifecycle hook using onMounted
+onMounted(() => {
+  const hcaptchaScript = document.createElement('script');
+  hcaptchaScript.src = 'https://web3forms.com/client/script.js';
+  hcaptchaScript.async = true;
+  hcaptchaScript.defer = true;
+  document.body.appendChild(hcaptchaScript);
+});
+
+// Form submission method
+const handleSubmit = async () => {
+  const response = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      access_key: accessKey.value,
+      ...formData.value
+    })
+  });
+
+  if (response.ok) {
+    const result = await response.json();
+    console.log(result);
+    alert('Form submitted successfully!');
+    formData.value = { name: '', email: '', message: '' }; // Reset form
+  } else {
+    alert('Failed to submit form. Please try again.');
+  }
+};
 
 </script>
 
@@ -37,7 +82,8 @@ import heroImage from "~/assets/img/contact_me/hero_img.jpg";
       
           <!-- Contact Form-->
           <div class="w-full lg:w-2/3">
-            <form action="#" method="POST" class="">
+            <form action="https://api.web3forms.com/submit" method="POST" class="">
+              <input type="hidden" name="access_key" value="8a1f8bd0-1766-42be-9d91-66fbc109d1e6">
               <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div class="sm:col-span-2">
                   <div class="mt-2.5">
@@ -45,7 +91,7 @@ import heroImage from "~/assets/img/contact_me/hero_img.jpg";
                     placeholder="YOUR NAME *" 
                     name="name" 
                     id="name" 
-                    autocomplete="organization" 
+                    required
                     class="w-full font-nanum text-base bg-customGreen border-b border-b-white px-2 py-4 text-white placeholder:text-white" />
                   </div>
                 </div>
@@ -53,9 +99,9 @@ import heroImage from "~/assets/img/contact_me/hero_img.jpg";
                   <div class="mt-2.5">
                     <input type="text" 
                     placeholder="YOUR SURNAME *" 
-                    name="company" 
-                    id="company" 
-                    autocomplete="organization" 
+                    name="surname" 
+                    id="surname" 
+                    required
                     class="w-full font-nanum text-base bg-customGreen  border-b border-b-white px-2 py-4 text-black placeholder:text-white" />
                   </div>
                 </div>
@@ -63,9 +109,9 @@ import heroImage from "~/assets/img/contact_me/hero_img.jpg";
                   <div class="mt-2.5">
                     <input type="text" 
                     placeholder="EMAIL *" 
-                    name="company" 
-                    id="company" 
-                    autocomplete="organization" 
+                    name="email" 
+                    id="email" 
+                    required
                     class="w-full font-nanum text-base bg-customGreen  border-b border-b-white px-2 py-4 text-white placeholder:text-white" />
                   </div>
                 </div>
@@ -73,14 +119,14 @@ import heroImage from "~/assets/img/contact_me/hero_img.jpg";
                 <div class="sm:col-span-2">
                   <div class="mt-2.5">
                   <form class="max-full mx-auto">
-                    <label for="countries" class="w-full font-nanum text-base px-2 py-4 text-white placeholder:text-black">WHAT ARE YOU LOOKING FOR ME TO CAPTURE? *</label>
-                    <select id="countries" class="border border-white bg-customGreen px-2 py-4 text-white text-base w-full">
+                    <label for="reffear" class="w-full font-nanum text-base px-2 py-4 text-white placeholder:text-black" required>WHAT ARE YOU LOOKING FOR ME TO CAPTURE? *</label>
+                    <select id="reffear" class="border border-white bg-customGreen px-2 py-4 text-white text-base w-full">
                       <option selected class="">-Select-</option>
-                      <option value="US">Instagram</option>
-                      <option value="CA">Friend referral</option>
-                      <option value="FR">Wedding fair</option>
-                      <option value="DE">Facebook ad</option>
-                      <option value="DE">Something else</option>
+                      <option value="IN">Instagram</option>
+                      <option value="FR">Friend referral</option>
+                      <option value="WF">Wedding fair</option>
+                      <option value="FA">Facebook ad</option>
+                      <option value="SE">Something else</option>
                     </select>
                   </form>
                 </div>
@@ -91,14 +137,15 @@ import heroImage from "~/assets/img/contact_me/hero_img.jpg";
                       placeholder="DATE *" 
                       name="date" id="date" 
                       autocomplete="date" 
+                      required
                       class="w-full font-nanum text-base bg-customGreen border-b border-b-white px-2 py-4 text-white placeholder:text-white" />
                     </div>
                   </div>
                   <div class="sm:col-span-2">
                   <div class="mt-2.5">
                   <form class="max-full mx-auto">
-                    <label for="countries" class="w-full font-nanum text-base px-2 py-4 text-white placeholder:text-white">WHAT ARE YOU LOOKING FOR ME TO CAPTURE? *</label>
-                    <select id="countries" class="border border-white bg-customGreen px-2 py-4 text-white text-base w-full">
+                    <label for="capture" class="w-full font-nanum text-base px-2 py-4 text-white placeholder:text-white">WHAT ARE YOU LOOKING FOR ME TO CAPTURE? *</label>
+                    <select id="capture" class="border border-white bg-customGreen px-2 py-4 text-white text-base w-full" required>
                       <option selected class="">-Select-</option>
                       <option value="US">Wedding day moments"</option>
                       <option value="CA">Family portraits</option>
@@ -114,17 +161,12 @@ import heroImage from "~/assets/img/contact_me/hero_img.jpg";
               <div class="my-10 flex justify-center">
                 <button type="submit" class="block bg-[#545A3F] outline outline-white uppercase px-8 py-2.5 text-center text-base  text-white shadow-sm ">submit</button>
               </div>
+                <!-- hCaptcha Spam Protection -->
+                <div class="h-captcha" data-captcha="true"></div>
             </form>
           </div>
       </div>
     </section>
   </div>
-
-
-
-
- 
-
-
 
 </template>

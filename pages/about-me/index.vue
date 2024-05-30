@@ -5,6 +5,7 @@ import TButton from "~/components/general/TButton.vue";
 </script>
 
 <template>
+   <div class="text-white" :style="{ backgroundColor: '#545A3F' }">
   <div class="flex flex-col justify-center px-6 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
   <div class="container space-y-2 lg:space-y-16">
     <TCard
@@ -29,6 +30,7 @@ import TButton from "~/components/general/TButton.vue";
     <div class="flex flex-col lg:flex-row justify-center space-y-6 lg:space-y-0">
       <div class="flex justify-center items-center">
       <TButton
+      class="border border-white"
       color-option="option1">
       Get In Touch
      </TButton>
@@ -42,6 +44,7 @@ import TButton from "~/components/general/TButton.vue";
         <p>+447444517696</p>
       </div>
     </div>
+  </div>
   </div>
   </div>
 </template>
