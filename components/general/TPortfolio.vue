@@ -65,63 +65,49 @@ const buttonClasses = computed(() => {
 </script>
 
 <template>
-  <div :class="['flex flex-col p-9 my-9 space-y-10 lg:space-y-0', containerClasses]">
-    <div class="flex flex-col lg:flex-row lg:mb-24 mt-2 lg:mt-10 space-y-8 lg:space-y-0">
+  <div :class="['flex flex-col  space-y-10 lg:space-y-14', containerClasses]">
+    <div class="flex flex-col  my-9 lg:flex-row mt-2 lg:mt-10 space-y-8 lg:space-y-0">
       <div class="ml-0 lg:ml-64">
-        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-nanum text-center">
+        <h1 class="text-2xl sm:text-4xl lg:text-4xl font-nanum text-center">
           {{ mainTitle }}
         </h1>
       </div>
-      <div class="flex justify-center ml-0 lg:ml-96">
+      <div class="flex justify-center ml-0 lg:ml-80">
         <button
           @click="navigateTo(buttonLink)"
-          :class="['text-sm outline px-2 py-2', buttonClasses]"
+          :class="['text-sm outline px-2', buttonClasses]"
         >
           {{ buttonText }}
         </button>
       </div>
     </div>
-    <div class="flex flex-col justify-center items-center lg:flex-row justify-center gap-4 lg:gap-8">
-      <div class="max-w-xs lg:max-w-sm lg:space-x-11 space-x-0">
-        <img
-          :src="imageSrcOne"
-          alt="Featured Image"
-          class="w-full"
-        />
-      </div>
-      <div class="max-w-xs lg:max-w-sm">
-        <img
-          :src="imageSrcTwo"
-          alt="Featured Image"
-          class="w-full"
-        />
-      </div>
-      <div class="max-w-xs lg:max-w-sm">
-        <img
-          :src="imageSrcThree"
-          alt="Featured Image"
-          class="w-full"
-        />
-      </div>
-      <div class="max-w-xs lg:max-w-sm">
-        <img
-          :src="imageSrcFour"
-          alt="Featured Image"
-          class="w-full"
-        />
-      </div>
-      <div class="max-w-xs lg:max-w-sm">
-        <img
-          :src="imageSrcFive"
-          alt="Featured Image"
-          class="w-full"
-        />
-      </div>
-    </div>
+    <div class="flex flex-col justify-center items-center lg:flex-row justify-center space-x-8">
+  <div class=" lg:max-w-sm">
+    <img :src="imageSrcOne" alt="Featured Image" class="w-full h-full object-cover" />
+  </div>
+  <div class=" lg:max-w-sm">
+    <img :src="imageSrcTwo" alt="Featured Image" class="w-full h-full object-cover" />
+  </div>
+  <div class=" lg:max-w-sm">
+    <img :src="imageSrcThree" alt="Featured Image" class="w-full h-full object-cover" />
+  </div>
+  <div class=" lg:max-w-sm">
+    <img :src="imageSrcFour" alt="Featured Image" class="w-full h-full object-cover" />
+  </div>
+  <div class=" lg:max-w-sm">
+    <img :src="imageSrcFive" alt="Featured Image" class="w-full h-full object-cover" />
+  </div>
+</div>
+
   </div>
 </template>
 
 <style scoped>
-/* Add any additional styles here */
+.w-custom-width {
+  width: 304px;
+}
+.h-custom-height {
+  height: 235px;
+}
 </style>
 
