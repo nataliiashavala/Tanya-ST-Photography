@@ -2,95 +2,95 @@
 import { computed, defineProps } from "vue";
 
 const props = defineProps({
-  titleOne: {
-    type: String,
-    default: "",
-  },
-  title: {
-    type: String,
-    default: "",
-  },
-  items: {
+  titleOne: String,
+  title1: String,
+  title2: String,
+  title3: String,
+  items1: {
     type: Array,
     default: () => [],
   },
-  imageSrc: {
-    type: String,
-    default: "",
+  items2: {
+    type: Array,
+    default: () => [],
+  },
+  items3: {
+    type: Array,
+    default: () => [],
   },
   styleOption: {
     type: String,
     default: "blackOption",
     validator: (value) => ["whiteOption", "blackOption"].includes(value),
-  },
-  reverseColumns: {
-    type: Boolean,
-    default: false,
-  },
+  }
 });
 
 const cardStyles = computed(() => {
-  const baseStyles = {
-    textColor:
-      props.styleOption === "whiteOption" ? "text-white" : "text-black",
-    border:
-      props.styleOption === "whiteOption" ? "border-white" : "border-black",
+  const isWhiteOption = props.styleOption === "whiteOption";
+  return {
+    titleTextColor: isWhiteOption ? "text-white" : "text-black",
+    titleBgColor: isWhiteOption ? "bg-[#545A3F]" : "bg-[#F5F5F5]",
+    textColor: isWhiteOption ? "text-black" : "text-white",
+    borderColor: isWhiteOption ? "border-black" : "border-white",
   };
-  baseStyles.verticalLineStyle =
-    props.styleOption === "whiteOption" ? "white" : "black";
-  return baseStyles;
 });
 </script>
 
 <template>
-  <div class="space-y-12 lg:space-y-0 lg:space-x-9">
-    <div class="">
-      <h2 class="text-3xl lg:text-6xl font-nanum text-center tracking-widest lg:mb-24 w-full">
-        {{ titleOne }}
-      </h2>
+  <div class="flex flex-col space-y-12 lg:space-y-0 w-full justify-center">
+    <div class="text-3xl lg:text-6xl font-nanum text-center tracking-widest lg:mb-24 w-full">
+      <h2>{{ titleOne }}</h2>
     </div>
-    <div
-      class="flex flex-col lg:flex-row items-center"
-      :class="{ 'lg:flex-row-reverse': props.reverseColumns }"
-    >
-      <div
-        class="flex flex-col"
-        :class="[
-          'container-relative text-center font-nanum pt-5 pb-2 px-6 lg:pt-11 lg:pb-5 lg:px-12 border',
-          cardStyles.border,
-          cardStyles.textColor,
-        ]"
-        :style="{ 'lg:border-left-color': cardStyles.verticalLineStyle }"
-      >
-        <h2 class="text-xl mb-2 lg:text-4xl lg:mb-4" :class="cardStyles.textColor">{{ title }}</h2>
-        <ul
-          class="text-left text-xl lg:text-2xl mb-6 list-disc list-inside leading-10 tracking-widest"
-          :class="cardStyles.textColor"
-        >
-          <li v-for="(item, index) in items" :key="index">{{ item }}</li>
-        </ul>
+
+    <div class="flex flex-col lg:flex-row lg:flex-1 space-x-0 lg:space-x-10 w-full space-y-12 lg:space-y-0 justify-between">
+      <div class="flex flex-col w-full lg:flex-1">
+        <div class="text-center font-nanum border rounded-lg" :class="[cardStyles.borderColor]">
+          <div :class="[cardStyles.titleBgColor, 'rounded-t-lg']">
+            <h2 class="text-2xl lg:text-4xl mb-4 pt-4" :class="cardStyles.titleTextColor">{{ title1 }}</h2>
+            <div class="border-b" :class="cardStyles.borderColor"></div>
+          </div>
+          <div class="rounded-b-lg pl-4 pr-6 py-10">
+            <ul class="text-left text-xl lg:text-2xl list-disc list-inside" :class="cardStyles.textColor">
+              <li class="tracking-widest leading-10" v-for="(item, index) in items1" :key="'1-' + index" :class="[cardStyles.textColor, 'text-xl lg:text-2xl ']">
+              {{ item }}
+            </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="flex m-1.5 pt-16 lg:pt-0flex flex-col lg:flex-row">
-        <img :src="imageSrc" alt="Featured Image" class="w-full" />
+
+      <div class="flex flex-col w-full lg:flex-1">
+        <div class="text-center font-nanum border rounded-lg" :class="[cardStyles.borderColor]">
+          <div :class="[cardStyles.titleBgColor, 'rounded-t-lg']">
+            <h2 class="text-2xl lg:text-4xl mb-4 pt-4" :class="cardStyles.titleTextColor">{{ title2 }}</h2>
+            <div class="border-b" :class="cardStyles.borderColor"></div>
+          </div>
+          <div class="rounded-b-lg pl-4 pr-6 py-10">
+            <ul class="text-left text-xl lg:text-2xl list-disc list-inside" :class="cardStyles.textColor">
+              <li v-for="(item, index) in items2" :key="'2-' + index" :class="[cardStyles.textColor, ' tracking-widest leading-10 text-xl lg:text-2xl']">
+              {{ item }}
+            </li>
+            </ul>
+          </div>
+        </div>
       </div>
+      
+      <div class="flex flex-col w-full lg:flex-1">
+        <div class="text-center font-nanum border rounded-lg" :class="[cardStyles.borderColor]">
+          <div :class="[cardStyles.titleBgColor, 'rounded-t-lg']">
+            <h2 class="text-2xl lg:text-4xl mb-4 pt-4" :class="cardStyles.titleTextColor">{{ title3 }}</h2>
+            <div class="border-b" :class="cardStyles.borderColor"></div>
+          </div>
+          <div class="rounded-b-lg pl-4 pr-6 py-10">
+            <ul class="text-left text-xl lg:text-2xl list-disc list-inside" :class="cardStyles.textColor">
+              <li v-for="(item, index) in items3" :key="'3-' + index" :class="[cardStyles.textColor, 'tracking-widest leading-10 text-xl lg:text-2xl']">
+              {{ item }}
+            </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
-
-<style scoped>
-.container-relative {
-  position: relative;
-}
-
-@media (min-width: 1024px) {
-  .container-relative::before {
-    content: "";
-    position: absolute;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 140px;
-    border-left: 1px solid v-bind("cardStyles.verticalLineStyle");
-  }
-}
-</style>
