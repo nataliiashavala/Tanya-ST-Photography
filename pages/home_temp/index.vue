@@ -1,3 +1,9 @@
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router';
+import TButton from '~/components/general/TButton.vue';
+import heroImage from '~/assets/img/home/hero_img.jpg';
+</script>
 
 <template>
   <!--Hero Section-->
@@ -6,7 +12,7 @@
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:pt-32">
         <div class="text-center text-white font-nanum space-y-12">
           <h1 class="text-2xl sm:text-4xl lg:text-6xl uppercase">tanya st photography</h1>
-          <p class="hidden sm:block mt-6 text-lg leading-8 uppercase">we are here to help you to remember the best days</p>
+          <p class="hidden sm:block mt-6 text-2xl leading-8 ">We are here to help you to remember the best days</p>
           <div class="flex items-center justify-center">
             <router-link to="/contact-me" class="text-center text-base sm:text-lg lg:text-xl outline outline-white sm:w-40 sm:h-9 lg:w-52 lg:h-14 py-2 px-4 shadow-md">Get In Touch</router-link>
           </div>
@@ -18,7 +24,7 @@
     <div class="container">
     <!-- Second Section-->
       <div class="flex flex-col justify-center items-center mt-6">
-        <div class="text-center text-2xl sm:text-4xl lg:text-5xl">
+        <div class="mt-4 lg:mt-10 text-center text-2xl sm:text-4xl lg:text-5xl">
           <h1 class="font-nanum mb-1">
             Beyond Ordinary
           </h1>
@@ -43,7 +49,7 @@
               </div>
           </div>
           <div class="max-w-sm pt-0 lg:pt-28">
-            <router-link to="/">
+            <router-link to="/family">
               <img class="" src="/assets/img/home/second_card_img.jpg" alt="" />
             </router-link>
               <div class="p-5 text-center">
@@ -73,23 +79,43 @@
             make a statment throuugh every picture</h1>
         </div>
       </div>
+      <!-- Porfolio-->
+      <div class="flex flex-col  space-y-10 lg:space-y-14 bg-[#F5F5F5] hidden md:block">
+        <div class="flex flex-col  my-9 lg:flex-row lg:mt-10 space-y-8 lg:space-y-0 pt-14">
+          <div class="ml-0 lg:ml-64">
+            <h1 class="text-2xl sm:text-4xl lg:text-4xl uppercase font-nanum text-center">
+              portfolio
+            </h1>
+          </div>
+          <div class="flex justify-center ml-0 lg:pl-80">
+            <button
+              @click="() => $router.push('/portfolio')"
+              class="text-sm uppercase outline px-2"
+            >
+             view all porfolio
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-center lg:flex-row justify-center space-x-8">
+      <div class=" lg:max-w-sm">
+        <img src="/assets/img/home/portfolio_1.jpg" alt="Featured Image" class="w-full h-full object-cover" />
+      </div>
+      <div class=" lg:max-w-sm w-custom-width h-custom-height">
+        <img src="/assets/img/home/portfolio_2.jpg" alt="Featured Image" class="w-full h-full object-cover" />
+      </div>
+      <div class=" lg:max-w-sm w-custom-width h-custom-height">
+        <img src="/assets/img/home/portfolio_3.jpg" alt="Featured Image" class="w-full h-full object-cover" />
+      </div>
+      <div class=" lg:max-w-sm w-custom-width h-custom-height">
+        <img src="/assets/img/home/portfolio_4.jpg" alt="Featured Image" class="w-full h-full object-cover" />
+      </div>
+      <div class=" lg:max-w-sm w-custom-width h-custom-height">
+        <img src="/assets/img/home/portfolio_5.jpg" alt="Featured Image" class="w-full h-full object-cover" />
+      </div>
+    </div>
+      </div>
 
-      <div>
-        <TPortfolio
-          mainTitle="PORTFOLIOS"
-          buttonText="VIEW ALL PORTFOLIO..."
-          buttonLink="/portfolio"
-          :image-srcOne="heroImage"
-          :image-srcTwo="heroImage"
-          :image-srcThree="heroImage"
-          :image-srcFour="heroImage"
-          :image-srcFive="heroImage"
-          styleOption="style2"
-        />
-     </div>
-
-
-    <div class="hidden md:block">
+    <div class="hidden md:block mt-28">
       <div class="flex flex-row justify-center items-center pb-11">
           <div class="w-72 h-px bg-black mr-4"></div>
             <div class="flex flex-col">
@@ -108,8 +134,8 @@
       <div class="justify-center items-center">
         <div class="flex flex-row">
           <img class="" src="/assets/img/home/left_card_img.jpg" alt="Image of married couple">
-          <div class="bg-stone-100">
-            <div class="outline outlin-black m-32 p-11">
+          <div class="bg-stone-100 flex justify-center align-center">
+            <div class="outline outline-black m-20 p-11">
               <div class="font-nanum text-center space-y-11">
                 <h2 class="uppercase text-xl">
                   let`s work together
@@ -133,11 +159,3 @@
   </div>
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router';
-import TButton from '~/components/general/TButton.vue';
-import heroImage from '~/assets/img/home/hero_img.jpg';
-import TPortfolio from '~/components/general/TPortfolio.vue';
-</script>

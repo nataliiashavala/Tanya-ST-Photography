@@ -1,6 +1,8 @@
 <script setup>
 import heroImage from "~/assets/img/contact_me/hero_img.jpg";
 import { ref, onMounted } from 'vue';
+import instagram from '~/assets/icons/instagram.svg';
+import facebook from '~/assets/icons/facebook.svg';
 
 // Data properties as reactive references
 const accessKey = ref('8a1f8bd0-1766-42be-9d91-66fbc109d1e6');
@@ -57,8 +59,8 @@ const handleSubmit = async () => {
           <p class="mb-8 text-small text-white lg:text-xl sm:px-16 lg:px-48">precious memories forever</p>
       </div>
   </section>
-  <div class="flex justify-center" :style="{ backgroundColor: '#545A3F' }">
-  <section class="container px-6 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+  <div class="flex justify-center px-6 sm:px-8 md:px-20 lg:px-64 lg:pt-36" :style="{ backgroundColor: '#545A3F' }">
+  <section class="container ">
     <!-- Left Column-->
     <div class="flex flex-col lg:flex-row items-start space-x-0 lg:space-x-20 mt-20 lg:mt-0">
       <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
@@ -76,7 +78,14 @@ const handleSubmit = async () => {
             </p>
             </div>
           </div>
-
+          <div class="flex items-center justify-center gap-4 mt-5">
+          <a href="https://www.instagram.com/tanyastt/">
+            <img :src="instagram" alt="" class="">
+          </a>
+          <a href="https://www.facebook.com/TanyaStPhoto">
+            <img :src="facebook" alt="">
+          </a>
+        </div>
         </div>
       </div> 
       

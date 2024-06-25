@@ -21,11 +21,23 @@ import img10 from "~/assets/img/portfolio/slider/img10.jpg";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
-
-const priceCardItems = [
+const itemsList1 = [
   "Pre-shoot consultation",
-  "1-1.5 hour shoot",
-  "150+ high-resolution, edited, digitals photos",
+  "30 min shoot hour shoot",
+  "10+ high-resolution, edited, digitals photos",
+];
+
+const itemsList2 = [
+  "Pre-shoot consultation",
+  "1 hour shoot",
+  "30+ high-resolution, edited, digitals photos",
+  "Online Gallery to view",
+];
+
+const itemsList3 = [
+  "Pre-shoot consultation",
+  "1 hour shoot",
+  "All high-resolution, edited, digitals photos",
   "Online Gallery to view",
 ];
 
@@ -40,10 +52,9 @@ const leftCardItems = [
   <div class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
     <div class="container space-y-8 lg:space-y-28">
       <TCard
-        title="I`M HERE TO HELP CAPTURE THE BEST OF YOU"
-        text="My mission is to empower you and make you feel good about yourself.
-        Whatever your age, background or role in life, I aim to bring out the best of you and capture it on camera. Whether you just want to relax and be yourself or show another facet of your character, I strive to help you feel good about yourself and boost your confidence.
-        It`s your choice and your day: I`m delighted to be a part of it!"
+        title="I`M HERE TO GIVE YOU UNFORGETTABLE MEMORIES"
+        text="Family shoots are important moments for everyone. I try to make it memorable and easy-going for my clients. I love to capture pure emotions and the special bond within each family. I love to take photos of people moving and interacting with each other. My shoots are full of emotion, action, fun and smiles.
+        I can help with clothes and styling, giving advice regarding colours, hair and overall look. I can also recommend an experienced make-up artist to help you achieve that perfect look on the day."
         :image-src="heroImage"
       />
       <div>
@@ -57,19 +68,22 @@ const leftCardItems = [
         title="What I Offer:"
         :items="leftCardItems"
       />
-      <div class="">
-        <TPriceCard
+      <TPriceCard
           title-one="PRICING"
-          title="SOLO SHOOT - £200"
-          :image-src="PriceCardImage"
-          :items="priceCardItems"
+          title1="£250"
+          :items1="itemsList1"
+          :items2="itemsList2"
+          :items3="itemsList3"
+          title2="£350"
+          title3="£450"
+          styleOption="whiteOption"
         />
-        <div class="flex justify-center my-10 lg:my-0">
-          <TButton class="outline outline-white text-center" color-option="option1"
-            >Get in touch
-          </TButton>
-        </div>
-        <div>
+        <div class="flex justify-center">
+              <TButton class="text-center rounded-3xl" color-option="option2">Learn More </TButton>
+            </div>
+      </div>
+  </div>
+      <div class="">
           <TPortfolio
             mainTitle="PORTFOLIOS"
             buttonText="VIEW ALL PORTFOLIO..."
@@ -77,12 +91,7 @@ const leftCardItems = [
             :image-srcOne="heroImage"
             :image-srcTwo="heroImage"
             :image-srcThree="heroImage"
-            :image-srcFour="heroImage"
-            :image-srcFive="heroImage"
             styleOption="style1"
           />
-        </div>
-      </div>
-    </div>
-  </div>
+       </div>
 </template>

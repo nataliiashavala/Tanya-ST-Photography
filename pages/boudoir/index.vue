@@ -21,14 +21,25 @@ import img10 from "~/assets/img/portfolio/slider/img10.jpg";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
-
-const priceCardItems = [
+const itemsList1 = [
   "Pre-shoot consultation",
-  "Min 2-hour shoot",
-  "300+ high-resolution, edited, digital photos",
-  "Online Gallery to view and share with family and friends",
+  "30 min shoot hour shoot",
+  "10+ high-resolution, edited, digitals photos",
 ];
 
+const itemsList2 = [
+  "Pre-shoot consultation",
+  "1 hour shoot",
+  "30+ high-resolution, edited, digitals photos",
+  "Online Gallery to view",
+];
+
+const itemsList3 = [
+  "Pre-shoot consultation",
+  "1 hour shoot",
+  "All high-resolution, edited, digitals photos",
+  "Online Gallery to view",
+];
 const leftCardItems = [
   "An initial consultation to understand your vision and help plan the photography that will best tell your story.",
   "A flexible, discreet, and sensitive presence on your special day, capturing every significant look, touch, and emotion.",
@@ -61,19 +72,24 @@ const leftCardItems = [
           :items="leftCardItems"
         />
 
-      <div class="">
-        <TPriceCard
-          title-one="PRICING"
-          title="COUPLES SHOOT - £250"
-          :items="priceCardItems"
-          :image-src="priceCardImage"
-        />
-
-        <div class="flex justify-center my-10 lg:my-0">
-          <TButton class="outline outline-white text-center" color-option="option1">
-            Get in touch
-          </TButton>
+     
+        <div class="flex justify-center flex-col space-y-4 lg:space-y-8 ">
+            <TPriceCard
+              title-one="PRICING"
+              title1="£250"
+              :items1="itemsList1"
+              :items2="itemsList2"
+              :items3="itemsList3"
+              title2="£350"
+              title3="£450"
+              styleOption="whiteOption"
+            />
+            <div class="flex justify-center">
+              <TButton class="text-center rounded-3xl" color-option="option2">Learn More </TButton>
+            </div>
+          </div> 
         </div>
+      </div>
         <div>
             <TPortfolio
               mainTitle="PORTFOLIOS"
@@ -87,7 +103,6 @@ const leftCardItems = [
               styleOption="style1"
             />
         </div>
-      </div>
-    </div>
-  </div>
+     
+    
 </template>

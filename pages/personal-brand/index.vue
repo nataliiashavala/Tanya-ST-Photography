@@ -4,7 +4,6 @@ import heroImage from "~/assets/img/personal_brand/hero_card_img.jpg";
 import TLeftCard from "~/components/general/TLeftCard.vue";
 import leftCard from "~/assets/img/personal_brand/left_card_img.jpg";
 import TPriceCard from "~/components/general/TPriceCard.vue";
-import PriceCardImage from "~/assets/img/family/price_card.jpg";
 import TButton from "~/components/general/TButton.vue";
 import TPortfolio from '~/components/general/TPortfolio.vue';
 import TImgCarousel from "~/components/general/TImgCarousel.vue";
@@ -27,10 +26,23 @@ const leftCardItems = [
   "Workplace Snapshots: Photographs of you in your workplace, capturing the essence of your everyday professional environment.",
 ];
 
-const priceCardItems = [
+const itemsList1 = [
   "Pre-shoot consultation",
-  "2 hour shoot",
-  "300+ high-resolution, edited, digitals photos",
+  "30 min shoot hour shoot",
+  "10+ high-resolution, edited, digitals photos",
+];
+
+const itemsList2 = [
+  "Pre-shoot consultation",
+  "1 hour shoot",
+  "30+ high-resolution, edited, digitals photos",
+  "Online Gallery to view",
+];
+
+const itemsList3 = [
+  "Pre-shoot consultation",
+  "1 hour shoot",
+  "All high-resolution, edited, digitals photos",
   "Online Gallery to view",
 ];
 </script>
@@ -50,19 +62,26 @@ const priceCardItems = [
         title="What I Offer:"
         :items="leftCardItems"
       />
-      <div class="space-y-4 lg:space-y-8">
+      <div class="flex justify-center flex-col space-y-4 lg:space-y-8 ">
         <TPriceCard
           title-one="PRICING"
-          title="BUSINESS SHOOT - £250"
-          :image-src="PriceCardImage"
-          :items="priceCardItems"
+          title1="£250"
+          :items1="itemsList1"
+          :items2="itemsList2"
+          :items3="itemsList3"
+          title2="£350"
+          title3="£450"
+          styleOption="whiteOption"
         />
         <div class="flex justify-center">
-          <TButton class="text-center" color-option="option2">Get in touch </TButton>
+          <TButton class="text-center rounded-3xl" color-option="option2">Learn More </TButton>
         </div>
       </div>
 
-      <div>
+      
+    </div>
+  </div>
+  <div>
         <TPortfolio
           mainTitle="PORTFOLIOS"
           buttonText="VIEW ALL PORTFOLIO..."
@@ -75,8 +94,6 @@ const priceCardItems = [
           styleOption="style1"
         />
      </div>
-    </div>
-  </div>
 </template>
 
 <style scoped></style>

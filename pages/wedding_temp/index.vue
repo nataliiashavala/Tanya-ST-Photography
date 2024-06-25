@@ -22,14 +22,7 @@ import img10 from "~/assets/img/portfolio/slider/img10.jpg";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
-const priceOneCardItems = [
-  "Pre-wedding consultation",
-  "Min 2-hour shoot",
-  "300+ high-resolution, edited, digital photos",
-  "Online Gallery to view and share with family and friends",
-];
-
-const priceTwoCardItems = [
+const itemsList1 = [
   "Pre-wedding consultation",
   "Half-Day photography from morning wedding preparation until spechless",
   "500+ high-resolution, edited, digital photos",
@@ -38,7 +31,7 @@ const priceTwoCardItems = [
   "Wedding album available - 450£",
 ];
 
-const priceThreeCardItems = [
+const itemsList2 = [
   "Pre-wedding consultation",
   "Full-Day photography from preparation to the first 2 dances",
   "600+ high-resolution, edited, digital photos",
@@ -46,7 +39,7 @@ const priceThreeCardItems = [
   "Online Gallery to view and share with family and friends",
   "Wedding album available - 450£",
 ];
-const leftCardItems = [
+const itemsList3 = [
   "Pre-wedding consultation",
   "Half-Day photography from morning wedding preparation until spechless",
   "500+ high-resolution, edited, digital photos",
@@ -81,37 +74,26 @@ const leftCardItems = [
           text="I am an easy-going photographer whilst never compromising on professionalism and detail and I will ensure you feel comfortable and relaxed working with me. I love bringing out the best in my subjects, capturing real moments and emotions, the formal and informal that both make up your special day. However, l am also happy to take more traditional posed-style photos, depending entirely on your personal needs.
           I am an adventurous and flexible person, delighted to go wherever my couples bring me. Whether it`s a church, your home or the top of a mountain, it`s your special day and I will follow! On the shoot with me, you will feel relaxed, at ease and will thoroughly enjoy your day, knowing your photos are in the best of hands."  
         />
-
-        <TPriceCard 
-          title-one="PRICING"
-          title="£250 / 1 HOUR"
-          :image-src="onePriceCardImage"
-          :items="priceOneCardItems"
-          styleOption= "whiteOption"
-        />
-
+        <div class="space-y-4 lg:space-y-8">
         <TPriceCard
-          title="£1,200"
-          :image-src="twoPriceCardImage"
-          :items="priceTwoCardItems"
-          reverse-columns
-          styleOption= "whiteOption"
+          title-one="PRICING"
+          title1="£250"
+          :items1="itemsList1"
+          :items2="itemsList2"
+          :items3="itemsList3"
+          title2="£350"
+          title3="£450"
+          styleOption="blackOption"
         />
-        <div class="">
-          <TPriceCard
-            title="£1,650"
-            :image-src="threePriceCardImage"
-            :items="priceThreeCardItems"
-            styleOption= "whiteOption"
-          />
+
           <div class="flex justify-center">
-          <TButton class="outline outline-white text-center" color-option="option1"
-            >Get in touch
+          <TButton class="outline outline-white text-center" color-option="option1">
+            Get in touch
           </TButton>
           </div>
         </div>
+        </div>
       </div>
-  </div>
   </div>
 </template>
 
