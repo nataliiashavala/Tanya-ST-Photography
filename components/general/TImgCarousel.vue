@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import { ref, defineProps, computed, onMounted } from 'vue';
+import { ref, defineProps, onMounted, onUnmounted } from 'vue';
 
 const props = defineProps({
   images: {
@@ -18,7 +18,7 @@ const props = defineProps({
   },
   interval: {
     type: Number,
-    default: 5000, // Default interval is 5 seconds
+    default: 2000, // Default interval is 3 seconds
   },
 });
 
@@ -28,11 +28,11 @@ const carouselHeight = ref('824px');
 // Update the carousel height based on screen size
 const updateCarouselHeight = () => {
   if (window.innerWidth < 640) {
-    carouselHeight.value = '200px';
-  } else if (window.innerWidth < 768) {
     carouselHeight.value = '300px';
-  } else if (window.innerWidth < 1024) {
+  } else if (window.innerWidth < 768) {
     carouselHeight.value = '500px';
+  } else if (window.innerWidth < 1024) {
+    carouselHeight.value = '824px';
   } else {
     carouselHeight.value = '824px';
   }
@@ -62,4 +62,3 @@ onUnmounted(() => {
   object-fit: cover;
 }
 </style>
-
