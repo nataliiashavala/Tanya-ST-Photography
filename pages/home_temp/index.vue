@@ -8,10 +8,10 @@ import heroImage from '~/assets/img/home/hero_img.jpg';
 <template>
   <!--Hero Section-->
   <div class="bg-cover bg-center" :style="{ backgroundImage: `url(${heroImage})` }">
-    <div class="isolate px-4 pt-14 lg:px-8">
+    <div class="isolate px-4 pt-14 lg:px-8 lg:pb-56 xl:pb-64">
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:pt-32">
         <div class="text-center text-white font-nanum space-y-12">
-          <h1 class="text-2xl sm:text-4xl lg:text-6xl uppercase">tanya st photography</h1>
+          <h1 class="text-2xl sm:text-2xl lg:text-4xl uppercase">tanya st photography</h1>
           <p class="hidden sm:block mt-6 text-2xl leading-8 ">We are here to help you to remember the best days</p>
           <div class="flex items-center justify-center">
             <router-link to="/contact-me" class="text-center text-base sm:text-lg lg:text-xl outline outline-white sm:w-40 sm:h-9 lg:w-52 lg:h-14 py-2 px-4 shadow-md">Get In Touch</router-link>

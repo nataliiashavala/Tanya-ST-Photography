@@ -49,7 +49,7 @@ const leftCardItems = [
 </script>
 
 <template>
-  <div class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+  <div class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36 text-white" :style="{ backgroundColor: '#545A3F' }">
     <div class="container space-y-8 lg:space-y-28">
       <TCard
         title="JUST US: SECRET ESCAPE"
@@ -62,7 +62,6 @@ const leftCardItems = [
         <div>
           <TImgCarousel
           :images="images"
-            :interval="5000"
               />
         </div>
         
@@ -82,7 +81,7 @@ const leftCardItems = [
               :items3="itemsList3"
               title2="£350"
               title3="£450"
-              styleOption="whiteOption"
+              styleOption="blackOption"
             />
             <div class="flex justify-center">
               <TButton class="text-center rounded-3xl" color-option="option2">Learn More </TButton>
@@ -90,7 +89,7 @@ const leftCardItems = [
           </div> 
         </div>
       </div>
-        <div>
+        <div class="lg:mt-20 mt-11">
             <TPortfolio
               mainTitle="PORTFOLIOS"
               buttonText="VIEW ALL PORTFOLIO..."
@@ -100,7 +99,7 @@ const leftCardItems = [
               :image-srcThree="heroImage"
               :image-srcFour="heroImage"
               :image-srcFive="heroImage"
-              styleOption="style1"
+              styleOption="style2"
             />
         </div>
      

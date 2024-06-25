@@ -63,7 +63,6 @@ const itemsList3 = [
         <div>
           <TImgCarousel
           :images="images"
-            :interval="5000"
               />
         </div>
         <TRightCard

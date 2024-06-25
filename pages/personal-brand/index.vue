@@ -57,6 +57,12 @@ const itemsList3 = [
         :image-src="heroImage"
       />
 
+      <div>
+          <TImgCarousel
+          :images="images"
+              />
+        </div>
+
       <TLeftCard
         :image-src="leftCard"
         title="What I Offer:"
@@ -81,7 +87,7 @@ const itemsList3 = [
       
     </div>
   </div>
-  <div>
+  <div class="lg:mt-20 mt-11">
         <TPortfolio
           mainTitle="PORTFOLIOS"
           buttonText="VIEW ALL PORTFOLIO..."

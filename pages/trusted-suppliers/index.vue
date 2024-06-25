@@ -17,8 +17,8 @@ import heroImage from "~/assets/img/trusted_suppliers/hero_card_img.jpg";
         />
         <div class="flex justify-center flex-row space-x-10 lg:space-x-0 lg:flex-col">
         <div class="flex justify-start space-y-12 lg:space-y-0">
-          <div class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 space-x-0 lg:space-x-64 ">
-            <div class ="flex flex-col space-y-9 lg:space-y-0 text-sm lg:text-2xl">
+          <div class="flex flex-col lg:flex-row space-y-10 lg:space-y-12 space-x-2 lg:space-x-64 ">
+            <div class ="flex flex-col space-y-9 lg:space-y-12 text-sm lg:text-2xl mt-0 lg:mt-12">
               <h1 class="font-bold">VENUES</h1>
               <div class="flex flex-col space-y-5">
                 <a href="https://www.example.com" class="">LAZY SUNDAY</a>
@@ -26,7 +26,7 @@ import heroImage from "~/assets/img/trusted_suppliers/hero_card_img.jpg";
                 <a href="https://www.example.com" class="">LAZY SUNDAY</a>
               </div>
             </div>
-            <div class ="flex flex-col space-y-9 lg:space-y-0 text-sm lg:text-2xl">
+            <div class ="flex flex-col space-y-9 lg:space-y-12 text-sm lg:text-2xl mt-0 lg:mt-12">
               <h1 class="font-bold">VENUES</h1>
               <div class="flex flex-col space-y-5">
                 <a href="https://www.example.com" class="">LAZY SUNDAY</a>
@@ -34,7 +34,7 @@ import heroImage from "~/assets/img/trusted_suppliers/hero_card_img.jpg";
                 <a href="https://www.example.com" class="">LAZY SUNDAY</a>
               </div>
             </div>
-            <div class ="flex flex-col space-y-9 lg:space-y-12 text-sm lg:text-2xl">
+            <div class ="flex flex-col space-y-9 lg:space-y-12 text-sm lg:text-2xl mt-0 lg:mt-12 ">
               <h1 class="font-bold">VENUES</h1>
               <div class="flex flex-col space-y-5">
                 <a href="https://www.example.com" class="">LAZY SUNDAY</a>
@@ -45,7 +45,7 @@ import heroImage from "~/assets/img/trusted_suppliers/hero_card_img.jpg";
           </div>
         </div>
         <div class="flex flex-col lg:flex-row space-y-10 lg:space-y-12 space-x-0 lg:space-x-64 ">
-            <div class ="flex flex-col space-y-9 lg:space-y-12 text-sm lg:text-2xl">
+            <div class ="flex flex-col space-y-9 lg:space-y-12 text-sm lg:text-2xl mt-0 lg:mt-12">
               <h1 class="font-bold">VENUES</h1>
               <div class="flex flex-col space-y-5">
                 <a href="https://www.example.com" class="">LAZY SUNDAY</a>

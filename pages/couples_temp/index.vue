@@ -61,7 +61,6 @@ const leftCardItems = [
       <div>
           <TImgCarousel
           :images="images"
-            :interval="5000"
               />
         </div>
       <div class="hidden md:block flex flex-col mt-9">
@@ -91,7 +90,7 @@ const leftCardItems = [
           </div>
       </div>
     </div>
-    <div>
+    <div class="lg:mt-20 mt-11">
             <TPortfolio
               mainTitle="PORTFOLIOS"
               buttonText="VIEW ALL PORTFOLIO..."

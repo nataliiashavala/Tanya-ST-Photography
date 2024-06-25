@@ -54,7 +54,6 @@ const itemsList3 = [
       <div>
           <TImgCarousel
           :images="images"
-            :interval="5000"
               />
         </div>
       <TRightCard
@@ -82,7 +81,7 @@ const itemsList3 = [
           </div>
         </div> 
       </div>
-        <div> 
+        <div class="lg:mt-20 mt-11"> 
             <TPortfolio
               mainTitle="PORTFOLIOS"
               buttonText="VIEW ALL PORTFOLIO..."
