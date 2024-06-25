@@ -4,7 +4,9 @@ import { Top } from '@element-plus/icons-vue';
 import mail from '~/assets/icons/mail.svg';
 import instagram from '~/assets/icons/instagram.svg';
 import facebook from '~/assets/icons/facebook.svg';
-
+import TNews from '~/components/general/TNews.vue'; 
+import TNewsS from '~/components/general/TNewsS.vue'
+import TNewsSS from '~/components/general/TNewsSS.vue'
 
 // Ref for storing the email input
 const enterEmail = ref("");
@@ -56,11 +58,12 @@ onMounted(() => {
     document.body.appendChild(script);
   }
 });
+
 </script>
 
 
 <template>
-  <div class="mt-7 md:mt-44 mx-4">
+  <div class="mt-7 md:mt-20 mx-4">
     <h1 class="text-center text-2xl lg:text-5xl text-[#4F4F4F]">FOLLOW ME ON INSTAGRAM</h1>
     <p class="text-center text-[#838383] text-2xl lg:text-4xl my-4">
       <a href="https://www.instagram.com/tanyastt/">@tanyastt</a>
@@ -102,6 +105,42 @@ onMounted(() => {
     </div>
   </div>
   <!-- Neswletter-->
+
+  <div id="mc_embed_shell">
+  
+  <div id="mc_embed_signup">
+      <form action="https://gmail.us17.list-manage.com/subscribe/post?u=3758dff65859e1a09e6054a58&amp;id=0321c60f7f&amp;f_id=00e4bbe0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+          <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
+              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+              <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+          <div id="mce-responses" class="clear foot">
+              <div class="response" id="mce-error-response" style="display: none;"></div>
+              <div class="response" id="mce-success-response" style="display: none;"></div>
+          </div>
+      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+          <input type="text" name="b_3758dff65859e1a09e6054a58_0321c60f7f" tabindex="-1" value="">
+      </div>
+          <div class="optionalParent">
+              <div class="clear foot">
+                  <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iQUwLI" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+              </div>
+          </div>
+      </div>
+  </form>
+  </div>
+  </div>
+<!-- News-->  
+
+  <TNews>
+
+  </TNews>
+
+  <TNewsS>
+
+  </TNewsS>
+  <!-- Newsletter-->
   <div class="flex  justify-between items-center pt-4 lg:pt-14">
     <div class="flex flex-col lg:flex-row bg-customGreen w-full justify-center items-center mt-6 h-20 px-6 lg:px-0">
       
@@ -139,6 +178,9 @@ onMounted(() => {
     </div>
   </div>
   <p class="text-center my-2 text-base md:text-xl">© BY TANYA ST PHOTOGRAPHY</p>
+  <TNewsSS>
+
+  </TNewsSS>
 </template>
 
 <style scoped>

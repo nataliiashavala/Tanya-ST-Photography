@@ -66,13 +66,13 @@ const buttonClasses = computed(() => {
 
 <template>
   <div :class="['flex flex-col  space-y-10 lg:space-y-14', containerClasses]">
-    <div class="flex flex-col  my-9 lg:flex-row mt-2 lg:mt-10 space-y-8 lg:space-y-0">
+    <div class="flex flex-col  my-9 lg:flex-row mt-2 lg:mt-10 space-y-8 lg:space-y-0 space-x-8 px-6 sm:px-8 md:px-20 lg:px-64">
       <div class="ml-0 lg:ml-64">
         <h1 class="text-2xl sm:text-4xl lg:text-4xl font-nanum text-center">
           {{ mainTitle }}
         </h1>
       </div>
-      <div class="flex justify-center ml-0 lg:ml-80">
+      <div class="flex justify-center ml-0 lg:pl-80">
         <button
           @click="navigateTo(buttonLink)"
           :class="['text-sm outline px-2', buttonClasses]"
@@ -81,21 +81,15 @@ const buttonClasses = computed(() => {
         </button>
       </div>
     </div>
-    <div class="flex flex-col justify-center items-center lg:flex-row justify-center space-x-8">
-  <div class=" lg:max-w-sm">
+    <div class="flex flex-col justify-center items-center lg:flex-row justify-center space-x-8 px-6 sm:px-8 md:px-20 lg:px-64">
+  <div class=" lg:max-w-sm w-custom-width h-custom-height">
     <img :src="imageSrcOne" alt="Featured Image" class="w-full h-full object-cover" />
   </div>
-  <div class=" lg:max-w-sm">
+  <div class=" lg:max-w-sm w-custom-width h-custom-height">
     <img :src="imageSrcTwo" alt="Featured Image" class="w-full h-full object-cover" />
   </div>
-  <div class=" lg:max-w-sm">
+  <div class=" lg:max-w-sm w-custom-width h-custom-height">
     <img :src="imageSrcThree" alt="Featured Image" class="w-full h-full object-cover" />
-  </div>
-  <div class=" lg:max-w-sm">
-    <img :src="imageSrcFour" alt="Featured Image" class="w-full h-full object-cover" />
-  </div>
-  <div class=" lg:max-w-sm">
-    <img :src="imageSrcFive" alt="Featured Image" class="w-full h-full object-cover" />
   </div>
 </div>
 
@@ -104,10 +98,10 @@ const buttonClasses = computed(() => {
 
 <style scoped>
 .w-custom-width {
-  width: 304px;
+  width: 365px;
 }
 .h-custom-height {
-  height: 235px;
+  height: 445px;
 }
 </style>
 
