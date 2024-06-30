@@ -5,7 +5,7 @@ import instagram from '~/assets/icons/instagram.svg';
 import facebook from '~/assets/icons/facebook.svg';
 
 // Data properties as reactive references
-const accessKey = ref('8a1f8bd0-1766-42be-9d91-66fbc109d1e6');
+const accessKey = ref('c39ec7c9-5ac6-47e8-8936-55c4b4fcd4f8');
 const formData = ref({
   name: '',
   surname: '',
@@ -167,6 +167,7 @@ const handleSubmit = async () => {
                 </div>
               </div>
               </div>
+
               <div class="my-10 flex justify-center">
                 <button type="submit" class="block bg-[#545A3F] outline outline-white uppercase px-8 py-2.5 text-center text-base  text-white shadow-sm ">submit</button>
               </div>
