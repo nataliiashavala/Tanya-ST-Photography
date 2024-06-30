@@ -129,7 +129,7 @@ const handleSubmit = async () => {
                   <div class="mt-2.5">
                   <form class="max-full mx-auto">
                     <label for="reffear" class="w-full font-nanum text-base px-2 py-4 text-white placeholder:text-black" required>WHAT ARE YOU LOOKING FOR ME TO CAPTURE? *</label>
-                    <select id="reffear" class="border border-white bg-customGreen px-2 py-4 text-white text-base w-full">
+                    <select id="reffear" name="reffear" class="border border-white bg-customGreen px-2 py-4 text-white text-base w-full">
                       <option selected class="">-Select-</option>
                       <option value="IN">Instagram</option>
                       <option value="FR">Friend referral</option>
@@ -154,7 +154,7 @@ const handleSubmit = async () => {
                   <div class="mt-2.5">
                   <form class="max-full mx-auto">
                     <label for="capture" class="w-full font-nanum text-base px-2 py-4 text-white placeholder:text-white">WHAT ARE YOU LOOKING FOR ME TO CAPTURE? *</label>
-                    <select id="capture" class="border border-white bg-customGreen px-2 py-4 text-white text-base w-full" required>
+                    <select id="capture" name="capture" class="border border-white bg-customGreen px-2 py-4 text-white text-base w-full" required>
                       <option selected class="">-Select-</option>
                       <option value="US">Wedding day moments"</option>
                       <option value="CA">Family portraits</option>
