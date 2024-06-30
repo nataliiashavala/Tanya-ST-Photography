@@ -92,7 +92,7 @@ const handleSubmit = async () => {
           <!-- Contact Form-->
           <div class="w-full lg:w-2/3">
             <form action="https://api.web3forms.com/submit" method="POST" class="">
-              <input type="hidden" name="access_key" value="8a1f8bd0-1766-42be-9d91-66fbc109d1e6">
+              <input type="hidden" name="access_key" value="c39ec7c9-5ac6-47e8-8936-55c4b4fcd4f8">
               <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div class="sm:col-span-2">
                   <div class="mt-2.5">
