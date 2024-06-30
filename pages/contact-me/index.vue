@@ -63,7 +63,7 @@ const handleSubmit = async () => {
   <section class="container ">
     <!-- Left Column-->
     <div class="flex flex-col lg:flex-row items-start space-x-0 lg:space-x-20 mt-20 lg:mt-0">
-      <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
+      <div class="w-full lg:w-1/2 mb-10 lg:mb-0 relative vertical-lines">
         <div class="bg-white p-4 lg:p-12 outline outline-black">
           <div class="flex flex-col justify-center text-center items-center space-y-6 lg:space-y-12">
             <h1 class="uppercase text-xl lg:text-2xl">
@@ -179,3 +179,29 @@ const handleSubmit = async () => {
   </div>
 
 </template>
+<style scoped>
+@media (min-width: 1024px) {
+.vertical-lines::before, .vertical-lines::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1px; /* Line width */
+  background-color: black; /* Line color */
+}
+
+.vertical-lines::before {
+    height: 106px; /* Adjust the height of the line */
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vertical-lines::after {
+    height: 106px; /* Adjust the height of the line */
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+}
+
+</style>
