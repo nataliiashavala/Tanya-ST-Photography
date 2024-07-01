@@ -126,7 +126,7 @@ onMounted(async () => {
 <template>
   <div
     :class="{ 'bg-customGreen text-white': hasGreenBackground }"
-    class="header pl-20"
+    class="header pl-0 lg:pl-20"
   >
     <!-- Sidebar -->
     <div
@@ -195,7 +195,7 @@ onMounted(async () => {
               :src="Logo"
               alt="Logo"
               :style="logoStyle"
-              class="w-16 h-16 lg:w-full lg:h-full"
+              class="w-full h-full"
             />
           </nuxt-link>
         </div>
