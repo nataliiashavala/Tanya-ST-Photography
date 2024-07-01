@@ -6,7 +6,7 @@ import leftImage from "~/assets/img/solo/left_card_img.jpg";
 import TPriceCard from "~/components/general/TPriceCard.vue";
 import PriceCardImage from "~/assets/img/solo/price_card.jpg";
 import TButton from "~/components/general/TButton.vue";
-import TPortfolio from '~/components/general/TPortfolio.vue';
+import TPortfolio from "~/components/general/TPortfolio.vue";
 import TImgCarousel from "~/components/general/TImgCarousel.vue";
 import img1 from "~/assets/img/portfolio/slider/img1.jpg";
 import img2 from "~/assets/img/portfolio/slider/img2.jpg";
@@ -49,7 +49,9 @@ const leftCardItems = [
 </script>
 
 <template>
-  <div class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+  <div
+    class="flex flex-col justify-center px-6 pt-12 sm:px-8 md:px-20 lg:px-64 lg:pt-36"
+  >
     <div class="container space-y-8 lg:space-y-28">
       <TCard
         title="I`M HERE TO GIVE YOU UNFORGETTABLE MEMORIES"
@@ -58,39 +60,39 @@ const leftCardItems = [
         :image-src="heroImage"
       />
       <div>
-          <TImgCarousel
-          :images="images"
-              />
-        </div>
+        <TImgCarousel :images="images" />
+      </div>
       <TLeftCard
         :image-src="leftImage"
         title="What I Offer:"
         :items="leftCardItems"
       />
       <TPriceCard
-          title-one="PRICING"
-          title1="£250"
-          :items1="itemsList1"
-          :items2="itemsList2"
-          :items3="itemsList3"
-          title2="£350"
-          title3="£450"
-          styleOption="whiteOption"
-        />
-        <div class="flex justify-center">
-              <TButton class="text-center rounded-3xl" color-option="option2">Learn More </TButton>
-            </div>
+        title-one="PRICING"
+        title1="£250"
+        :items1="itemsList1"
+        :items2="itemsList2"
+        :items3="itemsList3"
+        title2="£350"
+        title3="£450"
+        style-option="whiteOption"
+      />
+      <div class="flex justify-center">
+        <TButton class="text-center rounded-3xl" color-option="option2"
+          >Learn More
+        </TButton>
       </div>
+    </div>
   </div>
-      <div class="lg:mt-20 mt-11">
-          <TPortfolio
-            mainTitle="PORTFOLIOS"
-            buttonText="VIEW ALL PORTFOLIO..."
-            buttonLink="/portfolio"
-            :image-srcOne="heroImage"
-            :image-srcTwo="heroImage"
-            :image-srcThree="heroImage"
-            styleOption="style1"
-          />
-       </div>
+  <div class="lg:mt-20 mt-11">
+    <TPortfolio
+      main-title="PORTFOLIOS"
+      button-text="VIEW ALL PORTFOLIO..."
+      button-link="/portfolio"
+      :image-src-one="heroImage"
+      :image-src-two="heroImage"
+      :image-src-three="heroImage"
+      style-option="style1"
+    />
+  </div>
 </template>

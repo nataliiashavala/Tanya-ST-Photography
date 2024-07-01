@@ -5,12 +5,14 @@ import TButton from "~/components/general/TButton.vue";
 </script>
 
 <template>
-   <div class="text-white" :style="{ backgroundColor: '#545A3F' }">
-  <div class="flex flex-col justify-center px-6 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
-  <div class="container space-y-2 lg:space-y-16">
-    <TCard
-      title="HELLO I'M TANYA"
-      textTwo="I'm Ukrainian but I have been based in Aberdeen, Scotland since 2018.
+  <div class="text-white" :style="{ backgroundColor: '#545A3F' }">
+    <div
+      class="flex flex-col justify-center px-6 sm:px-8 md:px-20 lg:px-64 lg:pt-36"
+    >
+      <div class="container space-y-2 lg:space-y-16">
+        <TCard
+          title="HELLO I'M TANYA"
+          text-two="I'm Ukrainian but I have been based in Aberdeen, Scotland since 2018.
        Taking pictures has been a part of my life for as long as I can remember.
         I bought my first professional camera at 13 years old.
           Back then, l was sofascinated by how photographers could create such beautiful and unique images so I wanted photography to be part of my life since then.
@@ -25,26 +27,28 @@ import TButton from "~/components/general/TButton.vue";
                             Imagine capturing a kaleidoscope of cultures - from the lavish Arabic ceremonies to the joyous European celebrations and the vibrant Nigerian parties - every click told a different story.
                                Living and shooting among such diversity wasn't just work; it was an eye-opening journey.
                                  Every wedding had its own heartbeat, and I got to be there, camera in hand, soaking it all in. Dubai, you were an experience of a lifetime!."
-      :image-src="heroImage"
-     />
-    <div class="flex flex-col lg:flex-row justify-center space-y-6 lg:space-y-0">
-      <div class="flex justify-center items-center">
-      <TButton
-      class="border border-white"
-      color-option="option1">
-      Get In Touch
-     </TButton>
-    </div>
-      <div class="font-nanum text-start justify-end text-base ml-0 lg:ml-52">
-        <h1>INSTAGRAM</h1>
-        <p>@tanyast</p>
-        <h1 class="font-bold">EMAIL</h1>
-        <p>tanyastasyk@gmail.com</p>
-        <h1>PHONE</h1>
-        <p>+447444517696</p>
+          :image-src="heroImage"
+        />
+        <div
+          class="flex flex-col lg:flex-row justify-center space-y-6 lg:space-y-0"
+        >
+          <div class="flex justify-center items-center">
+            <TButton class="border border-white" color-option="option1">
+              Get In Touch
+            </TButton>
+          </div>
+          <div
+            class="font-nanum text-start justify-end text-base ml-0 lg:ml-52"
+          >
+            <h1>INSTAGRAM</h1>
+            <p>@tanyast</p>
+            <h1 class="font-bold">EMAIL</h1>
+            <p>tanyastasyk@gmail.com</p>
+            <h1>PHONE</h1>
+            <p>+447444517696</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
   </div>
 </template>

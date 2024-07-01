@@ -5,7 +5,7 @@ import TLeftCard from "~/components/general/TLeftCard.vue";
 import leftCard from "~/assets/img/personal_brand/left_card_img.jpg";
 import TPriceCard from "~/components/general/TPriceCard.vue";
 import TButton from "~/components/general/TButton.vue";
-import TPortfolio from '~/components/general/TPortfolio.vue';
+import TPortfolio from "~/components/general/TPortfolio.vue";
 import TImgCarousel from "~/components/general/TImgCarousel.vue";
 import img1 from "~/assets/img/portfolio/slider/img1.jpg";
 import img2 from "~/assets/img/portfolio/slider/img2.jpg";
@@ -48,7 +48,9 @@ const itemsList3 = [
 </script>
 
 <template>
-  <div class="flex flex-col justify-center px-6 sm:px-8 md:px-20 lg:px-64 lg:pt-36">
+  <div
+    class="flex flex-col justify-center px-6 sm:px-8 md:px-20 lg:px-64 lg:pt-36"
+  >
     <div class="container space-y-8 lg:space-y-28">
       <TCard
         title="CAPTURE YOUR PROFESSIONAL BEST"
@@ -58,17 +60,15 @@ const itemsList3 = [
       />
 
       <div>
-          <TImgCarousel
-          :images="images"
-              />
-        </div>
+        <TImgCarousel :images="images" />
+      </div>
 
       <TLeftCard
         :image-src="leftCard"
         title="What I Offer:"
         :items="leftCardItems"
       />
-      <div class="flex justify-center flex-col space-y-4 lg:space-y-8 ">
+      <div class="flex justify-center flex-col space-y-4 lg:space-y-8">
         <TPriceCard
           title-one="PRICING"
           title1="£250"
@@ -77,29 +77,29 @@ const itemsList3 = [
           :items3="itemsList3"
           title2="£350"
           title3="£450"
-          styleOption="whiteOption"
+          style-option="whiteOption"
         />
         <div class="flex justify-center">
-          <TButton class="text-center rounded-3xl" color-option="option2">Learn More </TButton>
+          <TButton class="text-center rounded-3xl" color-option="option2"
+            >Learn More
+          </TButton>
         </div>
       </div>
-
-      
     </div>
   </div>
   <div class="lg:mt-20 mt-11">
-        <TPortfolio
-          mainTitle="PORTFOLIOS"
-          buttonText="VIEW ALL PORTFOLIO..."
-          buttonLink="/portfolio"
-          :image-srcOne="heroImage"
-          :image-srcTwo="heroImage"
-          :image-srcThree="heroImage"
-          :image-srcFour="heroImage"
-          :image-srcFive="heroImage"
-          styleOption="style1"
-        />
-     </div>
+    <TPortfolio
+      main-title="PORTFOLIOS"
+      button-text="VIEW ALL PORTFOLIO..."
+      button-link="/portfolio"
+      :image-src-one="heroImage"
+      :image-src-two="heroImage"
+      :image-src-three="heroImage"
+      :image-src-four="heroImage"
+      :image-src-five="heroImage"
+      style-option="style1"
+    />
+  </div>
 </template>
 
 <style scoped></style>

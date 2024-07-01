@@ -51,7 +51,9 @@ const itemsList3 = [
 
 <template>
   <div class="text-white" :style="{ backgroundColor: '#545A3F' }">
-    <div class="flex justify-center px-6 pt-12 sm:px-8 sm:pt-16 md:px-10 lg:px-64 lg:pt-36">
+    <div
+      class="flex justify-center px-6 pt-12 sm:px-8 sm:pt-16 md:px-10 lg:px-64 lg:pt-36"
+    >
       <div class="container space-y-8 lg:space-y-32">
         <TCard
           title="I`M HERE TO HELP YOU REMEMBER YOUR BIG DAY"
@@ -61,41 +63,40 @@ const itemsList3 = [
           vertical-text="YOUR WEDDING DAY"
         />
         <div>
-          <TImgCarousel
-          :images="images"
-              />
+          <TImgCarousel :images="images" />
         </div>
         <TRightCard
           first-title="EMOTIONS THROUGH EVERY PHOTO"
           second-title="ON THE SHOOT"
           :image-src="rightImage"
-          showButton="true"
+          show-button="true"
           text="I am an easy-going photographer whilst never compromising on professionalism and detail and I will ensure you feel comfortable and relaxed working with me. I love bringing out the best in my subjects, capturing real moments and emotions, the formal and informal that both make up your special day. However, l am also happy to take more traditional posed-style photos, depending entirely on your personal needs.
-          I am an adventurous and flexible person, delighted to go wherever my couples bring me. Whether it`s a church, your home or the top of a mountain, it`s your special day and I will follow! On the shoot with me, you will feel relaxed, at ease and will thoroughly enjoy your day, knowing your photos are in the best of hands."  
+          I am an adventurous and flexible person, delighted to go wherever my couples bring me. Whether it`s a church, your home or the top of a mountain, it`s your special day and I will follow! On the shoot with me, you will feel relaxed, at ease and will thoroughly enjoy your day, knowing your photos are in the best of hands."
         />
         <div class="space-y-4 lg:space-y-8">
-        <TPriceCard
-          title-one="PRICING"
-          title1="£250"
-          :items1="itemsList1"
-          :items2="itemsList2"
-          :items3="itemsList3"
-          title2="£350"
-          title3="£450"
-          styleOption="blackOption"
-        />
+          <TPriceCard
+            title-one="PRICING"
+            title1="£250"
+            :items1="itemsList1"
+            :items2="itemsList2"
+            :items3="itemsList3"
+            title2="£350"
+            title3="£450"
+            style-option="blackOption"
+          />
 
           <div class="flex justify-center">
-          <TButton class="outline outline-white text-center" color-option="option1">
-            Get in touch
-          </TButton>
+            <TButton
+              class="outline outline-white text-center"
+              color-option="option1"
+            >
+              Get in touch
+            </TButton>
           </div>
         </div>
-        </div>
       </div>
+    </div>
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

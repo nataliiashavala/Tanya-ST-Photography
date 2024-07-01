@@ -26,8 +26,12 @@ defineProps({
         class="custom-size w-[35rem] h-[45.8rem]"
       />
     </div>
-    <div class="lg:text-left text-right flex-1 flex flex-col justify-top space-y-10 pt-5">
-      <h1 class="text-5xl lg:text-8xl tracking-widest font-explora">{{ title }}</h1>
+    <div
+      class="lg:text-left text-right flex-1 flex flex-col justify-top space-y-10 pt-5"
+    >
+      <h1 class="text-5xl lg:text-8xl tracking-widest font-explora">
+        {{ title }}
+      </h1>
       <ul
         class="font-nanum text-left text-small lg:text-2xl m-0 lg:m-6 list-disc list-inside leading-10 tracking-widest"
       >
