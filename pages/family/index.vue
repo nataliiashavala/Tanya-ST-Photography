@@ -1,10 +1,11 @@
 <script setup>
 import TCard from "~/components/general/TCard.vue";
-import heroImage from "~/assets/img/solo/hero_card_img.jpg";
+import porfolioOne from "~/assets/img/family/img1.jpg";
+import porfolioTwo from "~/assets/img/family/img2.jpg";
+import porfolioThree from "~/assets/img/family/img3.jpg";
+import heroImage from "~/assets/img/family/hero_img.jpg";
 import TLeftCard from "~/components/general/TLeftCard.vue";
-import leftImage from "~/assets/img/solo/left_card_img.jpg";
-import TPriceCard from "~/components/general/TPriceCard.vue";
-import PriceCardImage from "~/assets/img/solo/price_card.jpg";
+import leftImage from "~/assets/img/family/left_card.jpg";
 import TButton from "~/components/general/TButton.vue";
 import TPortfolio from '~/components/general/TPortfolio.vue';
 import TImgCarousel from "~/components/general/TImgCarousel.vue";
@@ -87,9 +88,9 @@ const leftCardItems = [
             mainTitle="PORTFOLIOS"
             buttonText="VIEW ALL PORTFOLIO..."
             buttonLink="/portfolio"
-            :image-srcOne="heroImage"
-            :image-srcTwo="heroImage"
-            :image-srcThree="heroImage"
+            :image-srcOne="porfolioOne"
+            :image-srcTwo="portfolioTwo"
+            :image-srcThree="portfolioThree"
             styleOption="style1"
           />
        </div>
