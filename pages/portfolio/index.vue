@@ -28,7 +28,7 @@
               <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img5.jpg" alt="">
           </div>
           <div>
-              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfoli/babies/slider/img6.jpg" alt="">
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img6.jpg" alt="">
           </div>
           <div>
               <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img7.jpg" alt="">
