@@ -11,101 +11,49 @@
     </h1>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
       <div class="grid gap-4">
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img1.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img2.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img3.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img4.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img13.jpg"
-            alt=""
-          />
-        </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img1.jpg" alt="">
+          </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img2.jpg" alt="">
+          </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img3.jpg" alt="">
+          </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img4.jpg" alt="">
+          </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img13.jpg" alt="">
+          </div>
       </div>
       <div class="grid gap-4">
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img5.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img6.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img7.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img8.jpg"
-            alt=""
-          />
-        </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img5.jpg" alt="">
+          </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img6.jpg" alt="">
+          </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img7.jpg" alt="">
+          </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img8.jpg" alt="">
+          </div>
       </div>
       <div class="grid gap-4">
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img9.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img10.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img11.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            class="h-auto max-w-full rounded-lg"
-            src="/assets/img/portfolio/slider/img12.jpg"
-            alt=""
-          />
-        </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img9.jpg" alt="">
+          </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img10.jpg" alt="">
+          </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img11.jpg" alt="">
+          </div>
+          <div>
+              <img class="h-auto max-w-full rounded-lg" src="/assets/img/portfolio/babies/slider/img12.jpg" alt="">
+          </div>
       </div>
     </div>
   </div>

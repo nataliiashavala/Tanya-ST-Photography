@@ -28,14 +28,6 @@ const props = defineProps({
     type: String,
     default: "",
   },
-  imageSrcFour: {
-    type: String,
-    default: "",
-  },
-  imageSrcFive: {
-    type: String,
-    default: "",
-  },
   styleOption: {
     type: String,
     default: "style1", // default style

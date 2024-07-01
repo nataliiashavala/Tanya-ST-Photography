@@ -8,7 +8,7 @@ const props = defineProps({
   },
   interval: {
     type: Number,
-    default: 2000, // Default interval is 3 seconds
+    default: 2000, // Default interval is 2 seconds
   },
 });
 

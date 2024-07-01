@@ -5,21 +5,28 @@ import TPriceCard from "~/components/general/TPriceCard.vue";
 import TButton from "~/components/general/TButton.vue";
 import heroImage from "~/assets/img/boudoir/hero_card_img.jpg";
 import leftCardImage from "~/assets/img/boudoir/left_card_img.jpg";
-import priceCardImage from "~/assets/img/boudoir/price_card.jpg";
-import TPortfolio from "~/components/general/TPortfolio.vue";
+import porfolioOne from "~/assets/img/boudoir/img1.jpg";
+import porfolioTwo from "~/assets/img/boudoir/img2.jpg";
+import porfolioThree from "~/assets/img/boudoir/img3.jpg";
+import TPortfolio from '~/components/general/TPortfolio.vue';
 import TImgCarousel from "~/components/general/TImgCarousel.vue";
-import img1 from "~/assets/img/portfolio/slider/img1.jpg";
-import img2 from "~/assets/img/portfolio/slider/img2.jpg";
-import img3 from "~/assets/img/portfolio/slider/img3.jpg";
-import img4 from "~/assets/img/portfolio/slider/img4.jpg";
-import img5 from "~/assets/img/portfolio/slider/img5.jpg";
-import img6 from "~/assets/img/portfolio/slider/img6.jpg";
-import img7 from "~/assets/img/portfolio/slider/img7.jpg";
-import img8 from "~/assets/img/portfolio/slider/img8.jpg";
-import img9 from "~/assets/img/portfolio/slider/img9.jpg";
-import img10 from "~/assets/img/portfolio/slider/img10.jpg";
+import img1 from "~/assets/img/portfolio/boudoir/slider/img1.jpg";
+import img2 from "~/assets/img/portfolio/boudoir/slider/img2.jpg";
+import img3 from "~/assets/img/portfolio/boudoir/slider/img3.jpg";
+import img4 from "~/assets/img/portfolio/boudoir/slider/img4.jpg";
+import img5 from "~/assets/img/portfolio/boudoir/slider/img5.jpg";
+import img6 from "~/assets/img/portfolio/boudoir/slider/img6.jpg";
+import img7 from "~/assets/img/portfolio/boudoir/slider/img7.jpg";
+import img8 from "~/assets/img/portfolio/boudoir/slider/img8.jpg";
+import img9 from "~/assets/img/portfolio/boudoir/slider/img9.jpg";
+import img10 from "~/assets/img/portfolio/boudoir/slider/img10.jpg";
+import img11 from "~/assets/img/portfolio/boudoir/slider/img11.jpg";
+import img12 from "~/assets/img/portfolio/boudoir/slider/img12.jpg";
+import img13 from "~/assets/img/portfolio/boudoir/slider/img13.jpg";
+import img14 from "~/assets/img/portfolio/boudoir/slider/img14.jpg";
+import img15 from "~/assets/img/portfolio/boudoir/slider/img15.jpg";
 
-const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15];
 
 const itemsList1 = [
   "Pre-shoot consultation",
@@ -72,36 +79,35 @@ const leftCardItems = [
         :items="leftCardItems"
       />
 
-      <div class="flex justify-center flex-col space-y-4 lg:space-y-8">
-        <TPriceCard
-          title-one="PRICING"
-          title1="£250"
-          :items1="itemsList1"
-          :items2="itemsList2"
-          :items3="itemsList3"
-          title2="£350"
-          title3="£450"
-          style-option="blackOption"
-        />
-        <div class="flex justify-center">
-          <TButton class="text-center rounded-3xl" color-option="option2"
-            >Learn More
-          </TButton>
+     
+        <div class="flex justify-center flex-col space-y-4 lg:space-y-8 ">
+            <TPriceCard
+              title-one="PRICING"
+              title1="£250"
+              :items1="itemsList1"
+              :items2="itemsList2"
+              :items3="itemsList3"
+              title2="£350"
+              title3="£450"
+              styleOption="blackOption"
+            />
+            <div class="flex justify-center">
+              <TButton class="text-center rounded-3xl" color-option="option2">Learn More </TButton>
+            </div>
+          </div> 
         </div>
       </div>
-    </div>
-  </div>
-  <div class="lg:mt-20 mt-11">
-    <TPortfolio
-      main-title="PORTFOLIOS"
-      button-text="VIEW ALL PORTFOLIO..."
-      button-link="/portfolio"
-      :image-src-one="heroImage"
-      :image-src-two="heroImage"
-      :image-src-three="heroImage"
-      :image-src-four="heroImage"
-      :image-src-five="heroImage"
-      style-option="style2"
-    />
-  </div>
+        <div class="lg:mt-20 mt-11">
+            <TPortfolio
+              mainTitle="PORTFOLIOS"
+              buttonText="VIEW ALL PORTFOLIO..."
+              buttonLink="/portfolio"
+              :image-srcOne="porfolioOne"
+              :image-srcTwo="porfolioTwo"
+              :image-srcThree="porfolioThree"
+              styleOption="style2"
+            />
+        </div>
+     
+    
 </template>

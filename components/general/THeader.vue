@@ -13,7 +13,7 @@ const greenBackgroundRoutes = [
   "/about-me",
   "/elopements",
   "/boudoir",
-  "/maternity",
+  "/maternity_temp",
   "/trusted-suppliers",
   "/contact-me",
 ];
