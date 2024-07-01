@@ -91,7 +91,7 @@ const leftCardItems = [
         </div>
         </div>
       </div>
-  </div>
+  </div> 
       <div class="lg:mt-20 mt-11">
             <TPortfolio
               mainTitle="PORTFOLIOS"
@@ -103,7 +103,7 @@ const leftCardItems = [
               styleOption="style2"
             />
           </div>
-    </div>
+  
 </template>
 
 <style scoped></style>
