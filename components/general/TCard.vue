@@ -38,8 +38,8 @@ defineProps({
         {{ title }}
       </h1>
       <h1 class="font-nanum text-3xl">{{ addTitle }}</h1>
-      <p class="text-small lg:text-2xl tracking-wide font-nanum">{{ text }}</p>
-      <p class="text-base tracking-wide font-nanum">{{ textTwo }}</p>
+      <p class="text-small lg:text-xl tracking-wide font-nanum">{{ text }}</p>
+      <p class="text-small lg:text-xl tracking-wide font-nanum">{{ textTwo }}</p>
       <p class="text-3xl lg:text-5xl italic tracking-wide font-explora">
         {{ textItalic }}
       </p>

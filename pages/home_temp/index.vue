@@ -11,10 +11,10 @@ import heroImage from "~/assets/img/home/hero_img.jpg";
     class="bg-cover bg-center"
     :style="{ backgroundImage: `url(${heroImage})` }"
   >
-    <div class="isolate px-4 pt-14 lg:px-8 lg:pb-56 xl:pb-64">
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:pt-32">
+    <div class="isolate px-4 pt-48 lg:px-8 lg:pb-24">
+      <div class="mx-auto max-w-2xl py-48 sm:py-48 lg:pt-32">
         <div class="text-center text-white font-nanum space-y-12">
-          <h1 class="text-2xl sm:text-2xl lg:text-4xl uppercase">
+          <h1 class="text-4xl sm:text-2xl lg:text-6xl uppercase">
             tanya st photography
           </h1>
           <p class="hidden sm:block mt-6 text-2xl leading-8">

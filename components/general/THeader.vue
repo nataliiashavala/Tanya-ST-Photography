@@ -233,7 +233,6 @@ onMounted(async () => {
               class="custom-select w-full uppercase text-xs"
               :popper-class="selectStyle"
               @change="handleSelectChange"
-              placeholder="more"
             >
               <el-option
                 v-for="(option, index) in item.more"
