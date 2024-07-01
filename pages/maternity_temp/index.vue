@@ -88,11 +88,9 @@ const itemsList3 = [
               mainTitle="PORTFOLIOS"
               buttonText="VIEW ALL PORTFOLIO..."
               buttonLink="/portfolio"
-              :image-srcOne="heroImage"
-              :image-srcTwo="heroImage"
-              :image-srcThree="heroImage"
-              :image-srcFour="heroImage"
-              :image-srcFive="heroImage"
+              :image-srcOne="porfolioOne"
+              :image-srcTwo="porfolioTwo"
+              :image-srcThree="porfolioThree"
               styleOption="style2"
             />
        </div>
