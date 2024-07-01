@@ -4,12 +4,6 @@ import TImgCarousel from "~/components/general/TImgCarousel.vue";
 import img1 from "~/assets/img/portfolio/albums/slider/img1.jpg";
 import img2 from "~/assets/img/portfolio/albums/slider/img2.jpg";
 import img3 from "~/assets/img/portfolio/albums/slider/img3.jpg";
-import img4 from "~/assets/img/portfolio/albums/slider/img4.jpg";
-import img5 from "~/assets/img/portfolio/albums/slider/img5.jpg";
-import img6 from "~/assets/img/portfolio/albums/slider/img6.jpg";
-import img7 from "~/assets/img/portfolio/albums/slider/img7.jpg";
-import img8 from "~/assets/img/portfolio/albums/slider/img8.jpg";
-
 
 const images = [img1, img2, img3,];
 </script>
