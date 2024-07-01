@@ -7,6 +7,9 @@ import TPriceCard from "~/components/general/TPriceCard.vue";
 import TButton from "~/components/general/TButton.vue";
 import TPortfolio from '~/components/general/TPortfolio.vue';
 import TImgCarousel from "~/components/general/TImgCarousel.vue";
+import porfolioOne from "~/assets/img/personal_brand/img1.jpg";
+import porfolioTwo from "~/assets/img/personal_brand/img2.jpg";
+import porfolioThree from "~/assets/img/personal_brand/img3.jpg";
 import img1 from "~/assets/img/portfolio/slider/img1.jpg";
 import img2 from "~/assets/img/portfolio/slider/img2.jpg";
 import img3 from "~/assets/img/portfolio/slider/img3.jpg";
@@ -92,11 +95,9 @@ const itemsList3 = [
           mainTitle="PORTFOLIOS"
           buttonText="VIEW ALL PORTFOLIO..."
           buttonLink="/portfolio"
-          :image-srcOne="heroImage"
-          :image-srcTwo="heroImage"
-          :image-srcThree="heroImage"
-          :image-srcFour="heroImage"
-          :image-srcFive="heroImage"
+          :image-srcOne="porfolioOne"
+          :image-srcTwo="porfolioTwo"
+          :image-srcThree="porfolioThree"
           styleOption="style1"
         />
      </div>

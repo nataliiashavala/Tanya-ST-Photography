@@ -1,5 +1,6 @@
 <script setup>
 import TCard from "~/components/general/TCard.vue";
+import TPriceCard from "~/components/general/TPriceCard.vue";
 import porfolioOne from "~/assets/img/family/img1.jpg";
 import porfolioTwo from "~/assets/img/family/img2.jpg";
 import porfolioThree from "~/assets/img/family/img3.jpg";
@@ -89,8 +90,8 @@ const leftCardItems = [
             buttonText="VIEW ALL PORTFOLIO..."
             buttonLink="/portfolio"
             :image-srcOne="porfolioOne"
-            :image-srcTwo="portfolioTwo"
-            :image-srcThree="portfolioThree"
+            :image-srcTwo="porfolioTwo"
+            :image-srcThree="porfolioThree"
             styleOption="style1"
           />
        </div>
