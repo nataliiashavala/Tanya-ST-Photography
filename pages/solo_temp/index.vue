@@ -4,7 +4,9 @@ import heroImage from "~/assets/img/solo/hero_card_img.jpg";
 import TLeftCard from "~/components/general/TLeftCard.vue";
 import leftImage from "~/assets/img/solo/left_card_img.jpg";
 import TPriceCard from "~/components/general/TPriceCard.vue";
-import PriceCardImage from "~/assets/img/solo/price_card.jpg";
+import porfolioOne from "~/assets/img/solo/img1.jpg";
+import porfolioTwo from "~/assets/img/solo/img2.jpg";
+import porfolioThree from "~/assets/img/solo/img3.jpg";
 import TButton from "~/components/general/TButton.vue";
 import TPortfolio from '~/components/general/TPortfolio.vue';
 import TImgCarousel from "~/components/general/TImgCarousel.vue";
@@ -93,9 +95,9 @@ const leftCardItems = [
             mainTitle="PORTFOLIOS"
             buttonText="VIEW ALL PORTFOLIO..."
             buttonLink="/portfolio"
-            :image-srcOne="heroImage"
-            :image-srcTwo="heroImage"
-            :image-srcThree="heroImage"
+            :image-srcOne="porfolioOne"
+            :image-srcTwo="porfolioTwo"
+            :image-srcThree="porfolioThree"
             styleOption="style1"
           />
         </div>
