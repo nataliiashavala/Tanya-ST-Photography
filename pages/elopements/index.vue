@@ -13,15 +13,9 @@ import TImgCarousel from "~/components/general/TImgCarousel.vue";
 import img1 from "~/assets/img/portfolio/elopements/slider/img1.jpg";
 import img2 from "~/assets/img/portfolio/elopements/slider/img2.jpg";
 import img3 from "~/assets/img/portfolio/elopements/slider/img3.jpg";
-import img4 from "~/assets/img/portfolio/elopements/slider/img4.jpg";
-import img5 from "~/assets/img/portfolio/elopements/slider/img5.jpg";
-import img6 from "~/assets/img/portfolio/elopements/slider/img6.jpg";
-import img7 from "~/assets/img/portfolio/elopements/slider/img7.jpg";
-import img8 from "~/assets/img/portfolio/elopements/slider/img8.jpg";
-import img9 from "~/assets/img/portfolio/elopements/slider/img9.jpg";
-import img10 from "~/assets/img/portfolio/elopements/slider/img10.jpg";
 
-const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+
+const images = [img1, img2, img3 ];
 
 const itemsList1 = [
   "Pre-shoot consultation",
@@ -84,7 +78,7 @@ const leftCardItems = [
           />
           <div class="flex justify-center">
             <TButton class="text-center rounded-3xl" color-option="option2"
-              >Learn More
+              >Contact Me
             </TButton>
           </div>
           

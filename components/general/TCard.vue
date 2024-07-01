@@ -34,7 +34,7 @@ defineProps({
     <div
       class="lg:text-right sm:text-left flex-1 flex flex-col justify-top lg:space-y-5 space-y-2"
     >
-      <h1 class="text-3xl sm:text-4xl lg:text-6xl ctracking-widest font-nanum">
+      <h1 class="text-3xl sm:text-4xl lg:text-7xl ctracking-widest font-nanum uppercase">
         {{ title }}
       </h1>
       <h1 class="font-nanum text-3xl">{{ addTitle }}</h1>

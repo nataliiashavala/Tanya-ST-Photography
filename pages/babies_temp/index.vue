@@ -47,7 +47,7 @@ const itemsList3 = [
   >
     <div class="container space-y-8 lg:space-y-28">
       <TCard
-        title="Tiny Smiles: Heartwarming Moments"
+        title="Tiny smiles: heartwarming moments"
         text="Witness the delicate yawns, tiny toes, and sleepy smiles with my Baby Photoshoot Sessions. Designed to capture the fleeting moments of infancy, these sessions are a celebration of new life and the love that surrounds it. In the comfort and warmth of a serene environment, I create timeless portraits that speak to the innocence and enchanting simplicity of your little one.
         Each photograph is a pause button on the rapid growth of your baby, a treasured snapshot of their earliest days. Whether it's a peaceful slumber or a wide-eyed wonder, my goal is to capture the natural beauty of your baby's first curious explorations of the world."
         :image-src="heroImage"
