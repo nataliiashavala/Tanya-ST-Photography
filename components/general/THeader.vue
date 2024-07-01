@@ -188,8 +188,8 @@ onMounted(async () => {
     </div>
 
     <div class="flex items-end justify-between">
-      <div class="flex justify-between items-end">
-        <div class="mt-8 ml-24 mr-0 lg:ml-2 lg:mr-32">
+      <div class="flex justify-between items-end ml-0 mb-8 lg:mb-0">
+        <div class="mt-8 mr-0 lg:ml-0 lg:mr-20">
           <nuxt-link to="/home_temp">
             <img
               :src="Logo"
@@ -202,7 +202,7 @@ onMounted(async () => {
         <div class="ml-auto">
           <nuxt-link
             id="open-sidebar"
-            class="mb-3 ml-52 text-2xl uppercase font-nanum block lg:hidden cursor-pointer"
+            class="mb-3 ml-40 text-2xl uppercase font-nanum block lg:hidden cursor-pointer"
             @click="isMenuOpen = !isMenuOpen"
           >
             menu
@@ -232,6 +232,7 @@ onMounted(async () => {
               class="custom-select w-full uppercase text-xs"
               :popper-class="selectStyle"
               @change="handleSelectChange"
+              placeholder="more"
             >
               <el-option
                 v-for="(option, index) in item.more"
