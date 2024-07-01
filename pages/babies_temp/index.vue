@@ -3,25 +3,22 @@ import TCard from "~/components/general/TCard.vue";
 import heroImage from "~/assets/img/babies/hero_card_img.jpg";
 import TRightCard from "~/components/general/TRightCard.vue";
 import TPriceCard from "~/components/general/TPriceCard.vue";
-import porfolioOne from "~/assets/img/babies/img1.jpg";
-import porfolioTwo from "~/assets/img/babies/img2.jpg";
-import porfolioThree from "~/assets/img/babies/img3.jpg";
 import TButton from "~/components/general/TButton.vue";
 import rightCardImage from "~/assets/img/babies/right_card_img.jpg";
 import TPortfolio from "~/components/general/TPortfolio.vue";
 import TImgCarousel from "~/components/general/TImgCarousel.vue";
-import img1 from "~/assets/img/portfolio/babies/slider/img1.jpg";
-import img2 from "~/assets/img/portfolio/babies/slider/img2.jpg";
-import img3 from "~/assets/img/portfolio/babies/slider/img3.jpg";
-import img4 from "~/assets/img/portfolio/babies/slider/img4.jpg";
-import img5 from "~/assets/img/portfolio/babies/slider/img5.jpg";
-import img6 from "~/assets/img/portfolio/babies/slider/img6.jpg";
-import img7 from "~/assets/img/portfolio/babies/slider/img7.jpg";
-import img8 from "~/assets/img/portfolio/babies/slider/img8.jpg";
-import img9 from "~/assets/img/portfolio/babies/slider/img9.jpg";
-import img10 from "~/assets/img/portfolio/babies/slider/img10.jpg";
+// import img1 from "~/assets/img/portfolio/slider/img1.jpg";
+// import img2 from "~/assets/img/portfolio/slider/img2.jpg";
+// import img3 from "~/assets/img/portfolio/slider/img3.jpg";
+// import img4 from "~/assets/img/portfolio/slider/img4.jpg";
+// import img5 from "~/assets/img/portfolio/slider/img5.jpg";
+// import img6 from "~/assets/img/portfolio/slider/img6.jpg";
+// import img7 from "~/assets/img/portfolio/slider/img7.jpg";
+// import img8 from "~/assets/img/portfolio/slider/img8.jpg";
+// import img9 from "~/assets/img/portfolio/slider/img9.jpg";
+// import img10 from "~/assets/img/portfolio/slider/img10.jpg";
 
-const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+// const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
 const itemsList1 = [
   "Pre-shoot consultation",
@@ -56,7 +53,7 @@ const itemsList3 = [
         :image-src="heroImage"
       />
       <div>
-        <TImgCarousel :images="images" />
+        <!-- <TImgCarousel :images="images" /> -->
       </div>
       <TRightCard
         first-title="EMOTIONS THROUGH EVERY PHOTO"

@@ -103,6 +103,7 @@ const leftCardItems = [
               styleOption="style2"
             />
           </div>
+    </div>
 </template>
 
 <style scoped></style>
