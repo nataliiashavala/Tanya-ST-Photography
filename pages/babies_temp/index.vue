@@ -10,16 +10,16 @@ import TButton from "~/components/general/TButton.vue";
 import rightCardImage from "~/assets/img/babies/right_card_img.jpg";
 import TPortfolio from "~/components/general/TPortfolio.vue";
 import TImgCarousel from "~/components/general/TImgCarousel.vue";
-import img1 from "~/assets/img/portfolio/slider/img1.jpg";
-import img2 from "~/assets/img/portfolio/slider/img2.jpg";
-import img3 from "~/assets/img/portfolio/slider/img3.jpg";
-import img4 from "~/assets/img/portfolio/slider/img4.jpg";
-import img5 from "~/assets/img/portfolio/slider/img5.jpg";
-import img6 from "~/assets/img/portfolio/slider/img6.jpg";
-import img7 from "~/assets/img/portfolio/slider/img7.jpg";
-import img8 from "~/assets/img/portfolio/slider/img8.jpg";
-import img9 from "~/assets/img/portfolio/slider/img9.jpg";
-import img10 from "~/assets/img/portfolio/slider/img10.jpg";
+import img1 from "~/assets/img/portfolio/babies/slider/img1.jpg";
+import img2 from "~/assets/img/portfolio/babies/slider/img2.jpg";
+import img3 from "~/assets/img/portfolio/babies/slider/img3.jpg";
+import img4 from "~/assets/img/portfolio/babies/slider/img4.jpg";
+import img5 from "~/assets/img/portfolio/babies/slider/img5.jpg";
+import img6 from "~/assets/img/portfolio/babies/slider/img6.jpg";
+import img7 from "~/assets/img/portfolio/babies/slider/img7.jpg";
+import img8 from "~/assets/img/portfolio/babies/slider/img8.jpg";
+import img9 from "~/assets/img/portfolio/babies/slider/img9.jpg";
+import img10 from "~/assets/img/portfolio/babies/slider/img10.jpg";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
@@ -90,11 +90,9 @@ const itemsList3 = [
       main-title="PORTFOLIOS"
       button-text="VIEW ALL PORTFOLIO..."
       button-link="/portfolio"
-      :image-src-one="heroImage"
-      :image-src-two="heroImage"
-      :image-src-three="heroImage"
-      :image-src-four="heroImage"
-      :image-src-five="heroImage"
+      :image-srcOne="porfolioOne"
+      :image-srcTwo="porfolioTwo"
+      :image-srcThree="porfolioThree"
       style-option="style1"
     />
   </div>

@@ -228,6 +228,7 @@ onMounted(async () => {
           <template v-if="item.more">
             <el-select
               v-model="value"
+              placeholder="MORE"
               :style="selectStyle"
               class="custom-select w-full uppercase text-xs"
               :popper-class="selectStyle"
@@ -239,7 +240,7 @@ onMounted(async () => {
                 :value="option.path"
                 :label="option.name"
                 :style="optionStyle"
-                class="custom-option"
+                class="custom-option uppercase"
               />
             </el-select>
           </template>
