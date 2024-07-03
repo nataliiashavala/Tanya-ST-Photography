@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: ["@/assets/scss/main.scss"],
+
   app: {
     head: {
       title: "TEMPLATE",
@@ -45,9 +46,13 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   modules: ["@nuxtjs/tailwindcss"],
+
+  // Other configuration...
   tailwindcss: {
     cssPath: "~/assets/scss/tailwind.scss",
   },
-  // Other configuration...
+
+  compatibilityDate: "2024-07-03"
 });
