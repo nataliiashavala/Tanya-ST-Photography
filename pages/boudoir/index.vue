@@ -29,7 +29,7 @@ import img15 from "~/assets/img/portfolio/boudoir/slider/img15.jpg";
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15];
 
 const itemsList1 = [
-  "Pre-shoot consultation",
+  "Pre-shoot consultation TANYA ST PHOTOGRAPHY",
   "30 min shoot hour shoot",
   "10+ high-resolution, edited, digitals photos",
 ];
