@@ -44,7 +44,7 @@ const itemsList2 = [
 const itemsList3 = [
   "Pre-shoot consultation",
   "1 hour shoot",
-  "All high-resolution, edited, digitals photos",
+  "All high-resolution, edited, digitals photos 6",
   "Online Gallery to view",
 ];
 const leftCardItems = [
