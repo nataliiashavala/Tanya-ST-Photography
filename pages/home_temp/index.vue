@@ -20,13 +20,15 @@ import heroImage from "~/assets/img/home/hero_img.jpg";
           <p class="hidden sm:block mt-6 text-2xl leading-8">
             TIMELESS CLASSICS WITH A SENSE OF FASHION
           </p>
-          <div class="flex items-center justify-center">
-            <router-link
-              to="/contact-me"
-              class="text-center text-base sm:text-lg lg:text-xl outline outline-white sm:w-40 sm:h-9 lg:w-52 lg:h-14 py-2 px-4 shadow-md"
-              >Get In Touch</router-link
-            >
-          </div>
+         <!-- 
+            <div class="flex items-center justify-center">
+              <router-link
+                to="/contact-me"
+                class="text-center text-base sm:text-lg lg:text-xl outline outline-white sm:w-40 sm:h-9 lg:w-52 lg:h-14 py-2 px-4 shadow-md"
+                >Get In Touch</router-link
+              >
+            </div>
+        -->
         </div>
       </div>
     </div>
@@ -39,8 +41,7 @@ import heroImage from "~/assets/img/home/hero_img.jpg";
           <h1 class="font-nanum mb-1">Beyond Ordinary</h1>
           <h1 class="font-nanum">Photography</h1>
         </div>
-        <div
-          class="flex flex-col lg:flex-row lg:space-x-14 mt-8 space-y-8 sm:space-y-0"
+        <div class="flex flex-col lg:flex-row lg:space-x-14 mt-8 space-y-8 sm:space-y-0"
         >
           <div class="max-w-sm">
             <router-link to="/wedding_temp">
@@ -48,39 +49,51 @@ import heroImage from "~/assets/img/home/hero_img.jpg";
             </router-link>
             <div class="p-5 text-center">
               <h5 class="mb-2 text-3xl">Wedding</h5>
-
               <p class="hidden sm:block mb-3 font-normal text-xl">
                 Authentic and creative wedding photography without any unnatural
                 and uncomfortable posing. Whether your style is relaxed,
                 unconventional or more traditional, I will capture the essence
                 of your most special day, not missing any of those precious
-                details. The only thing you’ll need to do is enjoy it to the
+                details. The only thing you'll need to do is enjoy it to the
                 full!
               </p>
-              <Tutton color-option="option1" Get In Touch />
+              <div class="flex items-center justify-center lg:items-end">
+              <router-link
+                to="/wedding_temp"
+                class="text-center text-base sm:text-lg lg:text-xl outline outline-black sm:w-40 sm:h-9 lg:w-64 py-2 lg:h-14 px-4 shadow-md lg:items-end"
+                >Take me to Wedding</router-link
+              >
+            </div>
             </div>
           </div>
-          <div class="max-w-sm pt-0 lg:pt-28">
+          <div class="max-w-sm pt-0 lg:pt-0">
             <router-link to="/family">
               <img class="" src="/assets/img/home/second_card_img.jpg" alt="" />
             </router-link>
             <div class="p-5 text-center">
               <h5 class="mb-2 text-3xl">Family</h5>
-              <p class="hidden sm:block mb-3 font-normal text-xl">
+              <p class="hidden sm:block mb-10 font-normal text-xl">
                 Special times with the ones you love. The focus is you and your
                 loved ones, and telling the story of your family and the special
-                relationship that you share. Capturing a child’s smile, a
-                parent’s affection or that special bond with your pet, I will
+                relationship that you share. Capturing a child's smile, a
+                parent's affection or that special bond with your pet, I will
                 ensure they are memories for a lifetime.
               </p>
-              <Tutton color-option="option1" Get In Touch />
+              <div class="flex items-center justify-center lg:items-end">
+              <router-link
+                to="/family"
+                class="text-center text-base sm:text-lg lg:text-xl outline outline-black sm:w-40 sm:h-9 lg:w-64 lg:h-14 px-4 py-2 shadow-md" 
+                >Take me to Family</router-link
+              >
+            </div>
             </div>
           </div>
+          <!-- Commented Elopments section
           <div class="max-w-sm text-center">
             <router-link to="/elopements">
               <img class="" src="/assets/img/home/third_card_img.jpg" alt="" />
             </router-link>
-            <div class="p-5 text-center">
+             <div class="p-5 text-center">
               <h5 class="mb-2 text-3xl">Elopements</h5>
               <p class="hidden sm:block mb-3 font-normal text-xl">
                 Elopements are wonderfully personal, and so is my approach. I'll
@@ -90,16 +103,18 @@ import heroImage from "~/assets/img/home/hero_img.jpg";
                 deserves. I am passionate about creating a visual chronicle that
                 encapsulates the purity and essence of your journey.
               </p>
-            </div>
-          </div>
+            </div> 
+          </div> 
+        -->
         </div>
-
+        <!--
         <div class="hidden sm:block uppercase text-center text-5xl py-36">
           <h1 class="mb-1">we will make a wonderful story</h1>
           <h1>make a statment throuugh every picture</h1>
         </div>
+        -->
       </div>
-      <!-- Porfolio-->
+      <!-- Porfolio
       <div
         class="flex flex-col space-y-10 lg:space-y-14 bg-[#F5F5F5] hidden md:block"
       >
@@ -162,6 +177,7 @@ import heroImage from "~/assets/img/home/hero_img.jpg";
           </div>
         </div>
       </div>
+      -->
 
       <div class="hidden md:block mt-28">
         <div class="flex flex-row justify-center items-center pb-11">

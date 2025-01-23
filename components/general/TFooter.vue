@@ -30,23 +30,22 @@ onMounted(() => {
 <template>
   <div class="mt-7 md:mt-20 mx-4">
     <h1 class="text-center text-2xl lg:text-5xl text-[#4F4F4F]">
-      FOLLOW ME ON INSTAGRAM
+      ME ON INSTAGRAM
     </h1>
     <p class="text-center text-[#838383] text-2xl lg:text-4xl my-4">
       <a href="https://www.instagram.com/tanyastt/">@tanyastt</a>
     </p>
-    <iframe
-      src="//lightwidget.com/widgets/34ca537e69395e63ad3d232bbcdb7dbe.html"
-      scrolling="no"
-      allowtransparency="true"
-      class="lightwidget-widget"
-      style="width: 100%; border: 0; overflow: hidden"
-    >
+    <iframe src="https://cdn.lightwidget.com/widgets/34ca537e69395e63ad3d232bbcdb7dbe.html" 
+      scrolling="no" 
+      allowtransparency="true" 
+      class="lightwidget-widget" 
+      style="width:100%;border:0;overflow:hidden;">
     </iframe>
 
     <div
-      class="mx-14 flex flex-col md:flex-row justify-between items-center relative mt-4 md:mt-14 uppercase"
+      class="mx-14 flex flex-col md:flex-row justify-center items-center relative mt-4 md:mt-14 uppercase"
     >
+    <!-- 
       <div class="content text-center mb-6 hidden md:hidden lg:block">
         <h3 class="mb-5">Get in touch</h3>
         <p>Tanyastasyk@gmail.com</p>
@@ -59,7 +58,9 @@ onMounted(() => {
         </p>
       </div>
       <div class="divider hidden lg:block"></div>
-      <div class="flex flex-col items-center">
+    -->
+      <div class="flex flex-col items-center justify-center">
+        
         <p class="uppercase mb-4 lg:text-base md:text-2xl">contact me</p>
         <div class="flex items-center justify-center gap-4">
           <a href="https://www.instagram.com/tanyastt/">

@@ -46,14 +46,12 @@ const links = [
     name: "more",
     more: [
       { name: "solo", path: "/solo_temp" },
-      { name: "elopements", path: "/elopements" },
       { name: "couples", path: "/couples_temp" },
       { name: "boudoir", path: "/boudoir" },
       { name: "babies", path: "/babies_temp" },
       { name: "maternity", path: "/maternity_temp" },
       { name: "portfolio", path: "/portfolio" },
       { name: "trusted suppliers", path: "/trusted-suppliers" },
-      { name: "blog", path: "/blog" },
       { name: "albums", path: "/albums_temp" },
     ],
   },
@@ -155,9 +153,10 @@ onMounted(async () => {
           <nuxt-link to="/solo_temp" class="" @click="closeSidebar"
             >solo</nuxt-link
           >
+          <!--
           <nuxt-link to="/elopements" class="" @click="closeSidebar"
             >elopements</nuxt-link
-          >
+          >-->
           <nuxt-link to="/couples_temp" class="" @click="closeSidebar"
             >couples</nuxt-link
           >

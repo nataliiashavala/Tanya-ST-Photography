@@ -28,7 +28,7 @@ defineProps({
 const router = useRouter();
 
 const navigateToPortfolio = () => {
-  router.push("/portflio");
+  router.push("/portfolio");
 };
 </script>
 

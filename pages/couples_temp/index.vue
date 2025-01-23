@@ -95,6 +95,7 @@ const leftCardItems = [
       </div>
     </div>
   </div>
+  <!--
   <div class="lg:mt-20 mt-11">
     <TPortfolio
       main-title="PORTFOLIOS"
@@ -108,4 +109,5 @@ const leftCardItems = [
       style-option="style1"
     />
   </div>
+  -->
 </template>

@@ -90,6 +90,7 @@ const itemsList3 = [
       </div>
     </div>
   </div>
+  <!--
   <div class="lg:mt-20 mt-11">
     <TPortfolio
       main-title="PORTFOLIOS"
@@ -103,6 +104,7 @@ const itemsList3 = [
       style-option="style1"
     />
   </div>
+  -->
 </template>
 
 <style scoped></style>

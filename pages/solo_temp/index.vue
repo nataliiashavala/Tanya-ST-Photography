@@ -87,6 +87,7 @@ const leftCardItems = [
     </div>
   </div>
   <div>
+    <!--
     <TPortfolio
       main-title="PORTFOLIOS"
       button-text="VIEW ALL PORTFOLIO..."
@@ -96,5 +97,7 @@ const leftCardItems = [
       :image-src-three="heroImage"
       style-option="style1"
     />
+    -->
   </div>
+  
 </template>
