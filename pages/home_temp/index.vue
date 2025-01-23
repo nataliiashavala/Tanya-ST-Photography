@@ -18,7 +18,7 @@ import heroImage from "~/assets/img/home/hero_img.jpg";
             tanya st photography
           </h1>
           <p class="hidden sm:block mt-6 text-2xl leading-8">
-            We are here to help you to remember the best days
+            TIMELESS CLASSICS WITH A SENSE OF FASHION
           </p>
           <div class="flex items-center justify-center">
             <router-link
