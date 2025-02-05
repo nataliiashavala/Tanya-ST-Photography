@@ -14,7 +14,6 @@ const greenBackgroundRoutes = [
   "/elopements",
   "/boudoir",
   "/maternity_temp",
-  "/trusted-suppliers",
   "/contact-me",
 ];
 
@@ -51,7 +50,6 @@ const links = [
       { name: "babies", path: "/babies_temp" },
       { name: "maternity", path: "/maternity_temp" },
       { name: "portfolio", path: "/portfolio" },
-      { name: "trusted suppliers", path: "/trusted-suppliers" },
       { name: "albums", path: "/albums_temp" },
     ],
   },
